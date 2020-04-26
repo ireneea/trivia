@@ -4,14 +4,16 @@ import { render } from "@testing-library/react-native";
 import Answer from "./Answer";
 
 describe("Answer", () => {
+  const answer = { answer: "one" };
   it("render Answer correctly", () => {
-    const { baseElement } = render(<Answer />);
+    const { baseElement } = render(<Answer answer={answer} />);
     expect(baseElement).toMatchSnapshot();
   });
 
   it("displays the answer", () => {
-    const answer = { answer: "one" };
-    const { getByText } = render(<Answer answer={answer} />);
-    expect(getByText(answer.answer)).toBeTruthy();
+    const { getByText } = render(
+      <Answer answer={{ ...answer, answer: "two" }} />
+    );
+    expect(getByText("two")).toBeTruthy();
   });
 });

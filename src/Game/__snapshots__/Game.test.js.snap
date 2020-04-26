@@ -21,24 +21,29 @@ exports[`Game render Game correctly 1`] = `
     <View
       style={
         Object {
-          "alignItems": "center",
+          "backgroundColor": "#fff",
           "flex": 1,
-          "justifyContent": "center",
+          "padding": 30,
         }
       }
       testID="gameScreen"
     >
-      <TouchableWithoutFeedback
-        testID="endGameBtn"
-      >
-        <Text>
-          End Game
-        </Text>
-      </TouchableWithoutFeedback>
       <View
-        testID="question"
+        style={
+          Object {
+            "height": 30,
+            "marginTop": 20,
+          }
+        }
       >
-        <Text />
+        <TouchableWithoutFeedback
+          accessibilityLabel="End Game"
+          testID="endGameBtn"
+        >
+          <Text>
+            End Game
+          </Text>
+        </TouchableWithoutFeedback>
       </View>
     </View>
   </View>

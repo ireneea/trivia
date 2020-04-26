@@ -18,8 +18,25 @@ exports[`Answer render Answer correctly 1`] = `
       }
     }
   >
-    <View>
-      <Text />
+    <View
+      style={
+        Object {
+          "backgroundColor": "deepskyblue",
+          "borderRadius": 5,
+          "marginVertical": 10,
+          "padding": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "snow",
+          }
+        }
+      >
+        one
+      </Text>
     </View>
   </View>
 </View>
