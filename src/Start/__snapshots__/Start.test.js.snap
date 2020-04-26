@@ -26,6 +26,7 @@ exports[`Start should render correctly 1`] = `
           "justifyContent": "center",
         }
       }
+      testID="startScreen"
     >
       <TouchableWithoutFeedback
         testID="startBtn"

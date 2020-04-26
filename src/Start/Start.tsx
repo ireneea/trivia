@@ -13,7 +13,7 @@ const Start: React.FC<Props> = (props) => {
   };
 
   return (
-    <View style={globalStyles.centredContainer}>
+    <View testID="startScreen" style={globalStyles.centredContainer}>
       <TouchableWithoutFeedback testID="startBtn" onPress={onStart}>
         <Text>Start</Text>
       </TouchableWithoutFeedback>

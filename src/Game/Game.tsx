@@ -47,7 +47,7 @@ const Game: React.FC<Props> = (props) => {
   };
 
   return (
-    <View style={globalStyles.centredContainer}>
+    <View testID="gameScreen" style={globalStyles.centredContainer}>
       <TouchableWithoutFeedback testID="endGameBtn" onPress={onEndGame}>
         <Text>End Game</Text>
       </TouchableWithoutFeedback>

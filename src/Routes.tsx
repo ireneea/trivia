@@ -11,7 +11,12 @@ const Stack = createStackNavigator();
 const Routes = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Start">
+      <Stack.Navigator
+        initialRouteName="Start"
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
         <Stack.Screen name="Start" component={Start} />
         <Stack.Screen name="Game" component={Game} />
         <Stack.Screen name="Score" component={Score} />
