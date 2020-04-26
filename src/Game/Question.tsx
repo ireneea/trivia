@@ -1,12 +1,21 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet, AccessibilityProps } from "react-native";
 
-const Question = ({ question }) => {
+import { globalStyles } from "../styles/globals";
+import { QuestionType } from "../ts/appTypes";
+
+type Props = {
+  question: QuestionType;
+};
+
+const Question: React.FC<Props & AccessibilityProps> = ({ question }) => {
   return (
-    <View testID="question">
+    <View testID="question" style={globalStyles.centredContainer}>
       <Text>{question?.text}</Text>
     </View>
   );
 };
+
+const styles = StyleSheet.create({});
 
 export default Question;

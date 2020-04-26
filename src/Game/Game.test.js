@@ -9,12 +9,12 @@ const game = {
   questions: [
     {
       text: "Kampala is the capital of",
-      correctAnswer: "two",
+      correctAnswer: "Uganda",
       choices: [
-        { answer: "one" },
-        { answer: "two" },
-        { answer: "three" },
-        { answer: "four" },
+        { answer: "Kenya" },
+        { answer: "Bhutan" },
+        { answer: "Uganda" },
+        { answer: "Rwanda" },
       ],
     },
   ],
@@ -29,8 +29,8 @@ describe("Game", () => {
   it("navigate to Score", () => {
     const props = mockNavigationProps();
 
-    const { getByText } = render(<Game {...props} />);
-    fireEvent.press(getByText("End Game"));
+    const { getByLabelText } = render(<Game {...props} />);
+    fireEvent.press(getByLabelText("End Game"));
 
     expect(props.navigation.navigate).toHaveBeenCalledWith("Score");
   });
