@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { View, Text, TouchableWithoutFeedback, StyleSheet } from "react-native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RouteProp } from "@react-navigation/native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import { globalStyles } from "../styles/globals";
 import { QuestionType, RoutesStackParamList } from "../ts/appTypes";
@@ -61,7 +62,12 @@ const Game: React.FC<Props> = (props) => {
           onPress={onEndGame}
           accessibilityLabel="End Game"
         >
-          <Text>End Game</Text>
+          <MaterialCommunityIcons
+            style={{ marginLeft: 8 }}
+            name="close"
+            size={29}
+            color="grey"
+          />
         </TouchableWithoutFeedback>
       </View>
       {currentQuestion ? (

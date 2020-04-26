@@ -40,9 +40,7 @@ exports[`Game render Game correctly 1`] = `
           accessibilityLabel="End Game"
           testID="endGameBtn"
         >
-          <Text>
-            End Game
-          </Text>
+          <Text />
         </TouchableWithoutFeedback>
       </View>
     </View>
