@@ -6,7 +6,9 @@ import Start from "./Start/Start";
 import Game from "./Game/Game";
 import Score from "./Score/Score";
 
-const Stack = createStackNavigator();
+import { RoutesStackParamList } from "./ts/appTypes";
+
+const Stack = createStackNavigator<RoutesStackParamList>();
 
 const Routes = () => {
   return (

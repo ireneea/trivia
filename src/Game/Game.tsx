@@ -1,33 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, TouchableWithoutFeedback } from "react-native";
 import { globalStyles } from "../styles/globals";
+import { QuestionType, RoutesStackParamList } from "../ts/appTypes";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RouteProp } from "@react-navigation/native";
 
 import Answer from "./Answer";
 import Question from "./Question";
 
 type Props = {
-  navigation: any;
-  route: any;
-};
-
-type Game = {
-  questions: Question[];
-};
-
-type Question = {
-  text: string;
-  choices: Answer[];
-};
-
-type Answer = {
-  answer: string;
+  navigation: StackNavigationProp<RoutesStackParamList, "Game">;
+  route: RouteProp<RoutesStackParamList, "Game">;
 };
 
 const Game: React.FC<Props> = (props) => {
-  const game: Game = props?.route?.params?.game;
+  const game = props?.route?.params?.game;
 
   const [currentQuestion, setCurrentQuestion] = useState(():
-    | Question
+    | QuestionType
     | undefined => {
     return undefined;
   });
