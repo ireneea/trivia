@@ -2,27 +2,44 @@
 
 exports[`Game render Game correctly 1`] = `
 <View
+  pointerEvents="box-none"
   style={
     Object {
-      "alignItems": "center",
       "flex": 1,
-      "justifyContent": "center",
     }
   }
 >
-  <Text
-    accessible={true}
-    focusable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    testID="endGameBtn"
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
   >
-    End Game
-  </Text>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TouchableWithoutFeedback
+        testID="endGameBtn"
+      >
+        <Text>
+          End Game
+        </Text>
+      </TouchableWithoutFeedback>
+      <View
+        testID="question"
+      >
+        <Text />
+      </View>
+    </View>
+  </View>
 </View>
 `;

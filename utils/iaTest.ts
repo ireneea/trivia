@@ -1,17 +1,22 @@
 import { ReactTestInstance } from "react-test-renderer";
 
-export function findByTestID(
-  root: ReactTestInstance,
-  testID: string
-): ReactTestInstance {
-  return root.findByProps({ testID });
-}
-
-export function mockNavigationProps(props = {}) {
+export function mockNavigationProps(props: Object = {}): Object {
   return {
     navigation: {
       // when use in a unit test jest will be defined
       navigate: jest.fn(),
+    },
+    ...props,
+  };
+}
+
+export function mockRouteParamsProps(
+  params: Object,
+  props: Object = {}
+): Object {
+  return {
+    route: {
+      params,
     },
     ...props,
   };

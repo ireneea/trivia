@@ -171,20 +171,14 @@ exports[`<App /> renders correctly 1`] = `
                         }
                       }
                     >
-                      <Text
-                        accessible={true}
-                        focusable={true}
-                        onClick={[Function]}
-                        onResponderGrant={[Function]}
-                        onResponderMove={[Function]}
-                        onResponderRelease={[Function]}
-                        onResponderTerminate={[Function]}
-                        onResponderTerminationRequest={[Function]}
-                        onStartShouldSetResponder={[Function]}
+                      <TouchableWithoutFeedback
+                        onPress={[Function]}
                         testID="startBtn"
                       >
-                        Start
-                      </Text>
+                        <Text>
+                          Start
+                        </Text>
+                      </TouchableWithoutFeedback>
                     </View>
                   </View>
                 </View>

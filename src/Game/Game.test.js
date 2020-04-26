@@ -1,23 +1,54 @@
 import React from "react";
-import renderer, { act } from "react-test-renderer";
+import { render, fireEvent } from "@testing-library/react-native";
 
 import Game from "./Game";
-import { findByTestID, mockNavigationProps } from "../../utils/iaTest";
+
+import { mockNavigationProps, mockRouteParamsProps } from "../../utils/iaTest";
+
+const game = {
+  questions: [
+    {
+      text: "Kampala is the capital of",
+      correctAnswer: "two",
+      choices: [
+        { answer: "one" },
+        { answer: "two" },
+        { answer: "three" },
+        { answer: "four" },
+      ],
+    },
+  ],
+};
 
 describe("Game", () => {
   it("render Game correctly", () => {
-    const gameRenderer = renderer.create(<Game />);
-    expect(gameRenderer.toJSON()).toMatchSnapshot();
+    const { baseElement } = render(<Game />);
+    expect(baseElement).toMatchSnapshot();
   });
 
   it("navigate to Score", () => {
     const props = mockNavigationProps();
-    const gameRenderer = renderer.create(<Game {...props} />);
 
-    act(() => {
-      findByTestID(gameRenderer.root, "endGameBtn").props.onPress();
-    });
+    const { getByText } = render(<Game {...props} />);
+    fireEvent.press(getByText("End Game"));
 
     expect(props.navigation.navigate).toHaveBeenCalledWith("Score");
+  });
+
+  it("render first question", () => {
+    const { getByText } = render(<Game {...mockRouteParamsProps({ game })} />);
+    const [firstQuestion] = game.questions;
+    expect(getByText(firstQuestion.text)).toBeTruthy();
+  });
+
+  it("render answers", () => {
+    const { getByText } = render(<Game {...mockRouteParamsProps({ game })} />);
+    const [firstQuestion] = game.questions;
+    const { choices } = firstQuestion;
+
+    expect(getByText(choices[0].answer)).toBeTruthy();
+    expect(getByText(choices[1].answer)).toBeTruthy();
+    expect(getByText(choices[2].answer)).toBeTruthy();
+    expect(getByText(choices[3].answer)).toBeTruthy();
   });
 });

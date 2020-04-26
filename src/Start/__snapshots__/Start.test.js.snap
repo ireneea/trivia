@@ -2,27 +2,39 @@
 
 exports[`Start should render correctly 1`] = `
 <View
+  pointerEvents="box-none"
   style={
     Object {
-      "alignItems": "center",
       "flex": 1,
-      "justifyContent": "center",
     }
   }
 >
-  <Text
-    accessible={true}
-    focusable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    testID="startBtn"
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
   >
-    Start
-  </Text>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TouchableWithoutFeedback
+        testID="startBtn"
+      >
+        <Text>
+          Start
+        </Text>
+      </TouchableWithoutFeedback>
+    </View>
+  </View>
 </View>
 `;

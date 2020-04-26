@@ -1,33 +1,29 @@
 import React from "react";
-import renderer, { act } from "react-test-renderer";
+import { render, fireEvent } from "@testing-library/react-native";
 
 import Score from "./Score";
-import { findByTestID, mockNavigationProps } from "../../utils/iaTest";
+import { mockNavigationProps } from "../../utils/iaTest";
 
 describe("Score", () => {
   it("render Score correctly", () => {
-    const scoreRenderer = renderer.create(<Score />);
-    expect(scoreRenderer.toJSON()).toMatchSnapshot();
+    const { baseElement } = render(<Score />);
+    expect(baseElement).toMatchSnapshot();
   });
 
-  it("navigate to Game", () => {
+  it("navigate to Game", async () => {
     const props = mockNavigationProps();
-    const scoreRenderer = renderer.create(<Score {...props} />);
 
-    act(() => {
-      findByTestID(scoreRenderer.root, "newGameBtn").props.onPress();
-    });
+    const { getByText } = render(<Score {...props} />);
+    fireEvent.press(getByText("New Game"));
 
     expect(props.navigation.navigate).toHaveBeenCalledWith("Game");
   });
 
   it("navigate to Start", () => {
     const props = mockNavigationProps();
-    const scoreRenderer = renderer.create(<Score {...props} />);
 
-    act(() => {
-      findByTestID(scoreRenderer.root, "homeBtn").props.onPress();
-    });
+    const { getByText } = render(<Score {...props} />);
+    fireEvent.press(getByText("Home"));
 
     expect(props.navigation.navigate).toHaveBeenCalledWith("Start");
   });

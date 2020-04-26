@@ -2,41 +2,47 @@
 
 exports[`Score render Score correctly 1`] = `
 <View
+  pointerEvents="box-none"
   style={
     Object {
-      "alignItems": "center",
       "flex": 1,
-      "justifyContent": "center",
     }
   }
 >
-  <Text
-    accessible={true}
-    focusable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    testID="newGameBtn"
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
   >
-    New Game
-  </Text>
-  <Text
-    accessible={true}
-    focusable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    testID="homeBtn"
-  >
-    Home
-  </Text>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+      testID="scoreScreen"
+    >
+      <TouchableWithoutFeedback
+        testID="newGameBtn"
+      >
+        <Text>
+          New Game
+        </Text>
+      </TouchableWithoutFeedback>
+      <TouchableWithoutFeedback
+        testID="homeBtn"
+      >
+        <Text>
+          Home
+        </Text>
+      </TouchableWithoutFeedback>
+    </View>
+  </View>
 </View>
 `;

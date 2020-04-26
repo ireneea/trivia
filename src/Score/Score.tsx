@@ -13,7 +13,7 @@ const Score: React.FC<Props> = (props) => {
   };
 
   return (
-    <View style={globalStyles.centredContainer}>
+    <View testID="scoreScreen" style={globalStyles.centredContainer}>
       <TouchableWithoutFeedback
         testID="newGameBtn"
         onPress={() => navigateTo("Game")}
