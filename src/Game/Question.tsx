@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, AccessibilityProps } from "react-native";
 
-import { globalStyles } from "../styles/globals";
+import { globalStyles, fontSize } from "../styles/globals";
 import { QuestionType } from "../ts/appTypes";
 
 type Props = {
@@ -10,12 +10,18 @@ type Props = {
 
 const Question: React.FC<Props & AccessibilityProps> = ({ question }) => {
   return (
-    <View testID="question" style={globalStyles.centredContainer}>
-      <Text>{question?.text}</Text>
+    <View testID="question" style={styles.questionContainer}>
+      <Text style={styles.questionText}>{question?.text}</Text>
     </View>
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  questionContainer: StyleSheet.flatten([
+    globalStyles.centredContainer,
+    { alignItems: "flex-start" },
+  ]),
+  questionText: StyleSheet.flatten([fontSize.l]),
+});
 
 export default Question;

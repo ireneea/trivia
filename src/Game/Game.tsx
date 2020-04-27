@@ -18,7 +18,7 @@ type Props = {
 const fakeGame = {
   questions: [
     {
-      text: "Kampala is the capital of",
+      text: "Kampala is the capital of?",
       correctAnswer: "Uganda",
       choices: [
         { answer: "Kenya" },
@@ -31,8 +31,8 @@ const fakeGame = {
 };
 
 const Game: React.FC<Props> = (props) => {
-  const game = props?.route?.params?.game;
-  // const game = fakeGame;
+  // const game = props?.route?.params?.game;
+  const game = fakeGame;
 
   const [currentQuestion, setCurrentQuestion] = useState(():
     | QuestionType

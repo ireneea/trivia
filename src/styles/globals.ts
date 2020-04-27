@@ -12,3 +12,11 @@ export const globalStyles = StyleSheet.create({
     alignItems: "center",
   },
 });
+
+export const fontSize = StyleSheet.create({
+  xs: { fontSize: 10 },
+  s: { fontSize: 13 },
+  m: { fontSize: 16 },
+  l: { fontSize: 20 },
+  xl: { fontSize: 25 },
+});

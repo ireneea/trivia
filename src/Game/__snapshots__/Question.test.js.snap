@@ -21,14 +21,20 @@ exports[`Question render Question correctly 1`] = `
     <View
       style={
         Object {
-          "alignItems": "center",
+          "alignItems": "flex-start",
           "flex": 1,
           "justifyContent": "center",
         }
       }
       testID="question"
     >
-      <Text />
+      <Text
+        style={
+          Object {
+            "fontSize": 20,
+          }
+        }
+      />
     </View>
   </View>
 </View>

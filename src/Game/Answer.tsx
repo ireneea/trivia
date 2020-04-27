@@ -1,6 +1,8 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
+
 import { AnswerType } from "../ts/appTypes";
+import { fontSize } from "../styles/globals";
 
 type Props = {
   answer: AnswerType;
@@ -16,14 +18,22 @@ const Answer: React.FC<Props> = ({ answer }) => {
 
 const styles = StyleSheet.create({
   answerContainer: {
-    backgroundColor: "deepskyblue",
+    backgroundColor: "whitesmoke",
     marginVertical: 10,
-    padding: 10,
-    borderRadius: 5,
+    paddingVertical: 15,
+    paddingHorizontal: 15,
+    borderRadius: 2,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+
+    elevation: 3,
   },
-  answerText: {
-    color: "snow",
-  },
+  answerText: StyleSheet.flatten([fontSize.m]),
 });
 
 export default Answer;
