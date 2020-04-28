@@ -2,13 +2,14 @@ import React from "react";
 import { render, fireEvent } from "@testing-library/react-native";
 
 import Game from "./Game";
+import { correctAnswerContainer, incorrectAnswerContainer } from "./Answer";
 
 import { mockNavigationProps, mockRouteParamsProps } from "../../utils/iaTest";
 
 const game = {
   questions: [
     {
-      text: "Kampala is the capital of",
+      text: "Kampala is the capital of?",
       correctAnswer: "Uganda",
       choices: [
         { answer: "Kenya" },
@@ -17,15 +18,20 @@ const game = {
         { answer: "Rwanda" },
       ],
     },
+    {
+      text: "Mogadishu is the capital of?",
+      correctAnswer: "Somalia",
+      choices: [
+        { answer: "Somalia" },
+        { answer: "Azerbaijan" },
+        { answer: "Angola" },
+        { answer: "Djibouti" },
+      ],
+    },
   ],
 };
 
 describe("Game", () => {
-  it("render Game correctly", () => {
-    const { baseElement } = render(<Game />);
-    expect(baseElement).toMatchSnapshot();
-  });
-
   it("navigate to Score", () => {
     const props = mockNavigationProps();
 
@@ -42,13 +48,102 @@ describe("Game", () => {
   });
 
   it("render answers", () => {
-    const { getByText } = render(<Game {...mockRouteParamsProps({ game })} />);
+    const { getByLabelText } = render(
+      <Game {...mockRouteParamsProps({ game })} />
+    );
     const [firstQuestion] = game.questions;
     const { choices } = firstQuestion;
 
-    expect(getByText(choices[0].answer)).toBeTruthy();
-    expect(getByText(choices[1].answer)).toBeTruthy();
-    expect(getByText(choices[2].answer)).toBeTruthy();
-    expect(getByText(choices[3].answer)).toBeTruthy();
+    choices.forEach(({ answer }) => {
+      expect(getByLabelText(answer)).toBeTruthy();
+    });
+  });
+
+  describe("answer questions", () => {
+    // OPTIMIZE: these tests rely on the internal logic of selecting a stylesheet
+    // this is far from ideal, but unfortunately I couldn't come up with a better solution
+
+    const getCorrectAnswer = (question) =>
+      question.choices.find(({ answer }) => answer === question.correctAnswer);
+    const getIncorrectAnswer = (question) =>
+      question.choices.find(({ answer }) => answer !== question.correctAnswer);
+
+    function expectAnswerToBeCorrect(component, answer) {
+      const { getByTestId } = component;
+      const answerNode = getByTestId(`answer-${answer.answer}`);
+      const style = answerNode.getProp("style");
+      expect(style).toBe(correctAnswerContainer);
+    }
+
+    function expectAnswerToBeIncorrect(component, answer) {
+      const { getByTestId } = component;
+      const answerNode = getByTestId(`answer-${answer.answer}`);
+      const style = answerNode.getProp("style");
+      expect(style).toBe(incorrectAnswerContainer);
+    }
+
+    function expectAnswerToNeutral(component, answer) {
+      const { getByTestId } = component;
+      const answerNode = getByTestId(`answer-${answer.answer}`);
+      const style = answerNode.getProp("style");
+      expect(style).not.toBe(correctAnswerContainer);
+      expect(style).not.toBe(incorrectAnswerContainer);
+    }
+
+    it("all answers be displayed as neutral when no answer has been selected", () => {
+      const component = render(<Game {...mockRouteParamsProps({ game })} />);
+      const [firstQuestion] = game.questions;
+      firstQuestion.choices.forEach((answer) => {
+        expectAnswerToNeutral(component, answer);
+      });
+    });
+
+    it("display answer as correct and the rest as neutral when the correct answer is selected", () => {
+      const component = render(<Game {...mockRouteParamsProps({ game })} />);
+
+      const { getByLabelText } = component;
+      const [firstQuestion] = game.questions;
+      const correctAnswer = getCorrectAnswer(firstQuestion);
+
+      fireEvent.press(getByLabelText(correctAnswer.answer));
+
+      expectAnswerToBeCorrect(component, correctAnswer);
+
+      const otherAnswers = firstQuestion.choices.filter(
+        ({ answer }) => answer !== correctAnswer.answer
+      );
+
+      otherAnswers.forEach((answer) => {
+        expectAnswerToNeutral(component, answer);
+      });
+    });
+
+    it("display answer as incorrect when the incorrect answer is selected", () => {
+      const component = render(<Game {...mockRouteParamsProps({ game })} />);
+
+      const { getByLabelText } = component;
+
+      const [firstQuestion] = game.questions;
+      const incorrect = getIncorrectAnswer(firstQuestion);
+      const correctAnswer = getCorrectAnswer(firstQuestion);
+
+      fireEvent.press(getByLabelText(incorrect.answer));
+
+      expectAnswerToBeCorrect(component, correctAnswer);
+      expectAnswerToBeIncorrect(component, incorrect);
+
+      const otherAnswers = firstQuestion.choices.filter(
+        ({ answer }) =>
+          answer !== correctAnswer.answer && answer !== incorrect.answer
+      );
+
+      otherAnswers.forEach((answer) => {
+        expectAnswerToNeutral(component, answer);
+      });
+    });
+
+    it("show to the second answer after the first answer has been answered", () => {});
+
+    it("end the game after all the questions have been answered", () => {});
   });
 });

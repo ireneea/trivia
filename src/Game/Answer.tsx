@@ -1,19 +1,56 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableWithoutFeedback,
+  StyleProp,
+} from "react-native";
 
 import { AnswerType } from "../ts/appTypes";
 import { fontSize } from "../styles/globals";
 
 type Props = {
   answer: AnswerType;
+  onSelect(): void;
+  isCorrect?: boolean;
+  isIncorrect?: boolean;
 };
 
-const Answer: React.FC<Props> = ({ answer }) => {
+const Answer: React.FC<Props> = (props) => {
+  const { answer, onSelect } = props;
+
+  const appliedStyle = getContainerStyle(props);
+
   return (
-    <View style={styles.answerContainer}>
-      <Text style={styles.answerText}>{answer.answer}</Text>
+    <View style={appliedStyle.container} testID={`answer-${answer.answer}`}>
+      <TouchableWithoutFeedback onPress={onSelect}>
+        <Text style={appliedStyle.text} accessibilityLabel={answer.answer}>
+          {answer.answer}
+        </Text>
+      </TouchableWithoutFeedback>
     </View>
   );
+};
+
+const getContainerStyle = (props: Props): any => {
+  const { isCorrect = false, isIncorrect = false } = props;
+
+  let container: StyleProp<{}> | [StyleProp<{}>];
+  let text: StyleProp<{}> | [StyleProp<{}>];
+
+  if (isCorrect) {
+    container = correctAnswerContainer;
+    text = correctAnswerText;
+  } else if (isIncorrect) {
+    container = incorrectAnswerContainer;
+    text = incorrectAnswerText;
+  } else {
+    container = styles.answerContainer;
+    text = styles.answerText;
+  }
+
+  return { container, text };
 };
 
 const styles = StyleSheet.create({
@@ -33,7 +70,39 @@ const styles = StyleSheet.create({
 
     elevation: 3,
   },
-  answerText: StyleSheet.flatten([fontSize.m]),
+  answerText: fontSize.m,
+  correctAnswerContainer: {
+    backgroundColor: "#02c39a",
+  },
+  incorrectAnswerContainer: {
+    backgroundColor: "#e63946",
+  },
+  correctAnswerText: {
+    color: "snow",
+  },
+  incorrectAnswerText: {
+    color: "snow",
+  },
 });
+
+export const correctAnswerContainer = StyleSheet.compose(
+  styles.answerContainer,
+  styles.correctAnswerContainer
+);
+
+export const incorrectAnswerContainer = StyleSheet.compose(
+  styles.answerContainer,
+  styles.incorrectAnswerContainer
+);
+
+const correctAnswerText = StyleSheet.flatten([
+  styles.answerText,
+  styles.correctAnswerText,
+]);
+
+const incorrectAnswerText = StyleSheet.flatten([
+  styles.answerText,
+  styles.incorrectAnswerText,
+]);
 
 export default Answer;

@@ -5,7 +5,7 @@ import { RouteProp } from "@react-navigation/native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import { globalStyles } from "../styles/globals";
-import { QuestionType, RoutesStackParamList } from "../ts/appTypes";
+import { QuestionType, AnswerType, RoutesStackParamList } from "../ts/appTypes";
 
 import Answer from "./Answer";
 import Question from "./Question";
@@ -30,15 +30,58 @@ const fakeGame = {
   ],
 };
 
+const getInitialQuestion = (): QuestionType | undefined => undefined;
+const getInitialSelectedAnswer = (): AnswerType | undefined => undefined;
+
+type CheckQuestion = {
+  question: QuestionType;
+  answer?: AnswerType;
+};
+
+type CheckShowQuestion = { selectedAnswer?: AnswerType } & CheckQuestion;
+
+const isAnswerCorrect = (props: CheckQuestion): boolean => {
+  const { question, answer } = props;
+  return !!answer && question.correctAnswer === answer.answer;
+};
+
+const isAnswerIncorrect = (props: CheckQuestion): boolean => {
+  const { question, answer } = props;
+  return !!answer && question.correctAnswer !== answer.answer;
+};
+
+const isShownAsCorrect = (props: CheckShowQuestion): boolean => {
+  let showAsCorrect = false;
+  const { question, answer, selectedAnswer } = props;
+
+  if (selectedAnswer) {
+    showAsCorrect = isAnswerCorrect({ question, answer });
+  }
+
+  return showAsCorrect;
+};
+
+const isShownAsIncorrect = (props: CheckShowQuestion): boolean => {
+  let showAsIncorrect = false;
+  const { question, answer, selectedAnswer } = props;
+
+  if (selectedAnswer && answer) {
+    showAsIncorrect =
+      isAnswerIncorrect({ question, answer }) &&
+      selectedAnswer.answer === answer.answer;
+  }
+
+  return showAsIncorrect;
+};
+
 const Game: React.FC<Props> = (props) => {
   // const game = props?.route?.params?.game;
   const game = fakeGame;
 
-  const [currentQuestion, setCurrentQuestion] = useState(():
-    | QuestionType
-    | undefined => {
-    return undefined;
-  });
+  const [currentQuestion, setCurrentQuestion] = useState(getInitialQuestion);
+  const [selectedAnswer, setSelectedAnswer] = useState(
+    getInitialSelectedAnswer
+  );
 
   useEffect(() => {
     let firstQuestion;
@@ -77,7 +120,23 @@ const Game: React.FC<Props> = (props) => {
           </View>
           <View style={{ flex: 2 }}>
             {currentQuestion?.choices.map((answer) => (
-              <Answer key={answer.answer} answer={answer} />
+              <Answer
+                key={answer.answer}
+                answer={answer}
+                isCorrect={isShownAsCorrect({
+                  question: currentQuestion,
+                  answer,
+                  selectedAnswer,
+                })}
+                isIncorrect={isShownAsIncorrect({
+                  question: currentQuestion,
+                  answer,
+                  selectedAnswer,
+                })}
+                onSelect={() => {
+                  setSelectedAnswer(answer);
+                }}
+              />
             ))}
           </View>
         </>

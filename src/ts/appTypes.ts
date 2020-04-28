@@ -4,6 +4,7 @@ export type GameType = {
 
 export type QuestionType = {
   text: string;
+  correctAnswer: string;
   choices: AnswerType[];
 };
 

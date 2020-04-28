@@ -9,9 +9,12 @@ type Props = {
 };
 
 const Question: React.FC<Props & AccessibilityProps> = ({ question }) => {
+  const text = question?.text;
   return (
     <View testID="question" style={styles.questionContainer}>
-      <Text style={styles.questionText}>{question?.text}</Text>
+      <Text style={styles.questionText} accessibilityLabel={text}>
+        {text}
+      </Text>
     </View>
   );
 };
