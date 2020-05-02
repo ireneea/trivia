@@ -1,5 +1,10 @@
 import React from "react";
-import { render, fireEvent } from "@testing-library/react-native";
+import {
+  render,
+  fireEvent,
+  wait,
+  waitForElement,
+} from "@testing-library/react-native";
 
 import Game from "./Game";
 import { correctAnswerContainer, incorrectAnswerContainer } from "./Answer";
@@ -124,8 +129,8 @@ describe("Game", () => {
       const { getByLabelText } = component;
 
       const [firstQuestion] = game.questions;
-      const incorrect = getIncorrectAnswer(firstQuestion);
       const correctAnswer = getCorrectAnswer(firstQuestion);
+      const incorrect = getIncorrectAnswer(firstQuestion);
 
       fireEvent.press(getByLabelText(incorrect.answer));
 
@@ -142,8 +147,32 @@ describe("Game", () => {
       });
     });
 
-    it("show to the second answer after the first answer has been answered", () => {});
+    it("show to the second answer after the first answer has been answered", async () => {
+      const component = render(<Game {...mockRouteParamsProps({ game })} />);
 
-    it("end the game after all the questions have been answered", () => {});
+      const [firstQuestion, secondQuestion] = game.questions;
+      const correctAnswer = getCorrectAnswer(firstQuestion);
+
+      fireEvent.press(component.getByLabelText(correctAnswer.answer));
+
+      await wait(() => {
+        expect(component.getByText(secondQuestion.text)).toBeTruthy();
+      });
+    });
+
+    it("end the game after all the questions have been answered", async () => {
+      const props = mockNavigationProps(mockRouteParamsProps({ game }));
+      const component = render(<Game {...props} />);
+
+      const [first, last] = game.questions;
+
+      fireEvent.press(component.getByLabelText(getCorrectAnswer(first).answer));
+      await waitForElement(() => component.getByText(last.text));
+      fireEvent.press(component.getByLabelText(getCorrectAnswer(last).answer));
+
+      await wait(() =>
+        expect(props.navigation.navigate).toHaveBeenCalledWith("Score")
+      );
+    });
   });
 });

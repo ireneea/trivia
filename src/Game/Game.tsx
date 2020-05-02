@@ -3,12 +3,15 @@ import { View, Text, TouchableWithoutFeedback, StyleSheet } from "react-native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RouteProp } from "@react-navigation/native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import _get from "lodash/get";
+import _has from "lodash/has";
 
 import { globalStyles } from "../styles/globals";
 import { QuestionType, AnswerType, RoutesStackParamList } from "../ts/appTypes";
 
 import Answer from "./Answer";
 import Question from "./Question";
+import useCountdown from "./hooks/useCountdown";
 
 type Props = {
   navigation: StackNavigationProp<RoutesStackParamList, "Game">;
@@ -25,6 +28,16 @@ const fakeGame = {
         { answer: "Bhutan" },
         { answer: "Uganda" },
         { answer: "Rwanda" },
+      ],
+    },
+    {
+      text: "Mogadishu is the capital of?",
+      correctAnswer: "Somalia",
+      choices: [
+        { answer: "Somalia" },
+        { answer: "Azerbaijan" },
+        { answer: "Angola" },
+        { answer: "Djibouti" },
       ],
     },
   ],
@@ -74,32 +87,68 @@ const isShownAsIncorrect = (props: CheckShowQuestion): boolean => {
   return showAsIncorrect;
 };
 
+const READ_ANSWER_TIME = 1000;
+
 const Game: React.FC<Props> = (props) => {
   // const game = props?.route?.params?.game;
   const game = fakeGame;
 
-  const [currentQuestion, setCurrentQuestion] = useState(getInitialQuestion);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(-1);
   const [selectedAnswer, setSelectedAnswer] = useState(
     getInitialSelectedAnswer
   );
 
-  useEffect(() => {
-    let firstQuestion;
-    if (game && Array.isArray(game.questions)) {
-      firstQuestion = game.questions[0];
-    }
+  const countDown = useCountdown();
 
-    setCurrentQuestion(firstQuestion);
+  useEffect(() => {
+    if (game && Array.isArray(game.questions) && game.questions.length > 0) {
+      setCurrentQuestionIndex(0);
+    } else {
+      setCurrentQuestionIndex(-1);
+    }
   }, [game]);
 
+  useEffect(() => {
+    const hasGameEnded =
+      hasGameStarted() && currentQuestionIndex >= game.questions.length;
+    if (hasGameEnded) {
+      onEndGame();
+    }
+  }, [currentQuestionIndex]);
+
   const onEndGame = () => {
-    const { navigation } = props;
-    navigation.navigate("Score");
+    props?.navigation?.navigate("Score");
   };
 
+  const hasGameStarted = () => currentQuestionIndex > -1;
+
+  const getCurrentQuestion = (): QuestionType | void => {
+    let question;
+
+    if (hasGameStarted()) {
+      question = _get(game, `questions[${currentQuestionIndex}]`);
+    }
+
+    return question;
+  };
+
+  const onSelectAnswer = (answer: AnswerType) => {
+    setSelectedAnswer(answer);
+    countDown.start({
+      milliseconds: READ_ANSWER_TIME,
+      onEnd: () => {
+        if (hasGameStarted()) {
+          setSelectedAnswer(null);
+          setCurrentQuestionIndex((prev) => prev + 1);
+        }
+      },
+    });
+  };
+
+  const currentQuestion = getCurrentQuestion();
   return (
     <View testID="gameScreen" style={styles.gameContainer}>
-      <View style={{ marginTop: 20, height: 30 }}>
+      <View style={styles.closeBtnContainer}>
         <TouchableWithoutFeedback
           testID="endGameBtn"
           onPress={onEndGame}
@@ -134,7 +183,7 @@ const Game: React.FC<Props> = (props) => {
                   selectedAnswer,
                 })}
                 onSelect={() => {
-                  setSelectedAnswer(answer);
+                  onSelectAnswer(answer);
                 }}
               />
             ))}
@@ -146,12 +195,8 @@ const Game: React.FC<Props> = (props) => {
 };
 
 const styles = StyleSheet.create({
-  gameContainer: StyleSheet.flatten([
-    globalStyles.container,
-    {
-      padding: 30,
-    },
-  ]),
+  gameContainer: StyleSheet.flatten([globalStyles.container, { padding: 30 }]),
+  closeBtnContainer: { marginTop: 20, height: 30 },
 });
 
 export default Game;
