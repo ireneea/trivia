@@ -23,22 +23,12 @@ const fakeGame = {
     {
       text: "Kampala is the capital of?",
       correctAnswer: "Uganda",
-      choices: [
-        { answer: "Kenya" },
-        { answer: "Bhutan" },
-        { answer: "Uganda" },
-        { answer: "Rwanda" },
-      ],
+      choices: [{ answer: "Kenya" }, { answer: "Bhutan" }, { answer: "Uganda" }, { answer: "Rwanda" }],
     },
     {
       text: "Mogadishu is the capital of?",
       correctAnswer: "Somalia",
-      choices: [
-        { answer: "Somalia" },
-        { answer: "Azerbaijan" },
-        { answer: "Angola" },
-        { answer: "Djibouti" },
-      ],
+      choices: [{ answer: "Somalia" }, { answer: "Azerbaijan" }, { answer: "Angola" }, { answer: "Djibouti" }],
     },
   ],
 };
@@ -79,9 +69,7 @@ const isShownAsIncorrect = (props: CheckShowQuestion): boolean => {
   const { question, answer, selectedAnswer } = props;
 
   if (selectedAnswer && answer) {
-    showAsIncorrect =
-      isAnswerIncorrect({ question, answer }) &&
-      selectedAnswer.answer === answer.answer;
+    showAsIncorrect = isAnswerIncorrect({ question, answer }) && selectedAnswer.answer === answer.answer;
   }
 
   return showAsIncorrect;
@@ -90,13 +78,10 @@ const isShownAsIncorrect = (props: CheckShowQuestion): boolean => {
 const READ_ANSWER_TIME = 1000;
 
 const Game: React.FC<Props> = (props) => {
-  // const game = props?.route?.params?.game;
-  const game = fakeGame;
+  const game = props?.route?.params?.game;
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(-1);
-  const [selectedAnswer, setSelectedAnswer] = useState(
-    getInitialSelectedAnswer
-  );
+  const [selectedAnswer, setSelectedAnswer] = useState(getInitialSelectedAnswer);
 
   const countDown = useCountdown();
 
@@ -109,8 +94,7 @@ const Game: React.FC<Props> = (props) => {
   }, [game]);
 
   useEffect(() => {
-    const hasGameEnded =
-      hasGameStarted() && currentQuestionIndex >= game.questions.length;
+    const hasGameEnded = hasGameStarted() && currentQuestionIndex >= game.questions.length;
     if (hasGameEnded) {
       onEndGame();
     }
@@ -135,10 +119,10 @@ const Game: React.FC<Props> = (props) => {
   const onSelectAnswer = (answer: AnswerType) => {
     setSelectedAnswer(answer);
     countDown.start({
-      milliseconds: READ_ANSWER_TIME,
+      time: READ_ANSWER_TIME,
       onEnd: () => {
         if (hasGameStarted()) {
-          setSelectedAnswer(null);
+          setSelectedAnswer(undefined);
           setCurrentQuestionIndex((prev) => prev + 1);
         }
       },
@@ -149,17 +133,8 @@ const Game: React.FC<Props> = (props) => {
   return (
     <View testID="gameScreen" style={styles.gameContainer}>
       <View style={styles.closeBtnContainer}>
-        <TouchableWithoutFeedback
-          testID="endGameBtn"
-          onPress={onEndGame}
-          accessibilityLabel="End Game"
-        >
-          <MaterialCommunityIcons
-            style={{ marginLeft: 8 }}
-            name="close"
-            size={29}
-            color="grey"
-          />
+        <TouchableWithoutFeedback testID="endGameBtn" onPress={onEndGame} accessibilityLabel="End Game">
+          <MaterialCommunityIcons style={{ marginLeft: 8 }} name="close" size={29} color="grey" />
         </TouchableWithoutFeedback>
       </View>
       {currentQuestion ? (
