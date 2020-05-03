@@ -1,37 +1,24 @@
 import React from "react";
-import {
-  render,
-  fireEvent,
-  wait,
-  waitForElement,
-} from "@testing-library/react-native";
+import { render, fireEvent, wait, waitForElement, act } from "@testing-library/react-native";
 
-import Game from "./Game";
+import Game, { READ_ANSWER_TIME, ANSWER_TIME } from "./Game";
 import { correctAnswerContainer, incorrectAnswerContainer } from "./Answer";
 
 import { mockNavigationProps, mockRouteParamsProps } from "../../utils/iaTest";
+
+jest.useFakeTimers();
 
 const game = {
   questions: [
     {
       text: "Kampala is the capital of?",
       correctAnswer: "Uganda",
-      choices: [
-        { answer: "Kenya" },
-        { answer: "Bhutan" },
-        { answer: "Uganda" },
-        { answer: "Rwanda" },
-      ],
+      choices: [{ answer: "Kenya" }, { answer: "Bhutan" }, { answer: "Uganda" }, { answer: "Rwanda" }],
     },
     {
       text: "Mogadishu is the capital of?",
       correctAnswer: "Somalia",
-      choices: [
-        { answer: "Somalia" },
-        { answer: "Azerbaijan" },
-        { answer: "Angola" },
-        { answer: "Djibouti" },
-      ],
+      choices: [{ answer: "Somalia" }, { answer: "Azerbaijan" }, { answer: "Angola" }, { answer: "Djibouti" }],
     },
   ],
 };
@@ -53,9 +40,7 @@ describe("Game", () => {
   });
 
   it("render answers", () => {
-    const { getByLabelText } = render(
-      <Game {...mockRouteParamsProps({ game })} />
-    );
+    const { getByLabelText } = render(<Game {...mockRouteParamsProps({ game })} />);
     const [firstQuestion] = game.questions;
     const { choices } = firstQuestion;
 
@@ -68,10 +53,8 @@ describe("Game", () => {
     // OPTIMIZE: these tests rely on the internal logic of selecting a stylesheet
     // this is far from ideal, but unfortunately I couldn't come up with a better solution
 
-    const getCorrectAnswer = (question) =>
-      question.choices.find(({ answer }) => answer === question.correctAnswer);
-    const getIncorrectAnswer = (question) =>
-      question.choices.find(({ answer }) => answer !== question.correctAnswer);
+    const getCorrectAnswer = (question) => question.choices.find(({ answer }) => answer === question.correctAnswer);
+    const getIncorrectAnswer = (question) => question.choices.find(({ answer }) => answer !== question.correctAnswer);
 
     function expectAnswerToBeCorrect(component, answer) {
       const { getByTestId } = component;
@@ -114,9 +97,7 @@ describe("Game", () => {
 
       expectAnswerToBeCorrect(component, correctAnswer);
 
-      const otherAnswers = firstQuestion.choices.filter(
-        ({ answer }) => answer !== correctAnswer.answer
-      );
+      const otherAnswers = firstQuestion.choices.filter(({ answer }) => answer !== correctAnswer.answer);
 
       otherAnswers.forEach((answer) => {
         expectAnswerToNeutral(component, answer);
@@ -138,8 +119,7 @@ describe("Game", () => {
       expectAnswerToBeIncorrect(component, incorrect);
 
       const otherAnswers = firstQuestion.choices.filter(
-        ({ answer }) =>
-          answer !== correctAnswer.answer && answer !== incorrect.answer
+        ({ answer }) => answer !== correctAnswer.answer && answer !== incorrect.answer
       );
 
       otherAnswers.forEach((answer) => {
@@ -147,7 +127,7 @@ describe("Game", () => {
       });
     });
 
-    it("show to the second answer after the first answer has been answered", async () => {
+    it("show the second answer after the first answer has been answered", () => {
       const component = render(<Game {...mockRouteParamsProps({ game })} />);
 
       const [firstQuestion, secondQuestion] = game.questions;
@@ -155,24 +135,34 @@ describe("Game", () => {
 
       fireEvent.press(component.getByLabelText(correctAnswer.answer));
 
-      await wait(() => {
-        expect(component.getByText(secondQuestion.text)).toBeTruthy();
-      });
+      act(() => jest.advanceTimersByTime(READ_ANSWER_TIME));
+
+      expect(component.getByText(secondQuestion.text)).toBeTruthy();
     });
 
-    it("end the game after all the questions have been answered", async () => {
+    it("show the second answer if the first question is never answered", () => {
+      const component = render(<Game {...mockRouteParamsProps({ game })} />);
+      const [, secondQuestion] = game.questions;
+
+      act(() => jest.advanceTimersByTime(ANSWER_TIME));
+      act(() => jest.advanceTimersByTime(READ_ANSWER_TIME));
+
+      expect(component.getByText(secondQuestion.text)).toBeTruthy();
+    });
+
+    it("end the game after all the questions have been answered", () => {
       const props = mockNavigationProps(mockRouteParamsProps({ game }));
       const component = render(<Game {...props} />);
 
       const [first, last] = game.questions;
 
       fireEvent.press(component.getByLabelText(getCorrectAnswer(first).answer));
-      await waitForElement(() => component.getByText(last.text));
-      fireEvent.press(component.getByLabelText(getCorrectAnswer(last).answer));
+      act(() => jest.advanceTimersByTime(READ_ANSWER_TIME));
 
-      await wait(() =>
-        expect(props.navigation.navigate).toHaveBeenCalledWith("Score")
-      );
+      fireEvent.press(component.getByLabelText(getCorrectAnswer(last).answer));
+      act(() => jest.advanceTimersByTime(READ_ANSWER_TIME));
+
+      expect(props.navigation.navigate).toHaveBeenCalledWith("Score");
     });
   });
 });

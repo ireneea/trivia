@@ -9,32 +9,30 @@ describe("Answer", () => {
   const answer = { answer: "one" };
 
   it("displays the answer", () => {
-    const { getByText } = render(
-      <Answer answer={{ ...answer, answer: "two" }} />
-    );
+    const { getByText } = render(<Answer answer={{ ...answer, answer: "two" }} />);
     expect(getByText("two")).toBeTruthy();
   });
 
   it("apply `correctAnswerContainer` when the answer is incorrect", () => {
-    const { container } = render(<Answer answer={answer} isCorrect />);
+    const { getByTestId } = render(<Answer answer={answer} isCorrect />);
 
-    const answerNode = container.children[0];
+    const answerNode = getByTestId(`answer-${answer.answer}`);
     const style = answerNode.getProp("style");
     expect(style).toBe(correctAnswerContainer);
   });
 
   it("apply `incorrectAnswerContainer` when the answer is incorrect", () => {
-    const { container } = render(<Answer answer={answer} isIncorrect />);
+    const { getByTestId } = render(<Answer answer={answer} isIncorrect />);
 
-    const answerNode = container.children[0];
+    const answerNode = getByTestId(`answer-${answer.answer}`);
     const style = answerNode.getProp("style");
     expect(style).toBe(incorrectAnswerContainer);
   });
 
   it("do not apply any specific style when the answer is neither correct or incorrect", () => {
-    const { container } = render(<Answer answer={answer} />);
+    const { getByTestId } = render(<Answer answer={answer} />);
 
-    const answerNode = container.children[0];
+    const answerNode = getByTestId(`answer-${answer.answer}`);
     const style = answerNode.getProp("style");
     expect(style).not.toBe(correctAnswerContainer);
     expect(style).not.toBe(incorrectAnswerContainer);
@@ -42,9 +40,7 @@ describe("Answer", () => {
 
   it("call the eventHandler when answer is pressed", () => {
     const onSelect = jest.fn();
-    const { getByLabelText } = render(
-      <Answer answer={answer} onSelect={onSelect} />
-    );
+    const { getByLabelText } = render(<Answer answer={answer} onSelect={onSelect} />);
 
     fireEvent.press(getByLabelText(answer.answer));
     expect(onSelect).toHaveBeenCalled();

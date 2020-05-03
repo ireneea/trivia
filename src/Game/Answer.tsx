@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableWithoutFeedback,
-  StyleProp,
-} from "react-native";
+import { View, Text, StyleSheet, TouchableWithoutFeedback, StyleProp } from "react-native";
 
 import { AnswerType } from "../ts/appTypes";
 import { fontSize } from "../styles/globals";
@@ -23,13 +17,13 @@ const Answer: React.FC<Props> = (props) => {
   const appliedStyle = getContainerStyle(props);
 
   return (
-    <View style={appliedStyle.container} testID={`answer-${answer.answer}`}>
-      <TouchableWithoutFeedback onPress={onSelect}>
+    <TouchableWithoutFeedback onPress={onSelect}>
+      <View style={appliedStyle.container} testID={`answer-${answer.answer}`}>
         <Text style={appliedStyle.text} accessibilityLabel={answer.answer}>
           {answer.answer}
         </Text>
-      </TouchableWithoutFeedback>
-    </View>
+      </View>
+    </TouchableWithoutFeedback>
   );
 };
 
@@ -85,24 +79,12 @@ const styles = StyleSheet.create({
   },
 });
 
-export const correctAnswerContainer = StyleSheet.compose(
-  styles.answerContainer,
-  styles.correctAnswerContainer
-);
+export const correctAnswerContainer = StyleSheet.compose(styles.answerContainer, styles.correctAnswerContainer);
 
-export const incorrectAnswerContainer = StyleSheet.compose(
-  styles.answerContainer,
-  styles.incorrectAnswerContainer
-);
+export const incorrectAnswerContainer = StyleSheet.compose(styles.answerContainer, styles.incorrectAnswerContainer);
 
-const correctAnswerText = StyleSheet.flatten([
-  styles.answerText,
-  styles.correctAnswerText,
-]);
+const correctAnswerText = StyleSheet.flatten([styles.answerText, styles.correctAnswerText]);
 
-const incorrectAnswerText = StyleSheet.flatten([
-  styles.answerText,
-  styles.incorrectAnswerText,
-]);
+const incorrectAnswerText = StyleSheet.flatten([styles.answerText, styles.incorrectAnswerText]);
 
 export default Answer;

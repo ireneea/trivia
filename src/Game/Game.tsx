@@ -21,25 +21,25 @@ type Props = {
 const fakeGame = {
   questions: [
     {
-      text: "Kampala is the capital of?",
+      text: "Kampala is the capital of",
       correctAnswer: "Uganda",
       choices: [{ answer: "Kenya" }, { answer: "Bhutan" }, { answer: "Uganda" }, { answer: "Rwanda" }],
     },
     {
-      text: "Mogadishu is the capital of?",
+      text: "Mogadishu is the capital of",
       correctAnswer: "Somalia",
       choices: [{ answer: "Somalia" }, { answer: "Azerbaijan" }, { answer: "Angola" }, { answer: "Djibouti" }],
     },
   ],
 };
 
-const getInitialQuestion = (): QuestionType | undefined => undefined;
-const getInitialSelectedAnswer = (): AnswerType | undefined => undefined;
-
 type CheckQuestion = {
   question: QuestionType;
   answer?: AnswerType;
 };
+
+type OptionalAnswer = AnswerType | undefined;
+type OptionalQuestion = QuestionType | undefined;
 
 type CheckShowQuestion = { selectedAnswer?: AnswerType } & CheckQuestion;
 
@@ -75,13 +75,15 @@ const isShownAsIncorrect = (props: CheckShowQuestion): boolean => {
   return showAsIncorrect;
 };
 
-const READ_ANSWER_TIME = 1000;
+export const READ_ANSWER_TIME = 500;
+export const ANSWER_TIME = 2000;
 
 const Game: React.FC<Props> = (props) => {
   const game = props?.route?.params?.game;
+  // const game = fakeGame;
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(-1);
-  const [selectedAnswer, setSelectedAnswer] = useState(getInitialSelectedAnswer);
+  const [selectedAnswer, setSelectedAnswer] = useState((): OptionalAnswer => undefined);
 
   const countDown = useCountdown();
 
@@ -97,8 +99,26 @@ const Game: React.FC<Props> = (props) => {
     const hasGameEnded = hasGameStarted() && currentQuestionIndex >= game.questions.length;
     if (hasGameEnded) {
       onEndGame();
+    } else if (currentQuestionIndex >= 0) {
+      countDown.start({
+        time: ANSWER_TIME,
+        onEnd: () => {
+          const correctAnswer = getCorrectAnswer();
+          onSelectAnswer(correctAnswer);
+        },
+      });
     }
   }, [currentQuestionIndex]);
+
+  const getCorrectAnswer = (): OptionalAnswer => {
+    let correctAnswer;
+    const currentQuestion = getCurrentQuestion();
+    if (currentQuestion) {
+      correctAnswer = currentQuestion.choices.find(({ answer }) => answer === currentQuestion.correctAnswer);
+    }
+
+    return correctAnswer;
+  };
 
   const onEndGame = () => {
     props?.navigation?.navigate("Score");
@@ -106,7 +126,7 @@ const Game: React.FC<Props> = (props) => {
 
   const hasGameStarted = () => currentQuestionIndex > -1;
 
-  const getCurrentQuestion = (): QuestionType | void => {
+  const getCurrentQuestion = (): OptionalQuestion => {
     let question;
 
     if (hasGameStarted()) {
@@ -116,17 +136,16 @@ const Game: React.FC<Props> = (props) => {
     return question;
   };
 
-  const onSelectAnswer = (answer: AnswerType) => {
+  const onSelectAnswer = (answer?: OptionalAnswer) => {
     setSelectedAnswer(answer);
-    countDown.start({
-      time: READ_ANSWER_TIME,
-      onEnd: () => {
-        if (hasGameStarted()) {
-          setSelectedAnswer(undefined);
-          setCurrentQuestionIndex((prev) => prev + 1);
-        }
-      },
-    });
+    countDown.start({ time: READ_ANSWER_TIME, onEnd: nextQuestion });
+  };
+
+  const nextQuestion = () => {
+    if (hasGameStarted()) {
+      setSelectedAnswer(undefined);
+      setCurrentQuestionIndex((prev) => prev + 1);
+    }
   };
 
   const currentQuestion = getCurrentQuestion();
@@ -141,6 +160,7 @@ const Game: React.FC<Props> = (props) => {
         <>
           <View style={{ flex: 3 }}>
             <Question question={currentQuestion} />
+            {/*<View> <Text>{selectedAnswer ? "" : countDown.timeLeft}</Text> </View>*/}
           </View>
           <View style={{ flex: 2 }}>
             {currentQuestion?.choices.map((answer) => (

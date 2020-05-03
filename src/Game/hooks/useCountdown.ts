@@ -115,13 +115,8 @@ const useCountdown = () => {
   }, []);
 
   React.useEffect(() => {
-    if (!!onCountdownTick) {
-      onCountdownTick();
-    }
-
-    if (!!onCountdownEnd && state.timeLeft === 0) {
-      onCountdownEnd();
-    }
+    !!onCountdownTick && onCountdownTick();
+    !!onCountdownEnd && state.timeLeft === 0 && onCountdownEnd();
   }, [state.timeLeft]);
 
   const pause = React.useCallback(() => dispatch({ type: PAUSE }), []);
@@ -136,7 +131,6 @@ const useCountdown = () => {
     isDone: state.isDone,
     isRunning: state.isRunning,
     isPaused: state.isPaused,
-    // stop,
   };
 
   return countdown;
