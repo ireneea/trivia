@@ -29,14 +29,14 @@ const Game: React.FC<Props> = (props) => {
   // const game = {
   //   questions: [
   //     {
-  //       text: "Question 1?",
-  //       correctAnswer: "correct",
-  //       choices: [{ answer: "fake1" }, { answer: "incorrect" }, { answer: "correct" }, { answer: "fake2" }],
+  //       text: "Kampala is the capital of?",
+  //       correctAnswer: "Uganda",
+  //       choices: [{ answer: "Kenya" }, { answer: "Bhutan" }, { answer: "Uganda" }, { answer: "Rwanda" }],
   //     },
   //     {
-  //       text: "Question 2?",
-  //       correctAnswer: "correct",
-  //       choices: [{ answer: "incorrect" }, { answer: "fake3" }, { answer: "fake4" }, { answer: "correct" }],
+  //       text: "Mogadishu is the capital of?",
+  //       correctAnswer: "Somalia",
+  //       choices: [{ answer: "Somalia" }, { answer: "Azerbaijan" }, { answer: "Angola" }, { answer: "Djibouti" }],
   //     },
   //   ],
   // };
