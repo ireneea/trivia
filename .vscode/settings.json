@@ -1,5 +1,9 @@
 {
   "files.exclude": {
     "**/__snapshots__": true
-  }
+  },
+  "cSpell.words": [
+    "cond",
+    "xstate"
+  ]
 }

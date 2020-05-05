@@ -1,7 +1,8 @@
 import React from "react";
-import { render, fireEvent, wait, waitForElement, act } from "@testing-library/react-native";
+import { render, fireEvent, act } from "@testing-library/react-native";
 
-import Game, { READ_ANSWER_TIME, ANSWER_TIME } from "./Game";
+import Game from "./Game";
+import { READ_ANSWER_TIME, ANSWER_TIME } from "./gameMachine";
 import { correctAnswerContainer, incorrectAnswerContainer } from "./Answer";
 
 import { mockNavigationProps, mockRouteParamsProps } from "../../utils/iaTest";

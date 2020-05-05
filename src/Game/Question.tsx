@@ -5,7 +5,7 @@ import { globalStyles, fontSize } from "../styles/globals";
 import { QuestionType } from "../ts/appTypes";
 
 type Props = {
-  question: QuestionType;
+  question?: QuestionType;
 };
 
 const Question: React.FC<Props & AccessibilityProps> = ({ question }) => {
@@ -20,10 +20,7 @@ const Question: React.FC<Props & AccessibilityProps> = ({ question }) => {
 };
 
 const styles = StyleSheet.create({
-  questionContainer: StyleSheet.flatten([
-    globalStyles.centredContainer,
-    { alignItems: "flex-start" },
-  ]),
+  questionContainer: StyleSheet.flatten([globalStyles.centredContainer, { alignItems: "flex-start" }]),
   questionText: StyleSheet.flatten([fontSize.l]),
 });
 
