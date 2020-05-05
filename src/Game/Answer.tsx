@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableWithoutFeedback, StyleProp } from "react-native";
+import { View, Text, StyleSheet, StyleProp, TouchableWithoutFeedback } from "react-native";
 
 import { AnswerType } from "../ts/appTypes";
 import { fontSize } from "../styles/globals";
@@ -9,15 +9,17 @@ type Props = {
   onSelect(): void;
   isCorrect?: boolean;
   isIncorrect?: boolean;
+  feedback?: boolean;
+  selected?: boolean;
 };
 
 const Answer: React.FC<Props> = (props) => {
-  const { answer, onSelect } = props;
+  const { answer, onSelect, feedback } = props;
 
   const appliedStyle = getContainerStyle(props);
 
   return (
-    <TouchableWithoutFeedback onPress={onSelect}>
+    <TouchableWithoutFeedback onPress={onSelect} disabled={feedback}>
       <View style={appliedStyle.container} testID={`answer-${answer.answer}`}>
         <Text style={appliedStyle.text} accessibilityLabel={answer.answer}>
           {answer.answer}
@@ -28,15 +30,15 @@ const Answer: React.FC<Props> = (props) => {
 };
 
 const getContainerStyle = (props: Props): any => {
-  const { isCorrect = false, isIncorrect = false } = props;
+  const { isCorrect = false, isIncorrect = false, feedback = false, selected = false } = props;
 
   let container: StyleProp<{}> | [StyleProp<{}>];
   let text: StyleProp<{}> | [StyleProp<{}>];
 
-  if (isCorrect) {
+  if (feedback && isCorrect) {
     container = correctAnswerContainer;
     text = correctAnswerText;
-  } else if (isIncorrect) {
+  } else if (selected && feedback && isIncorrect) {
     container = incorrectAnswerContainer;
     text = incorrectAnswerText;
   } else {

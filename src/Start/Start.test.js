@@ -2,7 +2,7 @@ import React from "react";
 import { render, fireEvent } from "@testing-library/react-native";
 
 import Start from "./Start";
-import { findByTestID, mockNavigationProps } from "../../utils/iaTest";
+import { mockNavigationProps } from "../../utils";
 
 describe("Start", () => {
   it("should render correctly", () => {

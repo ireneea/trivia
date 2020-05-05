@@ -10,8 +10,5 @@ describe("Routes", () => {
     const { getByTestId } = render(<Routes />);
     expect(getByTestId("startScreen")).toBeTruthy();
   });
-
-  it.skip("Navigate Between screen", async () => {
-    // TODO: find a good way to test the navigation
-  });
+  // TODO: find a good way to test the navigation
 });

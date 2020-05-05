@@ -22,8 +22,8 @@ describe("gameMachine", () => {
     expect(service.state.value).toMatchObject({ feedback: "correct" });
     expect(service.state.context).toMatchObject({ rounds: 3, currentRound: 1 });
 
-    // reaches `answering` via `READ_ANSWER_TIME` delay
-    jest.advanceTimersByTime(READ_ANSWER_TIME);
+    // reaches `answering` via `NEXT_ROUND`
+    service.send(gameMachine.events.NEXT_ROUND);
     expect(service.state.value).toBe("answering");
     expect(service.state.context).toMatchObject({ rounds: 3, currentRound: 2 });
 
@@ -32,18 +32,18 @@ describe("gameMachine", () => {
     expect(service.state.value).toMatchObject({ feedback: "incorrect" });
     expect(service.state.context).toMatchObject({ rounds: 3, currentRound: 2 });
 
-    // reaches `answering` via `READ_ANSWER_TIME` delay
-    jest.advanceTimersByTime(READ_ANSWER_TIME);
+    // reaches `answering` via `NEXT_ROUND`
+    service.send(gameMachine.events.NEXT_ROUND);
     expect(service.state.value).toBe("answering");
     expect(service.state.context).toMatchObject({ rounds: 3, currentRound: 3 });
 
     // reaches `feedback.correct` via `ANSWER_TIME` delay
-    jest.advanceTimersByTime(ANSWER_TIME);
+    service.send(gameMachine.events.NO_ANSWER);
     expect(service.state.value).toMatchObject({ feedback: "noAnswer" });
     expect(service.state.context).toMatchObject({ rounds: 3, currentRound: 3 });
 
-    // reaches `gameOver` via `READ_ANSWER_TIME` delay
-    jest.advanceTimersByTime(READ_ANSWER_TIME);
+    // reaches `gameOver` via `NEXT_ROUND`
+    service.send(gameMachine.events.NEXT_ROUND);
     expect(service.state.value).toBe("gameOver");
     expect(service.state.context).toMatchObject({ rounds: 3, currentRound: 3 });
   });

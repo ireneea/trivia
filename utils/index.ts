@@ -1,5 +1,4 @@
-import * as test from "./iaTest";
+import * as iaTestModule from "./test-utils/iaTest";
 
-export default {
-  test,
-};
+export const mockNavigationProps = iaTestModule.mockNavigationProps;
+export const mockRouteParamsProps = iaTestModule.mockRouteParamsProps;

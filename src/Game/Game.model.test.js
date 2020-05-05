@@ -5,11 +5,11 @@ import { createModel } from "@xstate/test";
 import { render, fireEvent, act } from "@testing-library/react-native";
 import _set from "lodash/set";
 
-import { mockNavigationProps, mockRouteParamsProps } from "../../utils/iaTest";
+import { mockNavigationProps, mockRouteParamsProps } from "../../utils";
 
-import Game from "./Game";
+import Game, { READ_ANSWER_TIME, ANSWER_TIME } from "./Game";
 import { correctAnswerContainer, incorrectAnswerContainer } from "./Answer";
-import gameMachine, { ANSWER_TIME, READ_ANSWER_TIME } from "./gameMachine";
+import gameMachine from "./gameMachine";
 
 jest.useFakeTimers();
 
@@ -45,14 +45,14 @@ const gameModel = createModel(generateTestMachine()).withEvents({
       fireEvent.press(component.getByLabelText("incorrect"));
     },
   },
-  [`xstate.after(${READ_ANSWER_TIME})#game.feedback`]: {
-    exec: () => {
-      act(() => jest.advanceTimersByTime(READ_ANSWER_TIME));
-    },
-  },
-  [`xstate.after(${ANSWER_TIME})#game.answering`]: {
+  [gameMachine.events.NO_ANSWER]: {
     exec: () => {
       act(() => jest.advanceTimersByTime(ANSWER_TIME));
+    },
+  },
+  [gameMachine.events.NEXT_ROUND]: {
+    exec: () => {
+      act(() => jest.advanceTimersByTime(READ_ANSWER_TIME));
     },
   },
 });
@@ -160,6 +160,16 @@ const expectAnswer = (component) => ({
 
 describe("Game MDT", () => {
   const testPlans = gameModel.getSimplePathPlans();
+  // const testPlans = gameModel.getShortestPathPlans();
+  // const plan = testPlans[5];
+  // const path = plan.paths[0];
+
+  // it(`${plan.description} ${path.description}`, async () => {
+  //   const props = mockNavigationProps(mockRouteParamsProps({ game: fakeGame }));
+  //   const component = render(<Game {...props} />);
+
+  //   await path.test({ props, component, expectAnswer: expectAnswer(component) });
+  // });
 
   testPlans.forEach((plan) => {
     describe(plan.description, () => {

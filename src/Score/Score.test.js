@@ -2,7 +2,7 @@ import React from "react";
 import { render, fireEvent } from "@testing-library/react-native";
 
 import Score from "./Score";
-import { mockNavigationProps } from "../../utils/iaTest";
+import { mockNavigationProps } from "../../utils";
 
 describe("Score", () => {
   it("render Score correctly", () => {

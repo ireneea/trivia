@@ -104,7 +104,8 @@ const useCountdown = () => {
   const [onCountdownEnd, setOnCountdownEnd] = React.useState(() => () => {});
 
   const canTick = state.isRunning && !state.isPaused;
-  useInterval(() => dispatch({ type: TICK }), canTick ? COUNTDOWN_DELAY : 0);
+  const tick = React.useCallback(() => dispatch({ type: TICK }), []);
+  useInterval(tick, canTick ? COUNTDOWN_DELAY : 0);
 
   const start = React.useCallback(({ time, onTick, onEnd }: StartProp) => {
     if (time > 0) {

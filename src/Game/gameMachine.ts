@@ -1,13 +1,12 @@
 import { Machine, MachineConfig, assign } from "xstate";
 
-export const READ_ANSWER_TIME = 500;
-export const ANSWER_TIME = 2000;
-
 export const events = {
   START: "START",
   ANSWER: "ANSWER",
   CORRECT_ANSWER: "CORRECT_ANSWER",
   INCORRECT_ANSWER: "INCORRECT_ANSWER",
+  NO_ANSWER: "NO_ANSWER",
+  NEXT_ROUND: "NEXT_ROUND",
   QUIT: "QUIT",
 };
 
@@ -36,16 +35,12 @@ const config: MachineConfig<any, any, any> = {
       on: {
         [events.CORRECT_ANSWER]: "feedback.correct",
         [events.INCORRECT_ANSWER]: "feedback.incorrect",
-      },
-      after: {
-        [ANSWER_TIME]: {
-          target: "feedback.noAnswer",
-        },
+        [events.NO_ANSWER]: "feedback.noAnswer",
       },
     },
     feedback: {
-      after: {
-        [READ_ANSWER_TIME]: [
+      on: {
+        [events.NEXT_ROUND]: [
           {
             target: "answering",
             cond: "isNotLastRound",

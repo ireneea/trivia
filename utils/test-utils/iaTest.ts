@@ -1,5 +1,3 @@
-import { ReactTestInstance } from "react-test-renderer";
-
 export function mockNavigationProps(props: Object = {}): Object {
   return {
     navigation: {
@@ -10,10 +8,7 @@ export function mockNavigationProps(props: Object = {}): Object {
   };
 }
 
-export function mockRouteParamsProps(
-  params: Object,
-  props: Object = {}
-): Object {
+export function mockRouteParamsProps(params: Object, props: Object = {}): Object {
   return {
     route: {
       params,

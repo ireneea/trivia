@@ -16,6 +16,9 @@ import Answer from "./Answer";
 import Question from "./Question";
 import useCountdown from "./hooks/useCountdown";
 
+export const READ_ANSWER_TIME = 200;
+export const ANSWER_TIME = 500;
+
 type Props = {
   navigation: StackNavigationProp<RoutesStackParamList, "Game">;
   route: RouteProp<RoutesStackParamList, "Game">;
@@ -23,11 +26,26 @@ type Props = {
 
 const Game: React.FC<Props> = (props) => {
   const game = props?.route?.params?.game;
+  // const game = {
+  //   questions: [
+  //     {
+  //       text: "Question 1?",
+  //       correctAnswer: "correct",
+  //       choices: [{ answer: "fake1" }, { answer: "incorrect" }, { answer: "correct" }, { answer: "fake2" }],
+  //     },
+  //     {
+  //       text: "Question 2?",
+  //       correctAnswer: "correct",
+  //       choices: [{ answer: "incorrect" }, { answer: "fake3" }, { answer: "fake4" }, { answer: "correct" }],
+  //     },
+  //   ],
+  // };
 
   const [gameState, sendGameEvent] = useMachine(
     gameMachine.machine.withContext({ rounds: game?.questions.length || 0, currentRound: 0 }),
     gameMachine.options
   );
+  const countdown = useCountdown();
   const [selectedAnswer, setSelectedAnswer] = React.useState((): AnswerType | undefined => undefined);
 
   React.useEffect(() => {
@@ -35,8 +53,24 @@ const Game: React.FC<Props> = (props) => {
   }, []);
 
   React.useEffect(() => {
+    countdown.pause();
     if (isGameOver()) {
       quit();
+    } else if (isAnswering() && gameState.changed) {
+      countdown.start({
+        time: ANSWER_TIME,
+        onEnd: () => {
+          setSelectedAnswer(undefined);
+          sendGameEvent(gameMachine.events.NO_ANSWER);
+        },
+      });
+    } else if (isFeedback() && gameState.changed) {
+      countdown.start({
+        time: READ_ANSWER_TIME,
+        onEnd: () => {
+          sendGameEvent(gameMachine.events.NEXT_ROUND);
+        },
+      });
     }
   }, [gameState.value]);
 
@@ -49,9 +83,7 @@ const Game: React.FC<Props> = (props) => {
 
   const isPlaying = () => isAnswering() || isFeedback();
   const isAnswering = () => gameState.matches("answering");
-  const hasAnswered = () => isFeedback() && !hasNotAnswered();
   const isFeedback = () => gameState.matches("feedback");
-  const hasNotAnswered = () => gameState.matches("feedback.noAnswer");
   const isGameOver = () => gameState.matches("gameOver");
 
   const getCurrentQuestion = (): QuestionType | undefined => {
@@ -104,8 +136,10 @@ const Game: React.FC<Props> = (props) => {
           <Answer
             key={answer.answer}
             answer={answer}
-            isCorrect={isFeedback() && isAnswerCorrect(answer)}
-            isIncorrect={isFeedback() && hasAnswered() && isSelectedAnswer(answer) && isAnswerIncorrect(answer)}
+            selected={isSelectedAnswer(answer)}
+            isCorrect={isAnswerCorrect(answer)}
+            isIncorrect={isAnswerIncorrect(answer)}
+            feedback={isFeedback()}
             onSelect={() => onAnswer(answer)}
           />
         ))}
