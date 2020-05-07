@@ -27,26 +27,26 @@ type Props = {
 };
 
 const Game: React.FC<Props> = (props) => {
-  // const game = props?.route?.params?.game;
-  const game = {
-    questions: [
-      {
-        text: "Kampala is the capital of?",
-        correctAnswer: "Uganda",
-        choices: [{ answer: "Kenya" }, { answer: "Bhutan" }, { answer: "Uganda" }, { answer: "Rwanda" }],
-      },
-      {
-        text: "Mogadishu is the capital of?",
-        correctAnswer: "Somalia",
-        choices: [{ answer: "Somalia" }, { answer: "Azerbaijan" }, { answer: "Angola" }, { answer: "Djibouti" }],
-      },
-      {
-        text: "Nairobi is the capital of?",
-        correctAnswer: "Kenya",
-        choices: [{ answer: "Ethiopia" }, { answer: "Kenya" }, { answer: "Sudan" }, { answer: "Togo" }],
-      },
-    ],
-  };
+  const game = props?.route?.params?.game;
+  // const game = {
+  //   questions: [
+  //     {
+  //       text: "Kampala is the capital of?",
+  //       correctAnswer: "Uganda",
+  //       choices: [{ answer: "Kenya" }, { answer: "Bhutan" }, { answer: "Uganda" }, { answer: "Rwanda" }],
+  //     },
+  //     {
+  //       text: "Mogadishu is the capital of?",
+  //       correctAnswer: "Somalia",
+  //       choices: [{ answer: "Somalia" }, { answer: "Azerbaijan" }, { answer: "Angola" }, { answer: "Djibouti" }],
+  //     },
+  //     {
+  //       text: "Nairobi is the capital of?",
+  //       correctAnswer: "Kenya",
+  //       choices: [{ answer: "Ethiopia" }, { answer: "Kenya" }, { answer: "Sudan" }, { answer: "Togo" }],
+  //     },
+  //   ],
+  // };
 
   const [gameState, sendGameEvent] = useMachine(
     gameMachine.machine.withContext({ rounds: game?.questions.length || 0, currentRound: 0 }),
