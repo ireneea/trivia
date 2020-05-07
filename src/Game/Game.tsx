@@ -15,6 +15,7 @@ import gameMachine from "./gameMachine";
 import Answer from "./Answer";
 import Question from "./Question";
 import OverlayTimer from "./OverlayTimer";
+import Rounds from "./Rounds";
 import useCountdown from "./hooks/useCountdown";
 
 export const READ_ANSWER_TIME = 1000;
@@ -38,6 +39,11 @@ const Game: React.FC<Props> = (props) => {
   //       text: "Mogadishu is the capital of?",
   //       correctAnswer: "Somalia",
   //       choices: [{ answer: "Somalia" }, { answer: "Azerbaijan" }, { answer: "Angola" }, { answer: "Djibouti" }],
+  //     },
+  //     {
+  //       text: "Nairobi is the capital of?",
+  //       correctAnswer: "Kenya",
+  //       choices: [{ answer: "Ethiopia" }, { answer: "Kenya" }, { answer: "Sudan" }, { answer: "Togo" }],
   //     },
   //   ],
   // };
@@ -152,6 +158,9 @@ const Game: React.FC<Props> = (props) => {
             onSelect={() => onAnswer(answer)}
           />
         ))}
+        <View style={{ height: 20, marginTop: 10 }}>
+          <Rounds currentRound={gameState.context.currentRound} rounds={gameState.context.rounds} />
+        </View>
       </View>
     </View>
   );
