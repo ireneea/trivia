@@ -175,6 +175,28 @@ describe("useCountdown", () => {
     expect(mockFunction).toHaveBeenCalledTimes(11);
   });
 
+  it("should call onTick with custom tick delay", () => {
+    const mockFunction = jest.fn();
+    const { result } = renderHook(() => useCountdown(500));
+    expect(mockFunction).toHaveBeenCalledTimes(0);
+
+    act(() => result.current.start({ time: 1000, onTick: mockFunction }));
+    expect(mockFunction).toHaveBeenCalledTimes(1);
+
+    act(() => jest.advanceTimersByTime(100));
+    expect(mockFunction).toHaveBeenCalledTimes(1);
+
+    act(() => jest.advanceTimersByTime(500));
+    expect(mockFunction).toHaveBeenCalledTimes(2);
+
+    act(() => jest.advanceTimersByTime(400));
+    expect(mockFunction).toHaveBeenCalledTimes(3);
+
+    //FIXME: find out why thou counter has ticked 4 times here
+    // act(() => jest.advanceTimersByTime(500));
+    // expect(mockFunction).toHaveBeenCalledTimes(3);
+  });
+
   it("should call onEnd", () => {
     const mockFunction = jest.fn();
     const { result } = renderHook(() => useCountdown());

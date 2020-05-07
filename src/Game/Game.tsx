@@ -14,10 +14,11 @@ import gameMachine from "./gameMachine";
 
 import Answer from "./Answer";
 import Question from "./Question";
+import OverlayTimer from "./OverlayTimer";
 import useCountdown from "./hooks/useCountdown";
 
-export const READ_ANSWER_TIME = 200;
-export const ANSWER_TIME = 500;
+export const READ_ANSWER_TIME = 1000;
+export const ANSWER_TIME = 5000;
 
 type Props = {
   navigation: StackNavigationProp<RoutesStackParamList, "Game">;
@@ -47,10 +48,17 @@ const Game: React.FC<Props> = (props) => {
   );
   const countdown = useCountdown();
   const [selectedAnswer, setSelectedAnswer] = React.useState((): AnswerType | undefined => undefined);
+  const [timeLeft, setTimeLeft] = React.useState(() => ANSWER_TIME);
 
   React.useEffect(() => {
     sendGameEvent(gameMachine.events.START);
   }, []);
+
+  React.useEffect(() => {
+    if (isAnswering()) {
+      setTimeLeft(countdown.timeLeft);
+    }
+  }, [countdown.timeLeft]);
 
   React.useEffect(() => {
     countdown.pause();
@@ -130,6 +138,7 @@ const Game: React.FC<Props> = (props) => {
       </View>
       <View style={{ flex: 3 }}>
         <Question question={currentQuestion} />
+        <OverlayTimer timeLeft={isPlaying() ? timeLeft : ANSWER_TIME} totalTime={ANSWER_TIME} />
       </View>
       <View style={{ flex: 2 }}>
         {currentQuestion?.choices.map((answer: AnswerType) => (

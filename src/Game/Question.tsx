@@ -10,6 +10,7 @@ type Props = {
 
 const Question: React.FC<Props & AccessibilityProps> = ({ question }) => {
   const text = question?.text;
+
   return (
     <View testID="question" style={styles.questionContainer}>
       <Text style={styles.questionText} accessibilityLabel={text}>
@@ -21,7 +22,7 @@ const Question: React.FC<Props & AccessibilityProps> = ({ question }) => {
 
 const styles = StyleSheet.create({
   questionContainer: StyleSheet.flatten([globalStyles.centredContainer, { alignItems: "flex-start" }]),
-  questionText: StyleSheet.flatten([fontSize.l]),
+  questionText: StyleSheet.flatten([fontSize.l, { paddingHorizontal: 15 }]),
 });
 
 export default Question;
