@@ -27,26 +27,26 @@ type Props = {
 };
 
 const Game: React.FC<Props> = (props) => {
-  const game = props?.route?.params?.game;
-  // const game = {
-  //   questions: [
-  //     {
-  //       text: "Kampala is the capital of?",
-  //       correctAnswer: "Uganda",
-  //       choices: [{ answer: "Kenya" }, { answer: "Bhutan" }, { answer: "Uganda" }, { answer: "Rwanda" }],
-  //     },
-  //     {
-  //       text: "Mogadishu is the capital of?",
-  //       correctAnswer: "Somalia",
-  //       choices: [{ answer: "Somalia" }, { answer: "Azerbaijan" }, { answer: "Angola" }, { answer: "Djibouti" }],
-  //     },
-  //     {
-  //       text: "Nairobi is the capital of?",
-  //       correctAnswer: "Kenya",
-  //       choices: [{ answer: "Ethiopia" }, { answer: "Kenya" }, { answer: "Sudan" }, { answer: "Togo" }],
-  //     },
-  //   ],
-  // };
+  // const game = props?.route?.params?.game;
+  const game = {
+    questions: [
+      {
+        text: "Kampala is the capital of?",
+        correctAnswer: "Uganda",
+        choices: [{ answer: "Kenya" }, { answer: "Bhutan" }, { answer: "Uganda" }, { answer: "Rwanda" }],
+      },
+      {
+        text: "Mogadishu is the capital of?",
+        correctAnswer: "Somalia",
+        choices: [{ answer: "Somalia" }, { answer: "Azerbaijan" }, { answer: "Angola" }, { answer: "Djibouti" }],
+      },
+      {
+        text: "Nairobi is the capital of?",
+        correctAnswer: "Kenya",
+        choices: [{ answer: "Ethiopia" }, { answer: "Kenya" }, { answer: "Sudan" }, { answer: "Togo" }],
+      },
+    ],
+  };
 
   const [gameState, sendGameEvent] = useMachine(
     gameMachine.machine.withContext({ rounds: game?.questions.length || 0, currentRound: 0 }),
@@ -137,16 +137,19 @@ const Game: React.FC<Props> = (props) => {
 
   return (
     <View testID="gameScreen" style={styles.gameContainer}>
-      <View style={styles.closeBtnContainer}>
-        <TouchableWithoutFeedback testID="endGameBtn" onPress={quit} accessibilityLabel="End Game">
-          <MaterialCommunityIcons style={{ marginLeft: 8 }} name="close" size={29} color="grey" />
-        </TouchableWithoutFeedback>
-      </View>
       <View style={{ flex: 3 }}>
-        <Question question={currentQuestion} />
         <OverlayTimer timeLeft={isPlaying() ? timeLeft : ANSWER_TIME} totalTime={ANSWER_TIME} />
+        <View style={styles.closeBtnContainer}>
+          <TouchableWithoutFeedback testID="endGameBtn" onPress={quit} accessibilityLabel="End Game">
+            <MaterialCommunityIcons style={{ marginLeft: 8 }} name="close" size={18} color="grey" />
+          </TouchableWithoutFeedback>
+        </View>
+        <View style={{ padding: 30, flex: 1 }}>
+          <Question question={currentQuestion} />
+        </View>
       </View>
-      <View style={{ flex: 2 }}>
+
+      <View style={{ flex: 2, paddingHorizontal: 30 }}>
         {currentQuestion?.choices.map((answer: AnswerType) => (
           <Answer
             key={answer.answer}
@@ -167,8 +170,8 @@ const Game: React.FC<Props> = (props) => {
 };
 
 const styles = StyleSheet.create({
-  gameContainer: StyleSheet.flatten([globalStyles.container, { padding: 30 }]),
-  closeBtnContainer: { marginTop: 20, height: 30 },
+  gameContainer: StyleSheet.flatten([globalStyles.container, { padding: 0 }]),
+  closeBtnContainer: { marginTop: 50, height: 30 },
 });
 
 export default Game;
