@@ -1,7 +1,8 @@
 import React from "react";
 import { render, fireEvent, act } from "@testing-library/react-native";
+import "@testing-library/jest-native/extend-expect";
 
-import Game, { READ_ANSWER_TIME, ANSWER_TIME } from "./Game";
+import Game, { READ_ANSWER_TIME, ANSWER_TIME, ANSWER_BONUS_TIME_LIMIT } from "./Game";
 import { correctAnswerContainer, incorrectAnswerContainer } from "./Answer";
 
 import { mockNavigationProps, mockRouteParamsProps } from "../../utils";
@@ -29,6 +30,7 @@ describe("Game", () => {
   it("should have valid timers", () => {
     expect(ANSWER_TIME).toBeGreaterThan(0);
     expect(READ_ANSWER_TIME).toBeGreaterThan(0);
+    expect(ANSWER_BONUS_TIME_LIMIT).toBeGreaterThan(0);
   });
 
   it("navigate to Score", () => {
@@ -59,9 +61,6 @@ describe("Game", () => {
   describe("answer questions", () => {
     // OPTIMIZE: these tests rely on the internal logic of selecting a stylesheet
     // this is far from ideal, but unfortunately I couldn't come up with a better solution
-
-    const getCorrectAnswer = (question) => question.choices.find(({ answer }) => answer === question.correctAnswer);
-    const getIncorrectAnswer = (question) => question.choices.find(({ answer }) => answer !== question.correctAnswer);
 
     function expectAnswerToBeCorrect(component, answer) {
       const { getByTestId } = component;
@@ -194,4 +193,68 @@ describe("Game", () => {
       expect(props.navigation.navigate).toHaveBeenCalledWith("Score");
     });
   });
+
+  describe("scoring", () => {
+    it("should be 0 by default", () => {
+      const component = render(<Game {...mockRouteParamsProps({ game })} />);
+      expect(component.getByHintText("score")).toHaveTextContent("0");
+    });
+
+    it("should add 100 points for non bonus questions", () => {
+      const component = render(<Game {...mockRouteParamsProps({ game })} />);
+      const [firstQuestion] = game.questions;
+
+      act(() => jest.advanceTimersByTime(ANSWER_BONUS_TIME_LIMIT));
+      fireEvent.press(component.getByLabelText(getCorrectAnswer(firstQuestion).answer));
+      expect(component.getByHintText("score")).toHaveTextContent("100");
+    });
+
+    it("should add bonus point for quick answer", () => {
+      const component = render(<Game {...mockRouteParamsProps({ game })} />);
+      const [firstQuestion] = game.questions;
+
+      fireEvent.press(component.getByLabelText(getCorrectAnswer(firstQuestion).answer));
+      const bonus = Math.round(ANSWER_BONUS_TIME_LIMIT / 100) + 100;
+      expect(component.getByHintText("score")).toHaveTextContent(`${bonus}`);
+    });
+
+    it("should not add points if the question is incorrect", () => {
+      const component = render(<Game {...mockRouteParamsProps({ game })} />);
+      const [firstQuestion] = game.questions;
+
+      fireEvent.press(component.getByLabelText(getIncorrectAnswer(firstQuestion).answer));
+      expect(component.getByHintText("score")).toHaveTextContent("0");
+    });
+
+    it("should not add points if the there is a time out", () => {
+      const component = render(<Game {...mockRouteParamsProps({ game })} />);
+      const [firstQuestion] = game.questions;
+
+      act(() => jest.advanceTimersByTime(ANSWER_TIME));
+      fireEvent.press(component.getByLabelText(getIncorrectAnswer(firstQuestion).answer));
+      expect(component.getByHintText("score")).toHaveTextContent("0");
+    });
+
+    it("score should be incremented", () => {
+      const component = render(<Game {...mockRouteParamsProps({ game })} />);
+      const [firstQuestion, secondQuestion] = game.questions;
+
+      // initial score
+      expect(component.getByHintText("score")).toHaveTextContent("0");
+
+      // no bonus score
+      act(() => jest.advanceTimersByTime(ANSWER_BONUS_TIME_LIMIT));
+      fireEvent.press(component.getByLabelText(getCorrectAnswer(firstQuestion).answer));
+      expect(component.getByHintText("score")).toHaveTextContent("100");
+
+      // bonus questions
+      act(() => jest.advanceTimersByTime(READ_ANSWER_TIME));
+      fireEvent.press(component.getByLabelText(getCorrectAnswer(secondQuestion).answer));
+      const bonus = Math.round(ANSWER_BONUS_TIME_LIMIT / 100) + 200;
+      expect(component.getByHintText("score")).toHaveTextContent(`${bonus}`);
+    });
+  });
 });
+
+const getCorrectAnswer = (question) => question.choices.find(({ answer }) => answer === question.correctAnswer);
+const getIncorrectAnswer = (question) => question.choices.find(({ answer }) => answer !== question.correctAnswer);

@@ -22,7 +22,10 @@ const Question: React.FC<Props & AccessibilityProps> = ({ question }) => {
 
 const styles = StyleSheet.create({
   questionContainer: StyleSheet.flatten([globalStyles.centredContainer, { alignItems: "flex-start" }]),
-  questionText: StyleSheet.flatten([fontSize.l, { paddingHorizontal: 15 }]),
+  questionText: StyleSheet.flatten([
+    fontSize.xxxl,
+    { paddingHorizontal: 15, textAlign: "center", color: "#5e5e5e", width: "100%" },
+  ]),
 });
 
 export default Question;

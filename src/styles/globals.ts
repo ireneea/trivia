@@ -19,4 +19,6 @@ export const fontSize = StyleSheet.create({
   m: { fontSize: 16 },
   l: { fontSize: 20 },
   xl: { fontSize: 25 },
+  xxl: { fontSize: 31 },
+  xxxl: { fontSize: 39 },
 });

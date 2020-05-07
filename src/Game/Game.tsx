@@ -1,7 +1,7 @@
 import React from "react";
 import { useMachine } from "@xstate/react";
 
-import { View, TouchableWithoutFeedback, StyleSheet } from "react-native";
+import { View, TouchableWithoutFeedback, StyleSheet, Text } from "react-native";
 
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RouteProp } from "@react-navigation/native";
@@ -20,6 +20,7 @@ import useCountdown from "./hooks/useCountdown";
 
 export const READ_ANSWER_TIME = 1000;
 export const ANSWER_TIME = 5000;
+export const ANSWER_BONUS_TIME_LIMIT = 3000;
 
 type Props = {
   navigation: StackNavigationProp<RoutesStackParamList, "Game">;
@@ -49,7 +50,7 @@ const Game: React.FC<Props> = (props) => {
   // };
 
   const [gameState, sendGameEvent] = useMachine(
-    gameMachine.machine.withContext({ rounds: game?.questions.length || 0, currentRound: 0 }),
+    gameMachine.machine.withContext({ rounds: game?.questions.length || 0, currentRound: 0, score: 0 }),
     gameMachine.options
   );
   const countdown = useCountdown();
@@ -112,7 +113,13 @@ const Game: React.FC<Props> = (props) => {
 
   const onAnswer = (answer: AnswerType) => {
     if (isAnswerCorrect(answer)) {
-      sendGameEvent(gameMachine.events.CORRECT_ANSWER);
+      let bonus = 0;
+      if (countdown.timeSpent < ANSWER_BONUS_TIME_LIMIT) {
+        bonus = (ANSWER_BONUS_TIME_LIMIT - countdown.timeSpent) / 100;
+      }
+      const points = Math.round(100 + bonus);
+
+      sendGameEvent(gameMachine.events.CORRECT_ANSWER, { points });
     } else {
       sendGameEvent(gameMachine.events.INCORRECT_ANSWER);
     }
@@ -139,12 +146,13 @@ const Game: React.FC<Props> = (props) => {
     <View testID="gameScreen" style={styles.gameContainer}>
       <View style={{ flex: 3 }}>
         <OverlayTimer timeLeft={isPlaying() ? timeLeft : ANSWER_TIME} totalTime={ANSWER_TIME} />
-        <View style={styles.closeBtnContainer}>
+        <View style={styles.gameStatusContainer}>
+          <Text accessibilityHint="score">{gameState.context.score}</Text>
           <TouchableWithoutFeedback testID="endGameBtn" onPress={quit} accessibilityLabel="End Game">
-            <MaterialCommunityIcons style={{ marginLeft: 8 }} name="close" size={18} color="grey" />
+            <MaterialCommunityIcons style={{ marginLeft: 8 }} name="close" size={18} color="rgba(0, 0, 0, 0.2)" />
           </TouchableWithoutFeedback>
         </View>
-        <View style={{ padding: 30, flex: 1 }}>
+        <View style={{ flex: 1, paddingHorizontal: 30 }}>
           <Question question={currentQuestion} />
         </View>
       </View>
@@ -171,7 +179,13 @@ const Game: React.FC<Props> = (props) => {
 
 const styles = StyleSheet.create({
   gameContainer: StyleSheet.flatten([globalStyles.container, { padding: 0 }]),
-  closeBtnContainer: { marginTop: 50, height: 30 },
+  gameStatusContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 50,
+    height: 30,
+    paddingHorizontal: 30,
+  },
 });
 
 export default Game;

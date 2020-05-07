@@ -16,6 +16,7 @@ const config: MachineConfig<any, any, any> = {
   context: {
     rounds: 0,
     currentRound: 0,
+    score: 0,
   },
   on: {
     [events.QUIT]: ".gameOver",
@@ -28,7 +29,6 @@ const config: MachineConfig<any, any, any> = {
           cond: "isGameValid",
         },
       },
-      meta: { test: async () => {} },
     },
     answering: {
       entry: "onQuestionStart",
@@ -52,7 +52,9 @@ const config: MachineConfig<any, any, any> = {
         ],
       },
       states: {
-        correct: {},
+        correct: {
+          entry: "onCorrectAnswer",
+        },
         incorrect: {},
         noAnswer: {},
       },
@@ -81,6 +83,12 @@ const guards = {
 const actions = {
   onQuestionStart: assign({
     currentRound: (ctx) => ctx.currentRound + 1,
+  }),
+  onCorrectAnswer: assign({
+    score: (ctx, event) => {
+      const points = event?.points || 0;
+      return ctx.score + points;
+    },
   }),
 };
 
