@@ -50,7 +50,7 @@ const Game: React.FC<Props> = (props) => {
   // };
 
   const [gameState, sendGameEvent] = useMachine(
-    gameMachine.machine.withContext({ rounds: game?.questions.length || 0, currentRound: 0, score: 0 }),
+    gameMachine.machine.withContext({ rounds: game?.questions.length || 0, currentRound: 0, score: 0, results: {} }),
     gameMachine.options
   );
   const countdown = useCountdown();
@@ -170,7 +170,11 @@ const Game: React.FC<Props> = (props) => {
           />
         ))}
         <View style={{ height: 20, marginTop: 10 }}>
-          <Rounds currentRound={gameState.context.currentRound} rounds={gameState.context.rounds} />
+          <Rounds
+            currentRound={gameState.context.currentRound}
+            rounds={gameState.context.rounds}
+            results={gameState.context.results}
+          />
         </View>
       </View>
     </View>

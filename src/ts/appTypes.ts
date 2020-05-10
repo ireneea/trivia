@@ -2,6 +2,12 @@ export type GameType = {
   questions: QuestionType[];
 };
 
+export enum AnswerResult {
+  CORRECT = "correct",
+  INCORRECT = "incorrect",
+  NO_ANSWER = "noAnswer",
+}
+
 export type QuestionType = {
   text: string;
   correctAnswer: string;
