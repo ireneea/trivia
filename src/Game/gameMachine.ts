@@ -17,6 +17,7 @@ const config: MachineConfig<any, any, any> = {
     rounds: 0,
     currentRound: 0,
     score: 0,
+    results: {},
   },
   on: {
     [events.QUIT]: ".gameOver",
@@ -55,8 +56,12 @@ const config: MachineConfig<any, any, any> = {
         correct: {
           entry: "onCorrectAnswer",
         },
-        incorrect: {},
-        noAnswer: {},
+        incorrect: {
+          entry: "onIncorrectAnswer",
+        },
+        noAnswer: {
+          entry: "onNoAnswer",
+        },
       },
     },
     gameOver: {
@@ -88,6 +93,28 @@ const actions = {
     score: (ctx, event) => {
       const points = event?.points || 0;
       return ctx.score + points;
+    },
+    results: (ctx, event) => {
+      return {
+        ...ctx.results,
+        [ctx.currentRound]: "correct",
+      };
+    },
+  }),
+  onIncorrectAnswer: assign({
+    results: (ctx, event) => {
+      return {
+        ...ctx.results,
+        [ctx.currentRound]: "incorrect",
+      };
+    },
+  }),
+  onNoAnswer: assign({
+    results: (ctx, event) => {
+      return {
+        ...ctx.results,
+        [ctx.currentRound]: "noAnswer",
+      };
     },
   }),
 };

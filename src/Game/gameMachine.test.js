@@ -3,7 +3,9 @@ import gameMachine from "./gameMachine";
 
 describe("gameMachine", () => {
   it(`reaches gameOver using all feedback states`, () => {
-    const validMachine = gameMachine.machine.withContext({ rounds: 4, currentRound: 0, score: 0 });
+    const initialContext = { rounds: 4, currentRound: 0, score: 0, results: {} };
+    let expectedContext = { ...initialContext };
+    const validMachine = gameMachine.machine.withContext(initialContext);
     const service = interpret(validMachine);
 
     // initial state
@@ -13,47 +15,57 @@ describe("gameMachine", () => {
     // reaches `answering` via `START`
     service.send(gameMachine.events.START);
     expect(service.state.value).toBe("answering");
-    expect(service.state.context).toMatchObject({ rounds: 4, currentRound: 1, score: 0 });
+    expectedContext.currentRound = 1;
+    expectContextToMatch(service, expectedContext);
 
     // reaches `feedback.correct` via `CORRECT_ANSWER
     service.send(gameMachine.events.CORRECT_ANSWER, { points: 100 });
     expect(service.state.value).toMatchObject({ feedback: "correct" });
-    expect(service.state.context).toMatchObject({ rounds: 4, currentRound: 1, score: 100 });
+    expectedContext.score = 100;
+    expectedContext.results = { "1": "correct" };
+    expectContextToMatch(service, expectedContext);
 
     // reaches `answering` via `NEXT_ROUND`
     service.send(gameMachine.events.NEXT_ROUND);
     expect(service.state.value).toBe("answering");
-    expect(service.state.context).toMatchObject({ rounds: 4, currentRound: 2, score: 100 });
+    expectedContext.currentRound = 2;
+    expectContextToMatch(service, expectedContext);
 
     // reaches `feedback.correct` via `INCORRECT_ANSWER
     service.send(gameMachine.events.INCORRECT_ANSWER);
     expect(service.state.value).toMatchObject({ feedback: "incorrect" });
-    expect(service.state.context).toMatchObject({ rounds: 4, currentRound: 2, score: 100 });
+    expectedContext.results["2"] = "incorrect";
+    expectContextToMatch(service, expectedContext);
 
     // reaches `answering` via `NEXT_ROUND`
     service.send(gameMachine.events.NEXT_ROUND);
     expect(service.state.value).toBe("answering");
-    expect(service.state.context).toMatchObject({ rounds: 4, currentRound: 3, score: 100 });
+    expectedContext.currentRound = 3;
+    expectContextToMatch(service, expectedContext);
 
     // reaches `feedback.correct` via `ANSWER_TIME` delay
     service.send(gameMachine.events.NO_ANSWER);
     expect(service.state.value).toMatchObject({ feedback: "noAnswer" });
-    expect(service.state.context).toMatchObject({ rounds: 4, currentRound: 3, score: 100 });
+    expectedContext.results["3"] = "noAnswer";
+    expectContextToMatch(service, expectedContext);
 
     // reaches `answering` via `NEXT_ROUND`
     service.send(gameMachine.events.NEXT_ROUND);
     expect(service.state.value).toBe("answering");
-    expect(service.state.context).toMatchObject({ rounds: 4, currentRound: 4, score: 100 });
+    expectedContext.currentRound = 4;
+    expectContextToMatch(service, expectedContext);
 
     // reaches `feedback.correct` via `CORRECT_ANSWER
     service.send(gameMachine.events.CORRECT_ANSWER, { points: 113 });
     expect(service.state.value).toMatchObject({ feedback: "correct" });
-    expect(service.state.context).toMatchObject({ rounds: 4, currentRound: 4, score: 213 });
+    expectedContext.score = 213;
+    expectedContext.results["4"] = "correct";
+    expectContextToMatch(service, expectedContext);
 
     // reaches `gameOver` via `NEXT_ROUND`
     service.send(gameMachine.events.NEXT_ROUND);
     expect(service.state.value).toBe("gameOver");
-    expect(service.state.context).toMatchObject({ rounds: 4, currentRound: 4, score: 213 });
+    expectContextToMatch(service, expectedContext);
   });
 
   it("does not start invalid game", () => {
@@ -66,3 +78,7 @@ describe("gameMachine", () => {
     expect(service.state.value).toBe("idling");
   });
 });
+
+const expectContextToMatch = (service, expectedContext) => {
+  expect(service.state.context).toMatchObject(expectedContext);
+};
