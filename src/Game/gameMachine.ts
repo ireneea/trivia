@@ -32,7 +32,7 @@ const config: MachineConfig<any, any, any> = {
       },
     },
     answering: {
-      entry: "onQuestionStart",
+      entry: "incrementRoundNumber",
       on: {
         [events.CORRECT_ANSWER]: "feedback.correct",
         [events.INCORRECT_ANSWER]: "feedback.incorrect",
@@ -54,13 +54,13 @@ const config: MachineConfig<any, any, any> = {
       },
       states: {
         correct: {
-          entry: "onCorrectAnswer",
+          entry: ["addScore", "setCorrectRoundResult"],
         },
         incorrect: {
-          entry: "onIncorrectAnswer",
+          entry: "setIncorrectRoundResult",
         },
         noAnswer: {
-          entry: "onNoAnswer",
+          entry: "setNoAnswerRoundResult",
         },
       },
     },
@@ -86,37 +86,31 @@ const guards = {
 };
 
 const actions = {
-  onQuestionStart: assign({
+  incrementRoundNumber: assign({
     currentRound: (ctx) => ctx.currentRound + 1,
   }),
-  onCorrectAnswer: assign({
+  addScore: assign({
     score: (ctx, event) => {
       const points = event?.points || 0;
       return ctx.score + points;
     },
-    results: (ctx, event) => {
-      return {
-        ...ctx.results,
-        [ctx.currentRound]: "correct",
-      };
-    },
   }),
-  onIncorrectAnswer: assign({
-    results: (ctx, event) => {
-      return {
-        ...ctx.results,
-        [ctx.currentRound]: "incorrect",
-      };
-    },
+  setCorrectRoundResult: assign({
+    results: (ctx) => setCurrentRoundResult(ctx, "correct"),
   }),
-  onNoAnswer: assign({
-    results: (ctx, event) => {
-      return {
-        ...ctx.results,
-        [ctx.currentRound]: "noAnswer",
-      };
-    },
+  setIncorrectRoundResult: assign({
+    results: (ctx) => setCurrentRoundResult(ctx, "incorrect"),
   }),
+  setNoAnswerRoundResult: assign({
+    results: (ctx) => setCurrentRoundResult(ctx, "noAnswer"),
+  }),
+};
+
+const setCurrentRoundResult = (ctx, result) => {
+  return {
+    ...ctx.results,
+    [ctx.currentRound]: result,
+  };
 };
 
 export default {
