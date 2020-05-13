@@ -2,6 +2,8 @@ export type GameType = {
   questions: QuestionType[];
 };
 
+export type GameResults = Record<string, AnswerResult>;
+
 export enum AnswerResult {
   CORRECT = "correct",
   INCORRECT = "incorrect",
@@ -22,5 +24,5 @@ export type RoutesStackParamList = {
   Start: undefined;
   // NOTES: might want to make the game parameter required
   Game: { game: GameType } | undefined;
-  Score: undefined;
+  Score: { points: number; results: GameResults };
 };
