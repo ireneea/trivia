@@ -8,7 +8,7 @@ import { RouteProp } from "@react-navigation/native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import { globalStyles } from "../styles/globals";
-import { AnswerType, RoutesStackParamList, QuestionType } from "../ts/appTypes";
+import { AnswerType, RoutesStackParamList, QuestionType, AnswerResult } from "../ts/appTypes";
 
 import gameMachine from "./gameMachine";
 
@@ -29,25 +29,6 @@ type Props = {
 
 const Game: React.FC<Props> = (props) => {
   const game = props?.route?.params?.game;
-  // const game = {
-  //   questions: [
-  //     {
-  //       text: "Kampala is the capital of?",
-  //       correctAnswer: "Uganda",
-  //       choices: [{ answer: "Kenya" }, { answer: "Bhutan" }, { answer: "Uganda" }, { answer: "Rwanda" }],
-  //     },
-  //     {
-  //       text: "Mogadishu is the capital of?",
-  //       correctAnswer: "Somalia",
-  //       choices: [{ answer: "Somalia" }, { answer: "Azerbaijan" }, { answer: "Angola" }, { answer: "Djibouti" }],
-  //     },
-  //     {
-  //       text: "Nairobi is the capital of?",
-  //       correctAnswer: "Kenya",
-  //       choices: [{ answer: "Ethiopia" }, { answer: "Kenya" }, { answer: "Sudan" }, { answer: "Togo" }],
-  //     },
-  //   ],
-  // };
 
   const [gameState, sendGameEvent] = useMachine(
     gameMachine.machine.withContext({ rounds: game?.questions.length || 0, currentRound: 0, score: 0, results: {} }),
@@ -93,7 +74,10 @@ const Game: React.FC<Props> = (props) => {
     if (!isGameOver()) {
       sendGameEvent(gameMachine.events.QUIT);
     }
-    props?.navigation?.navigate("Score");
+    props?.navigation?.navigate("Score", {
+      points: gameState.context.score,
+      results: gameState.context.results,
+    });
   };
 
   const isPlaying = () => isAnswering() || isFeedback();

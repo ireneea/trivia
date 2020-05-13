@@ -6,6 +6,7 @@ import Game, { READ_ANSWER_TIME, ANSWER_TIME, ANSWER_BONUS_TIME_LIMIT } from "./
 import { correctAnswerContainer, incorrectAnswerContainer } from "./Answer";
 
 import { mockNavigationProps, mockRouteParamsProps } from "../../utils";
+import { AnswerResult } from "../ts/appTypes";
 
 const game = {
   questions: [
@@ -39,7 +40,7 @@ describe("Game", () => {
     const { getByLabelText } = render(<Game {...props} />);
     fireEvent.press(getByLabelText("End Game"));
 
-    expect(props.navigation.navigate).toHaveBeenCalledWith("Score");
+    expect(props.navigation.navigate).toHaveBeenCalledWith("Score", { points: 0, results: {} });
   });
 
   it("render first question", () => {
@@ -187,10 +188,14 @@ describe("Game", () => {
       fireEvent.press(component.getByLabelText(getCorrectAnswer(first).answer));
       act(() => jest.advanceTimersByTime(READ_ANSWER_TIME));
 
-      fireEvent.press(component.getByLabelText(getCorrectAnswer(last).answer));
+      fireEvent.press(component.getByLabelText(getIncorrectAnswer(last).answer));
       act(() => jest.advanceTimersByTime(READ_ANSWER_TIME));
 
-      expect(props.navigation.navigate).toHaveBeenCalledWith("Score");
+      const gameStats = {
+        points: 130,
+        results: { "1": AnswerResult.CORRECT, "2": AnswerResult.INCORRECT },
+      };
+      expect(props.navigation.navigate).toHaveBeenCalledWith("Score", gameStats);
     });
   });
 
