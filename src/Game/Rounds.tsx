@@ -1,13 +1,13 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { View } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 
-import { AnswerResult } from "../ts/appTypes";
+import { AnswerResult, GameResults } from "../ts/appTypes";
 
 type Prop = {
   rounds: number;
   currentRound: number;
-  results: Record<string, AnswerResult>;
+  results: GameResults;
 };
 
 enum RoundType {
@@ -66,7 +66,7 @@ const Rounds: React.FC<Prop> = (props) => {
 
 const Current = () => <FontAwesome testID="current" name="circle" size={12} color="rgba(0, 0, 0, 0.1)" />;
 const Inactive = () => <FontAwesome testID="inactive" name="circle-o" size={12} color="rgba(0, 0, 0, 0.1)" />;
-const Success = () => <FontAwesome testID="success" name="circle-o" size={12} color="rgba(0, 0, 0, 0.1)" />;
-const Fail = () => <FontAwesome testID="fail" name="circle-o" size={12} color="rgba(0, 0, 0, 0.1)" />;
+const Success = () => <FontAwesome testID="success" name="circle" size={12} color="green" />;
+const Fail = () => <FontAwesome testID="fail" name="times" size={12} color="red" />;
 
 export default Rounds;

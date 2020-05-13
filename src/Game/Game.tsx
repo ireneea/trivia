@@ -128,7 +128,7 @@ const Game: React.FC<Props> = (props) => {
 
   return (
     <View testID="gameScreen" style={styles.gameContainer}>
-      <View style={{ flex: 3 }}>
+      <View style={{ flex: 2 }}>
         <OverlayTimer timeLeft={isPlaying() ? timeLeft : ANSWER_TIME} totalTime={ANSWER_TIME} />
         <View style={styles.gameStatusContainer}>
           <Text accessibilityHint="score">{gameState.context.score}</Text>
@@ -153,7 +153,7 @@ const Game: React.FC<Props> = (props) => {
             onSelect={() => onAnswer(answer)}
           />
         ))}
-        <View style={{ height: 20, marginTop: 10 }}>
+        <View style={{ height: 20, marginTop: 10, marginBottom: 50 }}>
           <Rounds
             currentRound={gameState.context.currentRound}
             rounds={gameState.context.rounds}
