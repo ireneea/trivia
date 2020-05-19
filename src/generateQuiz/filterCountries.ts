@@ -1,8 +1,19 @@
 import _isNumber from "lodash/isNumber";
 
-export function filterCountries(countries, filters = {}) {
+import { Country } from "../ts/appTypes";
+
+type Filters = {
+  regions?: number[];
+  withFlag?: boolean;
+  withPopulation?: boolean;
+  withSurface?: boolean;
+  withCapital?: boolean;
+  independent?: boolean;
+};
+
+export function filterCountries(countries: Country[], filters: Filters = {}) {
   const {
-    regions = undefined,
+    regions = [],
     withFlag = false,
     withPopulation = false,
     withSurface = false,
@@ -10,32 +21,47 @@ export function filterCountries(countries, filters = {}) {
     independent = false,
   } = filters;
 
-  const matchIndependent = (country) => independent !== true || country.independent === true;
-  const matchFlag = (country) => withFlag !== true || country.hasFlagFile === true;
-  const matchPopulation = (country) => withPopulation !== true || isPositiveNumber(country.population);
-  const matchSurface = (country) => withSurface !== true || isPositiveNumber(country.surface);
-  const matchCapital = (country) => withCapital !== true || !!country.capitalCity;
-
   return countries.filter((country) => {
     let include =
-      // !!country.name &&
-      matchIndependent(country) &&
-      countryMatchesRegion(country, regions) &&
-      matchFlag(country) &&
-      matchPopulation(country) &&
-      matchSurface(country) &&
-      matchCapital(country);
+      isValidCountry(country) &&
+      matchIndependent(country, independent) &&
+      matchRegions(country, regions) &&
+      matchFlag(country, withFlag) &&
+      matchPopulation(country, withPopulation) &&
+      matchSurface(country, withSurface) &&
+      matchCapital(country, withCapital);
 
     return include;
   });
 }
 
-function countryMatchesRegion(country, regions) {
+function isValidCountry(country?: Country): boolean {
+  return !!country && !!country.name;
+}
+
+function matchIndependent(country: Country, independent: boolean): boolean {
+  return independent !== true || country.independent === true;
+}
+
+function matchRegions(country: Country, regions: number[]): boolean {
   let match = true;
   if (Array.isArray(regions) && regions.length > 0 && Array.isArray(country.regions)) {
-    match = country.regions.find((r) => regions.includes(r.geoAreaCode));
+    match = !!country.regions.find((r) => regions.includes(r.geoAreaCode));
   }
   return match;
+}
+
+function matchFlag(country: Country, withFlag: boolean): boolean {
+  return withFlag !== true || country.hasFlagFile === true;
+}
+function matchPopulation(country: Country, withPopulation: boolean): boolean {
+  return withPopulation !== true || isPositiveNumber(country.population);
+}
+function matchSurface(country: Country, withSurface: boolean): boolean {
+  return withSurface !== true || isPositiveNumber(country.surface);
+}
+function matchCapital(country: Country, withCapital: boolean): boolean {
+  return withCapital !== true || !!country.capitalCity;
 }
 
 function isPositiveNumber(number: any): boolean {

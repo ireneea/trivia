@@ -220,6 +220,25 @@ describe("filterCountries", () => {
     expect(filtered).toContainEqual(_sample(countries));
   });
 
+  it("should not include invalid countries", () => {
+    const invalidCountry = {
+      m49Code: "2",
+      iso2Code: "BB",
+      iso3Code: "BBB",
+      regions: [{ geoAreaCode: 100, geoAreaName: "100" }],
+      capitalCity: "bbbb",
+      population: 50000000,
+      surface: 600000,
+      independent: true,
+      hasFlagFile: true,
+    };
+
+    const filtered = filterCountries([...countries, invalidCountry]);
+
+    expect(filtered).toHaveLength(countries.length);
+    expect(filtered).not.toContainEqual(invalidCountry);
+  });
+
   it("filter by one region", () => {
     const country = countries[0]; // we know that the first country has the region 100
     const filtered = filterCountries(countries, { regions: [100] });
