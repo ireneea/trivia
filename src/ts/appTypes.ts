@@ -26,3 +26,23 @@ export type RoutesStackParamList = {
   Game: { game: GameType } | undefined;
   Score: { points: number; results: GameResults };
 };
+
+export type Region = {
+  geoAreaCode: number;
+  geoAreaName: string;
+};
+
+export type Country = {
+  name: string;
+  m49Code: string;
+  iso2Code: string;
+  iso3Code: string;
+  regions: Region[];
+  capitalCity: string;
+  population: number;
+  populationYear: string;
+  surface: number;
+  surfaceYear: string;
+  independent: boolean;
+  hasFlagFile: boolean;
+};
