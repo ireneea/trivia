@@ -46,3 +46,12 @@ export type Country = {
   independent: boolean;
   hasFlagFile: boolean;
 };
+
+export type CountryFilters = {
+  regions?: number[];
+  withFlag?: boolean;
+  withPopulation?: boolean;
+  withSurface?: boolean;
+  withCapital?: boolean;
+  independent?: boolean;
+};

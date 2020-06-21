@@ -1,17 +1,8 @@
 import _isNumber from "lodash/isNumber";
 
-import { Country } from "../ts/appTypes";
+import { Country, CountryFilters } from "../ts/appTypes";
 
-type Filters = {
-  regions?: number[];
-  withFlag?: boolean;
-  withPopulation?: boolean;
-  withSurface?: boolean;
-  withCapital?: boolean;
-  independent?: boolean;
-};
-
-export function filterCountries(countries: Country[], filters: Filters = {}) {
+export function filterCountries(countries: Country[], filters: CountryFilters = {}) {
   const {
     regions = [],
     withFlag = false,

@@ -206,7 +206,7 @@ describe("filterCountries", () => {
     expect(filtered).toContainEqual(_sample(countries));
   });
 
-  it("should return all countries filters are empty", () => {
+  it("should return all countries when filters are empty", () => {
     const filtered = filterCountries(countries, {
       regions: [],
       withFlag: false,
@@ -221,6 +221,7 @@ describe("filterCountries", () => {
   });
 
   it("should not include invalid countries", () => {
+    // a country without a name is considered invalid
     const invalidCountry = {
       m49Code: "2",
       iso2Code: "BB",
