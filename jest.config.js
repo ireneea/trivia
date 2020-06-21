@@ -15,4 +15,5 @@ module.exports = Object.assign(expoPreset, jestPreset, {
     "!**/babel.config.js",
     "!**/jest.setup.js",
   ],
+  setupFilesAfterEnv: ["jest-extended"],
 });

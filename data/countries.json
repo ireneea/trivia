@@ -1,0 +1,4482 @@
+[
+  {
+    "name": "Afghanistan",
+    "m49Code": "4",
+    "iso2Code": "AF",
+    "iso3Code": "AFG",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 34, "geoAreaName": "Southern Asia" }
+    ],
+    "capitalCity": "Kabul",
+    "population": 29185507,
+    "populationYear": "2010",
+    "surface": 652860,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Albania",
+    "m49Code": "8",
+    "iso2Code": "AL",
+    "iso3Code": "ALB",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 39, "geoAreaName": "Southern Europe" }
+    ],
+    "capitalCity": "Tirane",
+    "population": 2913021,
+    "populationYear": "2010",
+    "surface": 28750,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "10",
+    "iso2Code": "AQ",
+    "iso3Code": "ATA",
+    "regions": [{ "geoAreaCode": 1, "geoAreaName": "World" }],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Algeria",
+    "m49Code": "12",
+    "iso2Code": "DZ",
+    "iso3Code": "DZA",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 15, "geoAreaName": "Northern Africa" }
+    ],
+    "capitalCity": "Algiers",
+    "population": 35977455,
+    "populationYear": "2010",
+    "surface": 2381740,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "American Samoa",
+    "m49Code": "16",
+    "iso2Code": "AS",
+    "iso3Code": "ASM",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 61, "geoAreaName": "Polynesia" }
+    ],
+    "capitalCity": "Pago Pago",
+    "population": 56079,
+    "populationYear": "2010",
+    "surface": 200,
+    "surfaceYear": "2010",
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Andorra",
+    "m49Code": "20",
+    "iso2Code": "AD",
+    "iso3Code": "AND",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 39, "geoAreaName": "Southern Europe" }
+    ],
+    "capitalCity": "Andorra la Vella",
+    "population": 84449,
+    "populationYear": "2010",
+    "surface": 470,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Angola",
+    "m49Code": "24",
+    "iso2Code": "AO",
+    "iso3Code": "AGO",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 17, "geoAreaName": "Middle Africa" }
+    ],
+    "capitalCity": "Luanda",
+    "population": 23356246,
+    "populationYear": "2010",
+    "surface": 1246700,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Antigua and Barbuda",
+    "m49Code": "28",
+    "iso2Code": "AG",
+    "iso3Code": "ATG",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "capitalCity": "Saint John's",
+    "population": 88028,
+    "populationYear": "2010",
+    "surface": 440,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Azerbaijan",
+    "m49Code": "31",
+    "iso2Code": "AZ",
+    "iso3Code": "AZE",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 145, "geoAreaName": "Western Asia" }
+    ],
+    "capitalCity": "Baku",
+    "population": 9054332,
+    "populationYear": "2010",
+    "surface": 86600,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Argentina",
+    "m49Code": "32",
+    "iso2Code": "AR",
+    "iso3Code": "ARG",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 5, "geoAreaName": "South America" }
+    ],
+    "capitalCity": "Buenos Aires",
+    "population": 40788453,
+    "populationYear": "2010",
+    "surface": 2780400,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Australia",
+    "m49Code": "36",
+    "iso2Code": "AU",
+    "iso3Code": "AUS",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 53, "geoAreaName": "Australia and New Zealand" }
+    ],
+    "capitalCity": "Canberra",
+    "population": 22031750,
+    "populationYear": "2010",
+    "surface": 7741220,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Austria",
+    "m49Code": "40",
+    "iso2Code": "AT",
+    "iso3Code": "AUT",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 155, "geoAreaName": "Western Europe" }
+    ],
+    "capitalCity": "Vienna",
+    "population": 8363404,
+    "populationYear": "2010",
+    "surface": 83879.00390625,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Bahamas",
+    "m49Code": "44",
+    "iso2Code": "BS",
+    "iso3Code": "BHS",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "capitalCity": "Nassau",
+    "population": 354942,
+    "populationYear": "2010",
+    "surface": 13880,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Bahrain",
+    "m49Code": "48",
+    "iso2Code": "BH",
+    "iso3Code": "BHR",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 145, "geoAreaName": "Western Asia" }
+    ],
+    "capitalCity": "Manama",
+    "population": 1240860,
+    "populationYear": "2010",
+    "surface": 761.999969482422,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Bangladesh",
+    "m49Code": "50",
+    "iso2Code": "BD",
+    "iso3Code": "BGD",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 34, "geoAreaName": "Southern Asia" }
+    ],
+    "capitalCity": "Dhaka",
+    "population": 147575430,
+    "populationYear": "2010",
+    "surface": 148460,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Armenia",
+    "m49Code": "51",
+    "iso2Code": "AM",
+    "iso3Code": "ARM",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 145, "geoAreaName": "Western Asia" }
+    ],
+    "capitalCity": "Yerevan",
+    "population": 2877319,
+    "populationYear": "2010",
+    "surface": 29740,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Barbados",
+    "m49Code": "52",
+    "iso2Code": "BB",
+    "iso3Code": "BRB",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "capitalCity": "Bridgetown",
+    "population": 282131,
+    "populationYear": "2010",
+    "surface": 430,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Belgium",
+    "m49Code": "56",
+    "iso2Code": "BE",
+    "iso3Code": "BEL",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 155, "geoAreaName": "Western Europe" }
+    ],
+    "capitalCity": "Brussels",
+    "population": 10895586,
+    "populationYear": "2010",
+    "surface": 30530,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Bermuda",
+    "m49Code": "60",
+    "iso2Code": "BM",
+    "iso3Code": "BMU",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 21, "geoAreaName": "Northern America" }
+    ],
+    "capitalCity": "Hamilton",
+    "population": 65124,
+    "populationYear": "2010",
+    "surface": 54.0000009536743,
+    "surfaceYear": "2010",
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Bhutan",
+    "m49Code": "64",
+    "iso2Code": "BT",
+    "iso3Code": "BTN",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 34, "geoAreaName": "Southern Asia" }
+    ],
+    "capitalCity": "Thimphu",
+    "population": 685503,
+    "populationYear": "2010",
+    "surface": 38393.9990234375,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Bolivia",
+    "m49Code": "68",
+    "iso2Code": "BO",
+    "iso3Code": "BOL",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 5, "geoAreaName": "South America" }
+    ],
+    "capitalCity": "La Paz",
+    "population": 10048590,
+    "populationYear": "2010",
+    "surface": 1098580,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Bosnia and Herzegovina",
+    "m49Code": "70",
+    "iso2Code": "BA",
+    "iso3Code": "BIH",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 39, "geoAreaName": "Southern Europe" }
+    ],
+    "capitalCity": "Sarajevo",
+    "population": 3705472,
+    "populationYear": "2010",
+    "surface": 51210,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Botswana",
+    "m49Code": "72",
+    "iso2Code": "BW",
+    "iso3Code": "BWA",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 18, "geoAreaName": "Southern Africa" }
+    ],
+    "capitalCity": "Gaborone",
+    "population": 1987105,
+    "populationYear": "2010",
+    "surface": 581730,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "74",
+    "iso2Code": "BV",
+    "iso3Code": "BVT",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 5, "geoAreaName": "South America" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Brazil",
+    "m49Code": "76",
+    "iso2Code": "BR",
+    "iso3Code": "BRA",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 5, "geoAreaName": "South America" }
+    ],
+    "capitalCity": "Brasilia",
+    "population": 195713635,
+    "populationYear": "2010",
+    "surface": 8515770,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Belize",
+    "m49Code": "84",
+    "iso2Code": "BZ",
+    "iso3Code": "BLZ",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 13, "geoAreaName": "Central America" }
+    ],
+    "capitalCity": "Belmopan",
+    "population": 322464,
+    "populationYear": "2010",
+    "surface": 22970,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "86",
+    "iso2Code": "IO",
+    "iso3Code": "IOT",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 14, "geoAreaName": "Eastern Africa" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Solomon Islands",
+    "m49Code": "90",
+    "iso2Code": "SB",
+    "iso3Code": "SLB",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 54, "geoAreaName": "Melanesia" }
+    ],
+    "capitalCity": "Honiara",
+    "population": 527861,
+    "populationYear": "2010",
+    "surface": 28900,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "British Virgin Islands",
+    "m49Code": "92",
+    "iso2Code": "VG",
+    "iso3Code": "VGB",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "capitalCity": "Road Town",
+    "population": 27794,
+    "populationYear": "2010",
+    "surface": 150,
+    "surfaceYear": "2010",
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Brunei Darussalam",
+    "m49Code": "96",
+    "iso2Code": "BN",
+    "iso3Code": "BRN",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 35, "geoAreaName": "South-Eastern Asia" }
+    ],
+    "capitalCity": "Bandar Seri Begawan",
+    "population": 388646,
+    "populationYear": "2010",
+    "surface": 5770,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Bulgaria",
+    "m49Code": "100",
+    "iso2Code": "BG",
+    "iso3Code": "BGR",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 151, "geoAreaName": "Eastern Europe" }
+    ],
+    "capitalCity": "Sofia",
+    "population": 7395599,
+    "populationYear": "2010",
+    "surface": 111000,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Myanmar",
+    "m49Code": "104",
+    "iso2Code": "MM",
+    "iso3Code": "MMR",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 35, "geoAreaName": "South-Eastern Asia" }
+    ],
+    "capitalCity": "Naypyidaw",
+    "population": 50600818,
+    "populationYear": "2010",
+    "surface": 676590,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Burundi",
+    "m49Code": "108",
+    "iso2Code": "BI",
+    "iso3Code": "BDI",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 14, "geoAreaName": "Eastern Africa" }
+    ],
+    "capitalCity": "Bujumbura",
+    "population": 8675602,
+    "populationYear": "2010",
+    "surface": 27830,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Belarus",
+    "m49Code": "112",
+    "iso2Code": "BY",
+    "iso3Code": "BLR",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 151, "geoAreaName": "Eastern Europe" }
+    ],
+    "capitalCity": "Minsk",
+    "population": 9490583,
+    "populationYear": "2010",
+    "surface": 207600,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Cambodia",
+    "m49Code": "116",
+    "iso2Code": "KH",
+    "iso3Code": "KHM",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 35, "geoAreaName": "South-Eastern Asia" }
+    ],
+    "capitalCity": "Phnom Penh",
+    "population": 14312212,
+    "populationYear": "2010",
+    "surface": 181040,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Cameroon",
+    "m49Code": "120",
+    "iso2Code": "CM",
+    "iso3Code": "CMR",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 17, "geoAreaName": "Middle Africa" }
+    ],
+    "capitalCity": "Yaounde",
+    "population": 20341241,
+    "populationYear": "2010",
+    "surface": 475440,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Canada",
+    "m49Code": "124",
+    "iso2Code": "CA",
+    "iso3Code": "CAN",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 21, "geoAreaName": "Northern America" }
+    ],
+    "capitalCity": "Ottawa",
+    "population": 34004889,
+    "populationYear": "2010",
+    "surface": 9984670,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Cabo Verde",
+    "m49Code": "132",
+    "iso2Code": "CV",
+    "iso3Code": "CPV",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 11, "geoAreaName": "Western Africa" }
+    ],
+    "capitalCity": "Praia",
+    "population": 492654,
+    "populationYear": "2010",
+    "surface": 4030,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Cayman Islands",
+    "m49Code": "136",
+    "iso2Code": "KY",
+    "iso3Code": "CYM",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "capitalCity": "George Town",
+    "population": 56672,
+    "populationYear": "2010",
+    "surface": 263.999996185303,
+    "surfaceYear": "2010",
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Central African Republic",
+    "m49Code": "140",
+    "iso2Code": "CF",
+    "iso3Code": "CAF",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 17, "geoAreaName": "Middle Africa" }
+    ],
+    "capitalCity": "Bangui",
+    "population": 4386768,
+    "populationYear": "2010",
+    "surface": 622980,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Sri Lanka",
+    "m49Code": "144",
+    "iso2Code": "LK",
+    "iso3Code": "LKA",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 34, "geoAreaName": "Southern Asia" }
+    ],
+    "capitalCity": "Colombo",
+    "population": 20261737,
+    "populationYear": "2010",
+    "surface": 65610,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Chad",
+    "m49Code": "148",
+    "iso2Code": "TD",
+    "iso3Code": "TCD",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 17, "geoAreaName": "Middle Africa" }
+    ],
+    "capitalCity": "N'Djamena",
+    "population": 11952136,
+    "populationYear": "2010",
+    "surface": 1284000,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Chile",
+    "m49Code": "152",
+    "iso2Code": "CL",
+    "iso3Code": "CHL",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 5, "geoAreaName": "South America" }
+    ],
+    "capitalCity": "Santiago",
+    "population": 17062536,
+    "populationYear": "2010",
+    "surface": 756096.015625,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "China",
+    "m49Code": "156",
+    "iso2Code": "CN",
+    "iso3Code": "CHN",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 30, "geoAreaName": "Eastern Asia" }
+    ],
+    "capitalCity": "Beijing",
+    "population": 1337705000,
+    "populationYear": "2010",
+    "surface": 9562911.25,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Taiwan, China",
+    "m49Code": "158",
+    "iso2Code": "TW",
+    "iso3Code": "TWN",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 30, "geoAreaName": "Eastern Asia" }
+    ],
+    "capitalCity": "",
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "162",
+    "iso2Code": "CX",
+    "iso3Code": "CXR",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 53, "geoAreaName": "Australia and New Zealand" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "166",
+    "iso2Code": "CC",
+    "iso3Code": "CCK",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 53, "geoAreaName": "Australia and New Zealand" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Colombia",
+    "m49Code": "170",
+    "iso2Code": "CO",
+    "iso3Code": "COL",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 5, "geoAreaName": "South America" }
+    ],
+    "capitalCity": "Bogota",
+    "population": 45222700,
+    "populationYear": "2010",
+    "surface": 1141750,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Comoros",
+    "m49Code": "174",
+    "iso2Code": "KM",
+    "iso3Code": "COM",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 14, "geoAreaName": "Eastern Africa" }
+    ],
+    "capitalCity": "Moroni",
+    "population": 689692,
+    "populationYear": "2010",
+    "surface": 1861.00006103516,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "175",
+    "iso2Code": "YT",
+    "iso3Code": "MYT",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 14, "geoAreaName": "Eastern Africa" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Congo, Rep.",
+    "m49Code": "178",
+    "iso2Code": "CG",
+    "iso3Code": "COG",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 11, "geoAreaName": "Western Africa" }
+    ],
+    "capitalCity": "Brazzaville",
+    "population": 4273731,
+    "populationYear": "2010",
+    "surface": 342000,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Congo, Dem. Rep.",
+    "m49Code": "180",
+    "iso2Code": "CD",
+    "iso3Code": "COD",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 17, "geoAreaName": "Middle Africa" }
+    ],
+    "capitalCity": "Kinshasa",
+    "population": 64563854,
+    "populationYear": "2010",
+    "surface": 2344860,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "184",
+    "iso2Code": "CK",
+    "iso3Code": "COK",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 61, "geoAreaName": "Polynesia" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Costa Rica",
+    "m49Code": "188",
+    "iso2Code": "CR",
+    "iso3Code": "CRI",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 13, "geoAreaName": "Central America" }
+    ],
+    "capitalCity": "San Jose",
+    "population": 4577378,
+    "populationYear": "2010",
+    "surface": 51100,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Croatia",
+    "m49Code": "191",
+    "iso2Code": "HR",
+    "iso3Code": "HRV",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 39, "geoAreaName": "Southern Europe" }
+    ],
+    "capitalCity": "Zagreb",
+    "population": 4295427,
+    "populationYear": "2010",
+    "surface": 56590,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Cuba",
+    "m49Code": "192",
+    "iso2Code": "CU",
+    "iso3Code": "CUB",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "capitalCity": "Havana",
+    "population": 11225832,
+    "populationYear": "2010",
+    "surface": 109880,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Cyprus",
+    "m49Code": "196",
+    "iso2Code": "CY",
+    "iso3Code": "CYP",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 145, "geoAreaName": "Western Asia" }
+    ],
+    "capitalCity": "Nicosia",
+    "population": 1112612,
+    "populationYear": "2010",
+    "surface": 9250,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Czech Republic",
+    "m49Code": "203",
+    "iso2Code": "CZ",
+    "iso3Code": "CZE",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 151, "geoAreaName": "Eastern Europe" }
+    ],
+    "capitalCity": "Prague",
+    "population": 10474410,
+    "populationYear": "2010",
+    "surface": 78870,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Benin",
+    "m49Code": "204",
+    "iso2Code": "BJ",
+    "iso3Code": "BEN",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 11, "geoAreaName": "Western Africa" }
+    ],
+    "capitalCity": "Porto-Novo",
+    "population": 9199259,
+    "populationYear": "2010",
+    "surface": 114760,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Denmark",
+    "m49Code": "208",
+    "iso2Code": "DK",
+    "iso3Code": "DNK",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 154, "geoAreaName": "Northern Europe" }
+    ],
+    "capitalCity": "Copenhagen",
+    "population": 5547683,
+    "populationYear": "2010",
+    "surface": 43090,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Dominica",
+    "m49Code": "212",
+    "iso2Code": "DM",
+    "iso3Code": "DMA",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "capitalCity": "Roseau",
+    "population": 70878,
+    "populationYear": "2010",
+    "surface": 750,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Dominican Republic",
+    "m49Code": "214",
+    "iso2Code": "DO",
+    "iso3Code": "DOM",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "capitalCity": "Santo Domingo",
+    "population": 9695121,
+    "populationYear": "2010",
+    "surface": 48670,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Ecuador",
+    "m49Code": "218",
+    "iso2Code": "EC",
+    "iso3Code": "ECU",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 5, "geoAreaName": "South America" }
+    ],
+    "capitalCity": "Quito",
+    "population": 15011117,
+    "populationYear": "2010",
+    "surface": 256370,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "El Salvador",
+    "m49Code": "222",
+    "iso2Code": "SV",
+    "iso3Code": "SLV",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 13, "geoAreaName": "Central America" }
+    ],
+    "capitalCity": "San Salvador",
+    "population": 6183875,
+    "populationYear": "2010",
+    "surface": 21040,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Equatorial Guinea",
+    "m49Code": "226",
+    "iso2Code": "GQ",
+    "iso3Code": "GNQ",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 17, "geoAreaName": "Middle Africa" }
+    ],
+    "capitalCity": "Malabo",
+    "population": 943639,
+    "populationYear": "2010",
+    "surface": 28050,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Ethiopia",
+    "m49Code": "231",
+    "iso2Code": "ET",
+    "iso3Code": "ETH",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 14, "geoAreaName": "Eastern Africa" }
+    ],
+    "capitalCity": "Addis Ababa",
+    "population": 87639964,
+    "populationYear": "2010",
+    "surface": 1104300,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Eritrea",
+    "m49Code": "232",
+    "iso2Code": "ER",
+    "iso3Code": "ERI",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 14, "geoAreaName": "Eastern Africa" }
+    ],
+    "capitalCity": "Asmara",
+    "population": 3170435,
+    "populationYear": "2010",
+    "surface": 117600,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Estonia",
+    "m49Code": "233",
+    "iso2Code": "EE",
+    "iso3Code": "EST",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 154, "geoAreaName": "Northern Europe" }
+    ],
+    "capitalCity": "Tallinn",
+    "population": 1331475,
+    "populationYear": "2010",
+    "surface": 45230,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Faroe Islands",
+    "m49Code": "234",
+    "iso2Code": "FO",
+    "iso3Code": "FRO",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 154, "geoAreaName": "Northern Europe" }
+    ],
+    "capitalCity": "Torshavn",
+    "population": 47814,
+    "populationYear": "2010",
+    "surface": 1396.00006103516,
+    "surfaceYear": "2010",
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "238",
+    "iso2Code": "FK",
+    "iso3Code": "FLK",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 5, "geoAreaName": "South America" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "239",
+    "iso2Code": "GS",
+    "iso3Code": "SGS",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 5, "geoAreaName": "South America" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Fiji",
+    "m49Code": "242",
+    "iso2Code": "FJ",
+    "iso3Code": "FJI",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 54, "geoAreaName": "Melanesia" }
+    ],
+    "capitalCity": "Suva",
+    "population": 859818,
+    "populationYear": "2010",
+    "surface": 18270,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Finland",
+    "m49Code": "246",
+    "iso2Code": "FI",
+    "iso3Code": "FIN",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 154, "geoAreaName": "Northern Europe" }
+    ],
+    "capitalCity": "Helsinki",
+    "population": 5363352,
+    "populationYear": "2010",
+    "surface": 338420,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "248",
+    "iso2Code": "AX",
+    "iso3Code": "ALA",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 154, "geoAreaName": "Northern Europe" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "France",
+    "m49Code": "250",
+    "iso2Code": "FR",
+    "iso3Code": "FRA",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 155, "geoAreaName": "Western Europe" }
+    ],
+    "capitalCity": "Paris",
+    "population": 65027507,
+    "populationYear": "2010",
+    "surface": 549086.9921875,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "254",
+    "iso2Code": "GF",
+    "iso3Code": "GUF",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 5, "geoAreaName": "South America" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "French Polynesia",
+    "m49Code": "258",
+    "iso2Code": "PF",
+    "iso3Code": "PYF",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 61, "geoAreaName": "Polynesia" }
+    ],
+    "capitalCity": "Papeete",
+    "population": 266455,
+    "populationYear": "2010",
+    "surface": 4000,
+    "surfaceYear": "2010",
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "260",
+    "iso2Code": "TF",
+    "iso3Code": "ATF",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 14, "geoAreaName": "Eastern Africa" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Djibouti",
+    "m49Code": "262",
+    "iso2Code": "DJ",
+    "iso3Code": "DJI",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 14, "geoAreaName": "Eastern Africa" }
+    ],
+    "capitalCity": "Djibouti",
+    "population": 840198,
+    "populationYear": "2010",
+    "surface": 23200,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Gabon",
+    "m49Code": "266",
+    "iso2Code": "GA",
+    "iso3Code": "GAB",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 17, "geoAreaName": "Middle Africa" }
+    ],
+    "capitalCity": "Libreville",
+    "population": 1624140,
+    "populationYear": "2010",
+    "surface": 267670,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Georgia",
+    "m49Code": "268",
+    "iso2Code": "GE",
+    "iso3Code": "GEO",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 145, "geoAreaName": "Western Asia" }
+    ],
+    "capitalCity": "Tbilisi",
+    "population": 3786695,
+    "populationYear": "2010",
+    "surface": 69700,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Gambia, The",
+    "m49Code": "270",
+    "iso2Code": "GM",
+    "iso3Code": "GMB",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 11, "geoAreaName": "Western Africa" }
+    ],
+    "capitalCity": "Banjul",
+    "population": 1793196,
+    "populationYear": "2010",
+    "surface": 11300,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "West Bank and Gaza",
+    "m49Code": "275",
+    "iso2Code": "PS",
+    "iso3Code": "PSE",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 145, "geoAreaName": "Western Asia" }
+    ],
+    "capitalCity": "",
+    "population": 3786161,
+    "populationYear": "2010",
+    "surface": 6020,
+    "surfaceYear": "2010",
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Germany",
+    "m49Code": "276",
+    "iso2Code": "DE",
+    "iso3Code": "DEU",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 155, "geoAreaName": "Western Europe" }
+    ],
+    "capitalCity": "Berlin",
+    "population": 81776930,
+    "populationYear": "2010",
+    "surface": 357126.9921875,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Ghana",
+    "m49Code": "288",
+    "iso2Code": "GH",
+    "iso3Code": "GHA",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 11, "geoAreaName": "Western Africa" }
+    ],
+    "capitalCity": "Accra",
+    "population": 24779619,
+    "populationYear": "2010",
+    "surface": 238540,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Gibraltar",
+    "m49Code": "292",
+    "iso2Code": "GI",
+    "iso3Code": "GIB",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 39, "geoAreaName": "Southern Europe" }
+    ],
+    "capitalCity": "",
+    "population": 33585,
+    "populationYear": "2010",
+    "surface": 10,
+    "surfaceYear": "2010",
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Kiribati",
+    "m49Code": "296",
+    "iso2Code": "KI",
+    "iso3Code": "KIR",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 57, "geoAreaName": "Micronesia" }
+    ],
+    "capitalCity": "Tarawa",
+    "population": 102927,
+    "populationYear": "2010",
+    "surface": 810,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Greece",
+    "m49Code": "300",
+    "iso2Code": "GR",
+    "iso3Code": "GRC",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 39, "geoAreaName": "Southern Europe" }
+    ],
+    "capitalCity": "Athens",
+    "population": 11121341,
+    "populationYear": "2010",
+    "surface": 131960,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Greenland",
+    "m49Code": "304",
+    "iso2Code": "GL",
+    "iso3Code": "GRL",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 21, "geoAreaName": "Northern America" }
+    ],
+    "capitalCity": "Nuuk",
+    "population": 56905,
+    "populationYear": "2010",
+    "surface": 410450,
+    "surfaceYear": "2010",
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Grenada",
+    "m49Code": "308",
+    "iso2Code": "GD",
+    "iso3Code": "GRD",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "capitalCity": "Saint George's",
+    "population": 106233,
+    "populationYear": "2010",
+    "surface": 340,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "312",
+    "iso2Code": "GP",
+    "iso3Code": "GLP",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Guam",
+    "m49Code": "316",
+    "iso2Code": "GU",
+    "iso3Code": "GUM",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 57, "geoAreaName": "Micronesia" }
+    ],
+    "capitalCity": "Agana",
+    "population": 159444,
+    "populationYear": "2010",
+    "surface": 540,
+    "surfaceYear": "2010",
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Guatemala",
+    "m49Code": "320",
+    "iso2Code": "GT",
+    "iso3Code": "GTM",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 13, "geoAreaName": "Central America" }
+    ],
+    "capitalCity": "Guatemala City",
+    "population": 14630417,
+    "populationYear": "2010",
+    "surface": 108890,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Guinea",
+    "m49Code": "324",
+    "iso2Code": "GN",
+    "iso3Code": "GIN",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 11, "geoAreaName": "Western Africa" }
+    ],
+    "capitalCity": "Conakry",
+    "population": 10192176,
+    "populationYear": "2010",
+    "surface": 245860,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Guyana",
+    "m49Code": "328",
+    "iso2Code": "GY",
+    "iso3Code": "GUY",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 5, "geoAreaName": "South America" }
+    ],
+    "capitalCity": "Georgetown",
+    "population": 749436,
+    "populationYear": "2010",
+    "surface": 214970,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Haiti",
+    "m49Code": "332",
+    "iso2Code": "HT",
+    "iso3Code": "HTI",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "capitalCity": "Port-au-Prince",
+    "population": 9949322,
+    "populationYear": "2010",
+    "surface": 27750,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "334",
+    "iso2Code": "HM",
+    "iso3Code": "HMD",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 53, "geoAreaName": "Australia and New Zealand" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "336",
+    "iso2Code": "VA",
+    "iso3Code": "VAT",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 39, "geoAreaName": "Southern Europe" }
+    ],
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Honduras",
+    "m49Code": "340",
+    "iso2Code": "HN",
+    "iso3Code": "HND",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 13, "geoAreaName": "Central America" }
+    ],
+    "capitalCity": "Tegucigalpa",
+    "population": 8317470,
+    "populationYear": "2010",
+    "surface": 112490,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Hong Kong SAR, China",
+    "m49Code": "344",
+    "iso2Code": "HK",
+    "iso3Code": "HKG",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 30, "geoAreaName": "Eastern Asia" }
+    ],
+    "capitalCity": "",
+    "population": 7024200,
+    "populationYear": "2010",
+    "surface": 1100,
+    "surfaceYear": "2010",
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Hungary",
+    "m49Code": "348",
+    "iso2Code": "HU",
+    "iso3Code": "HUN",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 151, "geoAreaName": "Eastern Europe" }
+    ],
+    "capitalCity": "Budapest",
+    "population": 10000023,
+    "populationYear": "2010",
+    "surface": 93030,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Iceland",
+    "m49Code": "352",
+    "iso2Code": "IS",
+    "iso3Code": "ISL",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 154, "geoAreaName": "Northern Europe" }
+    ],
+    "capitalCity": "Reykjavik",
+    "population": 318041,
+    "populationYear": "2010",
+    "surface": 103000,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "India",
+    "m49Code": "356",
+    "iso2Code": "IN",
+    "iso3Code": "IND",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 34, "geoAreaName": "Southern Asia" }
+    ],
+    "capitalCity": "New Delhi",
+    "population": 1234281170,
+    "populationYear": "2010",
+    "surface": 3287260,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Indonesia",
+    "m49Code": "360",
+    "iso2Code": "ID",
+    "iso3Code": "IDN",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 35, "geoAreaName": "South-Eastern Asia" }
+    ],
+    "capitalCity": "Jakarta",
+    "population": 241834215,
+    "populationYear": "2010",
+    "surface": 1910930,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Iran",
+    "m49Code": "364",
+    "iso2Code": "IR",
+    "iso3Code": "IRN",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 34, "geoAreaName": "Southern Asia" }
+    ],
+    "capitalCity": "Tehran",
+    "population": 73762519,
+    "populationYear": "2010",
+    "surface": 1745150,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Iraq",
+    "m49Code": "368",
+    "iso2Code": "IQ",
+    "iso3Code": "IRQ",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 145, "geoAreaName": "Western Asia" }
+    ],
+    "capitalCity": "Baghdad",
+    "population": 29741976,
+    "populationYear": "2010",
+    "surface": 435240,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Ireland",
+    "m49Code": "372",
+    "iso2Code": "IE",
+    "iso3Code": "IRL",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 154, "geoAreaName": "Northern Europe" }
+    ],
+    "capitalCity": "Dublin",
+    "population": 4560155,
+    "populationYear": "2010",
+    "surface": 70280,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Israel",
+    "m49Code": "376",
+    "iso2Code": "IL",
+    "iso3Code": "ISR",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 145, "geoAreaName": "Western Asia" }
+    ],
+    "capitalCity": "",
+    "population": 7623600,
+    "populationYear": "2010",
+    "surface": 22070,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Italy",
+    "m49Code": "380",
+    "iso2Code": "IT",
+    "iso3Code": "ITA",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 39, "geoAreaName": "Southern Europe" }
+    ],
+    "capitalCity": "Rome",
+    "population": 59277417,
+    "populationYear": "2010",
+    "surface": 301340,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Cote d'Ivoire",
+    "m49Code": "384",
+    "iso2Code": "CI",
+    "iso3Code": "CIV",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 11, "geoAreaName": "Western Africa" }
+    ],
+    "capitalCity": "Yamoussoukro",
+    "population": 20532950,
+    "populationYear": "2010",
+    "surface": 322460,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Jamaica",
+    "m49Code": "388",
+    "iso2Code": "JM",
+    "iso3Code": "JAM",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "capitalCity": "Kingston",
+    "population": 2810460,
+    "populationYear": "2010",
+    "surface": 10990,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Japan",
+    "m49Code": "392",
+    "iso2Code": "JP",
+    "iso3Code": "JPN",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 30, "geoAreaName": "Eastern Asia" }
+    ],
+    "capitalCity": "Tokyo",
+    "population": 128070000,
+    "populationYear": "2010",
+    "surface": 377950,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Kazakhstan",
+    "m49Code": "398",
+    "iso2Code": "KZ",
+    "iso3Code": "KAZ",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 143, "geoAreaName": "Central Asia" }
+    ],
+    "capitalCity": "Astana",
+    "population": 16321872,
+    "populationYear": "2010",
+    "surface": 2724901.875,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Jordan",
+    "m49Code": "400",
+    "iso2Code": "JO",
+    "iso3Code": "JOR",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 145, "geoAreaName": "Western Asia" }
+    ],
+    "capitalCity": "Amman",
+    "population": 7261539,
+    "populationYear": "2010",
+    "surface": 89320,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Kenya",
+    "m49Code": "404",
+    "iso2Code": "KE",
+    "iso3Code": "KEN",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 14, "geoAreaName": "Eastern Africa" }
+    ],
+    "capitalCity": "Nairobi",
+    "population": 42030676,
+    "populationYear": "2010",
+    "surface": 580370,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Korea, Dem. People’s Rep.",
+    "m49Code": "408",
+    "iso2Code": "KP",
+    "iso3Code": "PRK",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 30, "geoAreaName": "Eastern Asia" }
+    ],
+    "capitalCity": "Pyongyang",
+    "population": 24548836,
+    "populationYear": "2010",
+    "surface": 120540,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Korea, Rep.",
+    "m49Code": "410",
+    "iso2Code": "KR",
+    "iso3Code": "KOR",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 30, "geoAreaName": "Eastern Asia" }
+    ],
+    "capitalCity": "Seoul",
+    "population": 49554112,
+    "populationYear": "2010",
+    "surface": 100030,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Kuwait",
+    "m49Code": "414",
+    "iso2Code": "KW",
+    "iso3Code": "KWT",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 145, "geoAreaName": "Western Asia" }
+    ],
+    "capitalCity": "Kuwait City",
+    "population": 2991884,
+    "populationYear": "2010",
+    "surface": 17820,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Kyrgyz Republic",
+    "m49Code": "417",
+    "iso2Code": "KG",
+    "iso3Code": "KGZ",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 143, "geoAreaName": "Central Asia" }
+    ],
+    "capitalCity": "Bishkek",
+    "population": 5447900,
+    "populationYear": "2010",
+    "surface": 199949.00390625,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Lao PDR",
+    "m49Code": "418",
+    "iso2Code": "LA",
+    "iso3Code": "LAO",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 35, "geoAreaName": "South-Eastern Asia" }
+    ],
+    "capitalCity": "Vientiane",
+    "population": 6249165,
+    "populationYear": "2010",
+    "surface": 236800,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Lebanon",
+    "m49Code": "422",
+    "iso2Code": "LB",
+    "iso3Code": "LBN",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 145, "geoAreaName": "Western Asia" }
+    ],
+    "capitalCity": "Beirut",
+    "population": 4953061,
+    "populationYear": "2010",
+    "surface": 10450,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Lesotho",
+    "m49Code": "426",
+    "iso2Code": "LS",
+    "iso3Code": "LSO",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 18, "geoAreaName": "Southern Africa" }
+    ],
+    "capitalCity": "Maseru",
+    "population": 1995581,
+    "populationYear": "2010",
+    "surface": 30360,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Latvia",
+    "m49Code": "428",
+    "iso2Code": "LV",
+    "iso3Code": "LVA",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 154, "geoAreaName": "Northern Europe" }
+    ],
+    "capitalCity": "Riga",
+    "population": 2097555,
+    "populationYear": "2010",
+    "surface": 64510,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Liberia",
+    "m49Code": "430",
+    "iso2Code": "LR",
+    "iso3Code": "LBR",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 11, "geoAreaName": "Western Africa" }
+    ],
+    "capitalCity": "Monrovia",
+    "population": 3891356,
+    "populationYear": "2010",
+    "surface": 111370,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Libya",
+    "m49Code": "434",
+    "iso2Code": "LY",
+    "iso3Code": "LBY",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 15, "geoAreaName": "Northern Africa" }
+    ],
+    "capitalCity": "Tripoli",
+    "population": 6197663,
+    "populationYear": "2010",
+    "surface": 1759540,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Liechtenstein",
+    "m49Code": "438",
+    "iso2Code": "LI",
+    "iso3Code": "LIE",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 155, "geoAreaName": "Western Europe" }
+    ],
+    "capitalCity": "Vaduz",
+    "population": 35994,
+    "populationYear": "2010",
+    "surface": 160,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Lithuania",
+    "m49Code": "440",
+    "iso2Code": "LT",
+    "iso3Code": "LTU",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 154, "geoAreaName": "Northern Europe" }
+    ],
+    "capitalCity": "Vilnius",
+    "population": 3097282,
+    "populationYear": "2010",
+    "surface": 65300,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Luxembourg",
+    "m49Code": "442",
+    "iso2Code": "LU",
+    "iso3Code": "LUX",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 155, "geoAreaName": "Western Europe" }
+    ],
+    "capitalCity": "Luxembourg",
+    "population": 506953,
+    "populationYear": "2010",
+    "surface": 2590,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Macao SAR, China",
+    "m49Code": "446",
+    "iso2Code": "MO",
+    "iso3Code": "MAC",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 30, "geoAreaName": "Eastern Asia" }
+    ],
+    "capitalCity": "",
+    "population": 538219,
+    "populationYear": "2010",
+    "surface": 29.7000002861023,
+    "surfaceYear": "2010",
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Madagascar",
+    "m49Code": "450",
+    "iso2Code": "MG",
+    "iso3Code": "MDG",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 14, "geoAreaName": "Eastern Africa" }
+    ],
+    "capitalCity": "Antananarivo",
+    "population": 21151640,
+    "populationYear": "2010",
+    "surface": 587040,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Malawi",
+    "m49Code": "454",
+    "iso2Code": "MW",
+    "iso3Code": "MWI",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 14, "geoAreaName": "Eastern Africa" }
+    ],
+    "capitalCity": "Lilongwe",
+    "population": 14539612,
+    "populationYear": "2010",
+    "surface": 118480,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Malaysia",
+    "m49Code": "458",
+    "iso2Code": "MY",
+    "iso3Code": "MYS",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 35, "geoAreaName": "South-Eastern Asia" }
+    ],
+    "capitalCity": "Kuala Lumpur",
+    "population": 28208035,
+    "populationYear": "2010",
+    "surface": 330800,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Maldives",
+    "m49Code": "462",
+    "iso2Code": "MV",
+    "iso3Code": "MDV",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 34, "geoAreaName": "Southern Asia" }
+    ],
+    "capitalCity": "Male",
+    "population": 365734,
+    "populationYear": "2010",
+    "surface": 300,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Mali",
+    "m49Code": "466",
+    "iso2Code": "ML",
+    "iso3Code": "MLI",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 11, "geoAreaName": "Western Africa" }
+    ],
+    "capitalCity": "Bamako",
+    "population": 15049353,
+    "populationYear": "2010",
+    "surface": 1240190,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Malta",
+    "m49Code": "470",
+    "iso2Code": "MT",
+    "iso3Code": "MLT",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 39, "geoAreaName": "Southern Europe" }
+    ],
+    "capitalCity": "Valletta",
+    "population": 414508,
+    "populationYear": "2010",
+    "surface": 320,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "474",
+    "iso2Code": "MQ",
+    "iso3Code": "MTQ",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Mauritania",
+    "m49Code": "478",
+    "iso2Code": "MR",
+    "iso3Code": "MRT",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 11, "geoAreaName": "Western Africa" }
+    ],
+    "capitalCity": "Nouakchott",
+    "population": 3494195,
+    "populationYear": "2010",
+    "surface": 1030700,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Mauritius",
+    "m49Code": "480",
+    "iso2Code": "MU",
+    "iso3Code": "MUS",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 14, "geoAreaName": "Eastern Africa" }
+    ],
+    "capitalCity": "Port Louis",
+    "population": 1250400,
+    "populationYear": "2010",
+    "surface": 2040,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Mexico",
+    "m49Code": "484",
+    "iso2Code": "MX",
+    "iso3Code": "MEX",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 13, "geoAreaName": "Central America" }
+    ],
+    "capitalCity": "Mexico City",
+    "population": 114092963,
+    "populationYear": "2010",
+    "surface": 1964380,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Monaco",
+    "m49Code": "492",
+    "iso2Code": "MC",
+    "iso3Code": "MCO",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 155, "geoAreaName": "Western Europe" }
+    ],
+    "capitalCity": "Monaco",
+    "population": 35612,
+    "populationYear": "2010",
+    "surface": 2,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Mongolia",
+    "m49Code": "496",
+    "iso2Code": "MN",
+    "iso3Code": "MNG",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 30, "geoAreaName": "Eastern Asia" }
+    ],
+    "capitalCity": "Ulaanbaatar",
+    "population": 2719896,
+    "populationYear": "2010",
+    "surface": 1564120,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Moldova",
+    "m49Code": "498",
+    "iso2Code": "MD",
+    "iso3Code": "MDA",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 151, "geoAreaName": "Eastern Europe" }
+    ],
+    "capitalCity": "Chisinau",
+    "population": 2861487,
+    "populationYear": "2010",
+    "surface": 33850,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Montenegro",
+    "m49Code": "499",
+    "iso2Code": "ME",
+    "iso3Code": "MNE",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 39, "geoAreaName": "Southern Europe" }
+    ],
+    "capitalCity": "Podgorica",
+    "population": 619428,
+    "populationYear": "2010",
+    "surface": 13810,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "500",
+    "iso2Code": "MS",
+    "iso3Code": "MSR",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Morocco",
+    "m49Code": "504",
+    "iso2Code": "MA",
+    "iso3Code": "MAR",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 15, "geoAreaName": "Northern Africa" }
+    ],
+    "capitalCity": "Rabat",
+    "population": 32343389,
+    "populationYear": "2010",
+    "surface": 446550,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Mozambique",
+    "m49Code": "508",
+    "iso2Code": "MZ",
+    "iso3Code": "MOZ",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 14, "geoAreaName": "Eastern Africa" }
+    ],
+    "capitalCity": "Maputo",
+    "population": 23531574,
+    "populationYear": "2010",
+    "surface": 799380,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Oman",
+    "m49Code": "512",
+    "iso2Code": "OM",
+    "iso3Code": "OMN",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 145, "geoAreaName": "Western Asia" }
+    ],
+    "capitalCity": "Muscat",
+    "population": 3041434,
+    "populationYear": "2010",
+    "surface": 309500,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Namibia",
+    "m49Code": "516",
+    "iso2Code": "NA",
+    "iso3Code": "NAM",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 18, "geoAreaName": "Southern Africa" }
+    ],
+    "capitalCity": "Windhoek",
+    "population": 2118874,
+    "populationYear": "2010",
+    "surface": 824290,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Nauru",
+    "m49Code": "520",
+    "iso2Code": "NR",
+    "iso3Code": "NRU",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 57, "geoAreaName": "Micronesia" }
+    ],
+    "capitalCity": "Yaren District",
+    "population": 10005,
+    "populationYear": "2010",
+    "surface": 20,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Nepal",
+    "m49Code": "524",
+    "iso2Code": "NP",
+    "iso3Code": "NPL",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 34, "geoAreaName": "Southern Asia" }
+    ],
+    "capitalCity": "Kathmandu",
+    "population": 27013212,
+    "populationYear": "2010",
+    "surface": 147180,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Netherlands",
+    "m49Code": "528",
+    "iso2Code": "NL",
+    "iso3Code": "NLD",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 155, "geoAreaName": "Western Europe" }
+    ],
+    "capitalCity": "Amsterdam",
+    "population": 16615394,
+    "populationYear": "2010",
+    "surface": 41540,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Curacao",
+    "m49Code": "531",
+    "iso2Code": "CW",
+    "iso3Code": "CUW",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "capitalCity": "Willemstad",
+    "population": 148703,
+    "populationYear": "2010",
+    "surface": 444,
+    "surfaceYear": "2010",
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Aruba",
+    "m49Code": "533",
+    "iso2Code": "AW",
+    "iso3Code": "ABW",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "capitalCity": "Oranjestad",
+    "population": 101669,
+    "populationYear": "2010",
+    "surface": 180,
+    "surfaceYear": "2010",
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Sint Maarten (Dutch part)",
+    "m49Code": "534",
+    "iso2Code": "SX",
+    "iso3Code": "SXM",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "capitalCity": "Philipsburg",
+    "population": 34056,
+    "populationYear": "2010",
+    "surface": 34,
+    "surfaceYear": "2010",
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "535",
+    "iso2Code": "BQ",
+    "iso3Code": "BES",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "New Caledonia",
+    "m49Code": "540",
+    "iso2Code": "NC",
+    "iso3Code": "NCL",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 54, "geoAreaName": "Melanesia" }
+    ],
+    "capitalCity": "Noum'ea",
+    "population": 249750,
+    "populationYear": "2010",
+    "surface": 18580,
+    "surfaceYear": "2010",
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Vanuatu",
+    "m49Code": "548",
+    "iso2Code": "VU",
+    "iso3Code": "VUT",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 54, "geoAreaName": "Melanesia" }
+    ],
+    "capitalCity": "Port-Vila",
+    "population": 236211,
+    "populationYear": "2010",
+    "surface": 12190,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "New Zealand",
+    "m49Code": "554",
+    "iso2Code": "NZ",
+    "iso3Code": "NZL",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 53, "geoAreaName": "Australia and New Zealand" }
+    ],
+    "capitalCity": "Wellington",
+    "population": 4350700,
+    "populationYear": "2010",
+    "surface": 267710,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Nicaragua",
+    "m49Code": "558",
+    "iso2Code": "NI",
+    "iso3Code": "NIC",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 13, "geoAreaName": "Central America" }
+    ],
+    "capitalCity": "Managua",
+    "population": 5824065,
+    "populationYear": "2010",
+    "surface": 130370,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Niger",
+    "m49Code": "562",
+    "iso2Code": "NE",
+    "iso3Code": "NER",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 11, "geoAreaName": "Western Africa" }
+    ],
+    "capitalCity": "Niamey",
+    "population": 16464025,
+    "populationYear": "2010",
+    "surface": 1267000,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Nigeria",
+    "m49Code": "566",
+    "iso2Code": "NG",
+    "iso3Code": "NGA",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 11, "geoAreaName": "Western Africa" }
+    ],
+    "capitalCity": "Abuja",
+    "population": 158503197,
+    "populationYear": "2010",
+    "surface": 923770,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "570",
+    "iso2Code": "NU",
+    "iso3Code": "NIU",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 61, "geoAreaName": "Polynesia" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "574",
+    "iso2Code": "NF",
+    "iso3Code": "NFK",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 53, "geoAreaName": "Australia and New Zealand" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Norway",
+    "m49Code": "578",
+    "iso2Code": "NO",
+    "iso3Code": "NOR",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 154, "geoAreaName": "Northern Europe" }
+    ],
+    "capitalCity": "Oslo",
+    "population": 4889252,
+    "populationYear": "2010",
+    "surface": 385178.0078125,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Northern Mariana Islands",
+    "m49Code": "580",
+    "iso2Code": "MP",
+    "iso3Code": "MNP",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 57, "geoAreaName": "Micronesia" }
+    ],
+    "capitalCity": "Saipan",
+    "population": 53971,
+    "populationYear": "2010",
+    "surface": 460,
+    "surfaceYear": "2010",
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "581",
+    "iso2Code": "UM",
+    "iso3Code": "UMI",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 57, "geoAreaName": "Micronesia" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Micronesia, Fed. Sts.",
+    "m49Code": "583",
+    "iso2Code": "FM",
+    "iso3Code": "FSM",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 57, "geoAreaName": "Micronesia" }
+    ],
+    "capitalCity": "Palikir",
+    "population": 102911,
+    "populationYear": "2010",
+    "surface": 700,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Marshall Islands",
+    "m49Code": "584",
+    "iso2Code": "MH",
+    "iso3Code": "MHL",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 57, "geoAreaName": "Micronesia" }
+    ],
+    "capitalCity": "Majuro",
+    "population": 56366,
+    "populationYear": "2010",
+    "surface": 180,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Palau",
+    "m49Code": "585",
+    "iso2Code": "PW",
+    "iso3Code": "PLW",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 57, "geoAreaName": "Micronesia" }
+    ],
+    "capitalCity": "Koror",
+    "population": 17955,
+    "populationYear": "2010",
+    "surface": 460,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Pakistan",
+    "m49Code": "586",
+    "iso2Code": "PK",
+    "iso3Code": "PAK",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 34, "geoAreaName": "Southern Asia" }
+    ],
+    "capitalCity": "Islamabad",
+    "population": 179424641,
+    "populationYear": "2010",
+    "surface": 796100,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Panama",
+    "m49Code": "591",
+    "iso2Code": "PA",
+    "iso3Code": "PAN",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 13, "geoAreaName": "Central America" }
+    ],
+    "capitalCity": "Panama City",
+    "population": 3642687,
+    "populationYear": "2010",
+    "surface": 75420,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Papua New Guinea",
+    "m49Code": "598",
+    "iso2Code": "PG",
+    "iso3Code": "PNG",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 54, "geoAreaName": "Melanesia" }
+    ],
+    "capitalCity": "Port Moresby",
+    "population": 7310507,
+    "populationYear": "2010",
+    "surface": 462840,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Paraguay",
+    "m49Code": "600",
+    "iso2Code": "PY",
+    "iso3Code": "PRY",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 5, "geoAreaName": "South America" }
+    ],
+    "capitalCity": "Asuncion",
+    "population": 6248020,
+    "populationYear": "2010",
+    "surface": 406751.9921875,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Peru",
+    "m49Code": "604",
+    "iso2Code": "PE",
+    "iso3Code": "PER",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 5, "geoAreaName": "South America" }
+    ],
+    "capitalCity": "Lima",
+    "population": 29027674,
+    "populationYear": "2010",
+    "surface": 1285220,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Philippines",
+    "m49Code": "608",
+    "iso2Code": "PH",
+    "iso3Code": "PHL",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 35, "geoAreaName": "South-Eastern Asia" }
+    ],
+    "capitalCity": "Manila",
+    "population": 93966780,
+    "populationYear": "2010",
+    "surface": 300000,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "612",
+    "iso2Code": "PN",
+    "iso3Code": "PCN",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 61, "geoAreaName": "Polynesia" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Poland",
+    "m49Code": "616",
+    "iso2Code": "PL",
+    "iso3Code": "POL",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 151, "geoAreaName": "Eastern Europe" }
+    ],
+    "capitalCity": "Warsaw",
+    "population": 38042794,
+    "populationYear": "2010",
+    "surface": 312680,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Portugal",
+    "m49Code": "620",
+    "iso2Code": "PT",
+    "iso3Code": "PRT",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 39, "geoAreaName": "Southern Europe" }
+    ],
+    "capitalCity": "Lisbon",
+    "population": 10573100,
+    "populationYear": "2010",
+    "surface": 92210,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Guinea-Bissau",
+    "m49Code": "624",
+    "iso2Code": "GW",
+    "iso3Code": "GNB",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 11, "geoAreaName": "Western Africa" }
+    ],
+    "capitalCity": "Bissau",
+    "population": 1522599,
+    "populationYear": "2010",
+    "surface": 36130,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Timor-Leste",
+    "m49Code": "626",
+    "iso2Code": "TL",
+    "iso3Code": "TLS",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 35, "geoAreaName": "South-Eastern Asia" }
+    ],
+    "capitalCity": "Dili",
+    "population": 1093523,
+    "populationYear": "2010",
+    "surface": 14870,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Puerto Rico",
+    "m49Code": "630",
+    "iso2Code": "PR",
+    "iso3Code": "PRI",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "capitalCity": "San Juan",
+    "population": 3721525,
+    "populationYear": "2010",
+    "surface": 8870,
+    "surfaceYear": "2010",
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Qatar",
+    "m49Code": "634",
+    "iso2Code": "QA",
+    "iso3Code": "QAT",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 145, "geoAreaName": "Western Asia" }
+    ],
+    "capitalCity": "Doha",
+    "population": 1856327,
+    "populationYear": "2010",
+    "surface": 11610,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "638",
+    "iso2Code": "RE",
+    "iso3Code": "REU",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 14, "geoAreaName": "Eastern Africa" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Romania",
+    "m49Code": "642",
+    "iso2Code": "RO",
+    "iso3Code": "ROU",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 151, "geoAreaName": "Eastern Europe" }
+    ],
+    "capitalCity": "Bucharest",
+    "population": 20246871,
+    "populationYear": "2010",
+    "surface": 238390,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Russian Federation",
+    "m49Code": "643",
+    "iso2Code": "RU",
+    "iso3Code": "RUS",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 151, "geoAreaName": "Eastern Europe" }
+    ],
+    "capitalCity": "Moscow",
+    "population": 142849449,
+    "populationYear": "2010",
+    "surface": 17098250,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Rwanda",
+    "m49Code": "646",
+    "iso2Code": "RW",
+    "iso3Code": "RWA",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 14, "geoAreaName": "Eastern Africa" }
+    ],
+    "capitalCity": "Kigali",
+    "population": 10039338,
+    "populationYear": "2010",
+    "surface": 26340,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "652",
+    "iso2Code": "BL",
+    "iso3Code": "BLM",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "654",
+    "iso2Code": "SH",
+    "iso3Code": "SHN",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 11, "geoAreaName": "Western Africa" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "St. Kitts and Nevis",
+    "m49Code": "659",
+    "iso2Code": "KN",
+    "iso3Code": "KNA",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "capitalCity": "Basseterre",
+    "population": 49016,
+    "populationYear": "2010",
+    "surface": 260,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "660",
+    "iso2Code": "AI",
+    "iso3Code": "AIA",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "St. Lucia",
+    "m49Code": "662",
+    "iso2Code": "LC",
+    "iso3Code": "LCA",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "capitalCity": "Castries",
+    "population": 174085,
+    "populationYear": "2010",
+    "surface": 620,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "St. Martin (French part)",
+    "m49Code": "663",
+    "iso2Code": "MF",
+    "iso3Code": "MAF",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "capitalCity": "Marigot",
+    "population": 37582,
+    "populationYear": "2010",
+    "surface": 54.4,
+    "surfaceYear": "2010",
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "666",
+    "iso2Code": "PM",
+    "iso3Code": "SPM",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 21, "geoAreaName": "Northern America" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "St. Vincent and the Grenadines",
+    "m49Code": "670",
+    "iso2Code": "VC",
+    "iso3Code": "VCT",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "capitalCity": "Kingstown",
+    "population": 108255,
+    "populationYear": "2010",
+    "surface": 390,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "San Marino",
+    "m49Code": "674",
+    "iso2Code": "SM",
+    "iso3Code": "SMR",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 39, "geoAreaName": "Southern Europe" }
+    ],
+    "capitalCity": "San Marino",
+    "population": 31229,
+    "populationYear": "2010",
+    "surface": 60,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Sao Tome and Principe",
+    "m49Code": "678",
+    "iso2Code": "ST",
+    "iso3Code": "STP",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 17, "geoAreaName": "Middle Africa" }
+    ],
+    "capitalCity": "Sao Tome",
+    "population": 180371,
+    "populationYear": "2010",
+    "surface": 960,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Saudi Arabia",
+    "m49Code": "682",
+    "iso2Code": "SA",
+    "iso3Code": "SAU",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 145, "geoAreaName": "Western Asia" }
+    ],
+    "capitalCity": "Riyadh",
+    "population": 27421461,
+    "populationYear": "2010",
+    "surface": 2149690,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Senegal",
+    "m49Code": "686",
+    "iso2Code": "SN",
+    "iso3Code": "SEN",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 11, "geoAreaName": "Western Africa" }
+    ],
+    "capitalCity": "Dakar",
+    "population": 12678148,
+    "populationYear": "2010",
+    "surface": 196710,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Serbia",
+    "m49Code": "688",
+    "iso2Code": "RS",
+    "iso3Code": "SRB",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 39, "geoAreaName": "Southern Europe" }
+    ],
+    "capitalCity": "Belgrade",
+    "population": 7291436,
+    "populationYear": "2010",
+    "surface": 88360,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Seychelles",
+    "m49Code": "690",
+    "iso2Code": "SC",
+    "iso3Code": "SYC",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 14, "geoAreaName": "Eastern Africa" }
+    ],
+    "capitalCity": "Victoria",
+    "population": 89770,
+    "populationYear": "2010",
+    "surface": 460,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Sierra Leone",
+    "m49Code": "694",
+    "iso2Code": "SL",
+    "iso3Code": "SLE",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 11, "geoAreaName": "Western Africa" }
+    ],
+    "capitalCity": "Freetown",
+    "population": 6415634,
+    "populationYear": "2010",
+    "surface": 72300,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Singapore",
+    "m49Code": "702",
+    "iso2Code": "SG",
+    "iso3Code": "SGP",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 35, "geoAreaName": "South-Eastern Asia" }
+    ],
+    "capitalCity": "Singapore",
+    "population": 5076732,
+    "populationYear": "2010",
+    "surface": 711.999969482422,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Slovak Republic",
+    "m49Code": "703",
+    "iso2Code": "SK",
+    "iso3Code": "SVK",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 151, "geoAreaName": "Eastern Europe" }
+    ],
+    "capitalCity": "Bratislava",
+    "population": 5391428,
+    "populationYear": "2010",
+    "surface": 49037.001953125,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Vietnam",
+    "m49Code": "704",
+    "iso2Code": "VN",
+    "iso3Code": "VNM",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 35, "geoAreaName": "South-Eastern Asia" }
+    ],
+    "capitalCity": "Hanoi",
+    "population": 87967651,
+    "populationYear": "2010",
+    "surface": 330953.984375,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Slovenia",
+    "m49Code": "705",
+    "iso2Code": "SI",
+    "iso3Code": "SVN",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 39, "geoAreaName": "Southern Europe" }
+    ],
+    "capitalCity": "Ljubljana",
+    "population": 2048583,
+    "populationYear": "2010",
+    "surface": 20270,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Somalia",
+    "m49Code": "706",
+    "iso2Code": "SO",
+    "iso3Code": "SOM",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 14, "geoAreaName": "Eastern Africa" }
+    ],
+    "capitalCity": "Mogadishu",
+    "population": 12043883,
+    "populationYear": "2010",
+    "surface": 637660,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "South Africa",
+    "m49Code": "710",
+    "iso2Code": "ZA",
+    "iso3Code": "ZAF",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 18, "geoAreaName": "Southern Africa" }
+    ],
+    "capitalCity": "Pretoria",
+    "population": 51216964,
+    "populationYear": "2010",
+    "surface": 1219090,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Zimbabwe",
+    "m49Code": "716",
+    "iso2Code": "ZW",
+    "iso3Code": "ZWE",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 14, "geoAreaName": "Eastern Africa" }
+    ],
+    "capitalCity": "Harare",
+    "population": 12697723,
+    "populationYear": "2010",
+    "surface": 390760,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Spain",
+    "m49Code": "724",
+    "iso2Code": "ES",
+    "iso3Code": "ESP",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 39, "geoAreaName": "Southern Europe" }
+    ],
+    "capitalCity": "Madrid",
+    "population": 46576897,
+    "populationYear": "2010",
+    "surface": 505600,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "South Sudan",
+    "m49Code": "728",
+    "iso2Code": "SS",
+    "iso3Code": "SSD",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 14, "geoAreaName": "Eastern Africa" }
+    ],
+    "capitalCity": "Juba",
+    "population": 9508364,
+    "populationYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Sudan",
+    "m49Code": "729",
+    "iso2Code": "SD",
+    "iso3Code": "SDN",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 15, "geoAreaName": "Northern Africa" }
+    ],
+    "capitalCity": "Khartoum",
+    "population": 34545013,
+    "populationYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "732",
+    "iso2Code": "EH",
+    "iso3Code": "ESH",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 15, "geoAreaName": "Northern Africa" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Suriname",
+    "m49Code": "740",
+    "iso2Code": "SR",
+    "iso3Code": "SUR",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 5, "geoAreaName": "South America" }
+    ],
+    "capitalCity": "Paramaribo",
+    "population": 529131,
+    "populationYear": "2010",
+    "surface": 163820,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "744",
+    "iso2Code": "SJ",
+    "iso3Code": "SJM",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 154, "geoAreaName": "Northern Europe" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Eswatini",
+    "m49Code": "748",
+    "iso2Code": "SZ",
+    "iso3Code": "SWZ",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 18, "geoAreaName": "Southern Africa" }
+    ],
+    "capitalCity": "Mbabane",
+    "population": 1064837,
+    "populationYear": "2010",
+    "surface": 17360,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Sweden",
+    "m49Code": "752",
+    "iso2Code": "SE",
+    "iso3Code": "SWE",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 154, "geoAreaName": "Northern Europe" }
+    ],
+    "capitalCity": "Stockholm",
+    "population": 9378126,
+    "populationYear": "2010",
+    "surface": 450300,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Switzerland",
+    "m49Code": "756",
+    "iso2Code": "CH",
+    "iso3Code": "CHE",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 155, "geoAreaName": "Western Europe" }
+    ],
+    "capitalCity": "Bern",
+    "population": 7824909,
+    "populationYear": "2010",
+    "surface": 41290,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Syrian Arab Republic",
+    "m49Code": "760",
+    "iso2Code": "SY",
+    "iso3Code": "SYR",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 145, "geoAreaName": "Western Asia" }
+    ],
+    "capitalCity": "Damascus",
+    "population": 21362529,
+    "populationYear": "2010",
+    "surface": 185180,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Tajikistan",
+    "m49Code": "762",
+    "iso2Code": "TJ",
+    "iso3Code": "TJK",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 143, "geoAreaName": "Central Asia" }
+    ],
+    "capitalCity": "Dushanbe",
+    "population": 7527394,
+    "populationYear": "2010",
+    "surface": 142550,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Thailand",
+    "m49Code": "764",
+    "iso2Code": "TH",
+    "iso3Code": "THA",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 35, "geoAreaName": "South-Eastern Asia" }
+    ],
+    "capitalCity": "Bangkok",
+    "population": 67195028,
+    "populationYear": "2010",
+    "surface": 513120,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Togo",
+    "m49Code": "768",
+    "iso2Code": "TG",
+    "iso3Code": "TGO",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 11, "geoAreaName": "Western Africa" }
+    ],
+    "capitalCity": "Lome",
+    "population": 6421679,
+    "populationYear": "2010",
+    "surface": 56790,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "772",
+    "iso2Code": "TK",
+    "iso3Code": "TKL",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 61, "geoAreaName": "Polynesia" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Tonga",
+    "m49Code": "776",
+    "iso2Code": "TO",
+    "iso3Code": "TON",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 61, "geoAreaName": "Polynesia" }
+    ],
+    "capitalCity": "Nuku'alofa",
+    "population": 103986,
+    "populationYear": "2010",
+    "surface": 750,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Trinidad and Tobago",
+    "m49Code": "780",
+    "iso2Code": "TT",
+    "iso3Code": "TTO",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "capitalCity": "Port-of-Spain",
+    "population": 1328147,
+    "populationYear": "2010",
+    "surface": 5130,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "United Arab Emirates",
+    "m49Code": "784",
+    "iso2Code": "AE",
+    "iso3Code": "ARE",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 145, "geoAreaName": "Western Asia" }
+    ],
+    "capitalCity": "Abu Dhabi",
+    "population": 8549988,
+    "populationYear": "2010",
+    "surface": 83600,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Tunisia",
+    "m49Code": "788",
+    "iso2Code": "TN",
+    "iso3Code": "TUN",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 15, "geoAreaName": "Northern Africa" }
+    ],
+    "capitalCity": "Tunis",
+    "population": 10635244,
+    "populationYear": "2010",
+    "surface": 163610,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Turkey",
+    "m49Code": "792",
+    "iso2Code": "TR",
+    "iso3Code": "TUR",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 145, "geoAreaName": "Western Asia" }
+    ],
+    "capitalCity": "Ankara",
+    "population": 72326988,
+    "populationYear": "2010",
+    "surface": 785350,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Turkmenistan",
+    "m49Code": "795",
+    "iso2Code": "TM",
+    "iso3Code": "TKM",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 143, "geoAreaName": "Central Asia" }
+    ],
+    "capitalCity": "Ashgabat",
+    "population": 5087213,
+    "populationYear": "2010",
+    "surface": 488100,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Turks and Caicos Islands",
+    "m49Code": "796",
+    "iso2Code": "TC",
+    "iso3Code": "TCA",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "capitalCity": "Grand Turk",
+    "population": 32660,
+    "populationYear": "2010",
+    "surface": 950,
+    "surfaceYear": "2010",
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Tuvalu",
+    "m49Code": "798",
+    "iso2Code": "TV",
+    "iso3Code": "TUV",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 61, "geoAreaName": "Polynesia" }
+    ],
+    "capitalCity": "Funafuti",
+    "population": 10530,
+    "populationYear": "2010",
+    "surface": 30,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Uganda",
+    "m49Code": "800",
+    "iso2Code": "UG",
+    "iso3Code": "UGA",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 14, "geoAreaName": "Eastern Africa" }
+    ],
+    "capitalCity": "Kampala",
+    "population": 32428167,
+    "populationYear": "2010",
+    "surface": 241550,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Ukraine",
+    "m49Code": "804",
+    "iso2Code": "UA",
+    "iso3Code": "UKR",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 151, "geoAreaName": "Eastern Europe" }
+    ],
+    "capitalCity": "Kiev",
+    "population": 45870700,
+    "populationYear": "2010",
+    "surface": 603550,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "North Macedonia",
+    "m49Code": "807",
+    "iso2Code": "MK",
+    "iso3Code": "MKD",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 39, "geoAreaName": "Southern Europe" }
+    ],
+    "capitalCity": "Skopje",
+    "population": 2070741,
+    "populationYear": "2010",
+    "surface": 25710,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Egypt, Arab Rep.",
+    "m49Code": "818",
+    "iso2Code": "EG",
+    "iso3Code": "EGY",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 15, "geoAreaName": "Northern Africa" }
+    ],
+    "capitalCity": "Cairo",
+    "population": 82761235,
+    "populationYear": "2010",
+    "surface": 1001450,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "United Kingdom",
+    "m49Code": "826",
+    "iso2Code": "GB",
+    "iso3Code": "GBR",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 154, "geoAreaName": "Northern Europe" }
+    ],
+    "capitalCity": "London",
+    "population": 62766365,
+    "populationYear": "2010",
+    "surface": 243610,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "831",
+    "iso2Code": "GG",
+    "iso3Code": "GGY",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 154, "geoAreaName": "Northern Europe" },
+      { "geoAreaCode": 830, "geoAreaName": "Channel Islands" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "832",
+    "iso2Code": "JE",
+    "iso3Code": "JEY",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 154, "geoAreaName": "Northern Europe" },
+      { "geoAreaCode": 830, "geoAreaName": "Channel Islands" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Isle of Man",
+    "m49Code": "833",
+    "iso2Code": "IM",
+    "iso3Code": "IMN",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 154, "geoAreaName": "Northern Europe" }
+    ],
+    "capitalCity": "Douglas",
+    "population": 84857,
+    "populationYear": "2010",
+    "surface": 570,
+    "surfaceYear": "2010",
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Tanzania",
+    "m49Code": "834",
+    "iso2Code": "TZ",
+    "iso3Code": "TZA",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 14, "geoAreaName": "Eastern Africa" }
+    ],
+    "capitalCity": "Dodoma",
+    "population": 44346525,
+    "populationYear": "2010",
+    "surface": 947300,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "United States",
+    "m49Code": "840",
+    "iso2Code": "US",
+    "iso3Code": "USA",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 21, "geoAreaName": "Northern America" }
+    ],
+    "capitalCity": "Washington D.C.",
+    "population": 309321666,
+    "populationYear": "2010",
+    "surface": 9831510,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Virgin Islands (U.S.)",
+    "m49Code": "850",
+    "iso2Code": "VI",
+    "iso3Code": "VIR",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "capitalCity": "Charlotte Amalie",
+    "population": 108358,
+    "populationYear": "2010",
+    "surface": 350,
+    "surfaceYear": "2010",
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Burkina Faso",
+    "m49Code": "854",
+    "iso2Code": "BF",
+    "iso3Code": "BFA",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 11, "geoAreaName": "Western Africa" }
+    ],
+    "capitalCity": "Ouagadougou",
+    "population": 15605217,
+    "populationYear": "2010",
+    "surface": 274220,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Uruguay",
+    "m49Code": "858",
+    "iso2Code": "UY",
+    "iso3Code": "URY",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 5, "geoAreaName": "South America" }
+    ],
+    "capitalCity": "Montevideo",
+    "population": 3359275,
+    "populationYear": "2010",
+    "surface": 176220,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Uzbekistan",
+    "m49Code": "860",
+    "iso2Code": "UZ",
+    "iso3Code": "UZB",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 143, "geoAreaName": "Central Asia" }
+    ],
+    "capitalCity": "Tashkent",
+    "population": 28562400,
+    "populationYear": "2010",
+    "surface": 447400,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Venezuela",
+    "m49Code": "862",
+    "iso2Code": "VE",
+    "iso3Code": "VEN",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 5, "geoAreaName": "South America" }
+    ],
+    "capitalCity": "Caracas",
+    "population": 28439940,
+    "populationYear": "2010",
+    "surface": 912050,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "876",
+    "iso2Code": "WF",
+    "iso3Code": "WLF",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 61, "geoAreaName": "Polynesia" }
+    ],
+    "independent": false,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Samoa",
+    "m49Code": "882",
+    "iso2Code": "WS",
+    "iso3Code": "WSM",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 9, "geoAreaName": "Oceania" },
+      { "geoAreaCode": 61, "geoAreaName": "Polynesia" }
+    ],
+    "capitalCity": "Apia",
+    "population": 185949,
+    "populationYear": "2010",
+    "surface": 2840,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Yemen",
+    "m49Code": "887",
+    "iso2Code": "YE",
+    "iso3Code": "YEM",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 145, "geoAreaName": "Western Asia" }
+    ],
+    "capitalCity": "Sana'a",
+    "population": 23154855,
+    "populationYear": "2010",
+    "surface": 527970,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "name": "Zambia",
+    "m49Code": "894",
+    "iso2Code": "ZM",
+    "iso3Code": "ZMB",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 14, "geoAreaName": "Eastern Africa" }
+    ],
+    "capitalCity": "Lusaka",
+    "population": 13605984,
+    "populationYear": "2010",
+    "surface": 752610,
+    "surfaceYear": "2010",
+    "independent": true,
+    "hasFlagFile": true
+  },
+  {
+    "m49Code": "369",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 145, "geoAreaName": "Western Asia" }
+    ],
+    "hasFlagFile": false
+  },
+  {
+    "m49Code": "370",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 142, "geoAreaName": "Asia" },
+      { "geoAreaCode": 145, "geoAreaName": "Western Asia" }
+    ],
+    "hasFlagFile": false
+  },
+  {
+    "m49Code": "412",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 151, "geoAreaName": "Eastern Europe" }
+    ],
+    "hasFlagFile": false
+  },
+  {
+    "m49Code": "530",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 19, "geoAreaName": "Americas" },
+      { "geoAreaCode": 419, "geoAreaName": "Latin America and the Caribbean" },
+      { "geoAreaCode": 29, "geoAreaName": "Caribbean" }
+    ],
+    "hasFlagFile": false
+  },
+  {
+    "m49Code": "680",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 154, "geoAreaName": "Northern Europe" },
+      { "geoAreaCode": 830, "geoAreaName": "Channel Islands" }
+    ],
+    "hasFlagFile": false
+  },
+  {
+    "m49Code": "736",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 2, "geoAreaName": "Africa" },
+      { "geoAreaCode": 202, "geoAreaName": "Sub-Saharan Africa" },
+      { "geoAreaCode": 14, "geoAreaName": "Eastern Africa" }
+    ],
+    "hasFlagFile": false
+  },
+  {
+    "m49Code": "827",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 154, "geoAreaName": "Northern Europe" }
+    ],
+    "hasFlagFile": false
+  },
+  {
+    "m49Code": "828",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 154, "geoAreaName": "Northern Europe" }
+    ],
+    "hasFlagFile": false
+  },
+  {
+    "m49Code": "829",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 154, "geoAreaName": "Northern Europe" }
+    ],
+    "hasFlagFile": false
+  },
+  {
+    "m49Code": "891",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 150, "geoAreaName": "Europe" },
+      { "geoAreaCode": 39, "geoAreaName": "Southern Europe" }
+    ],
+    "hasFlagFile": false
+  },
+  {
+    "m49Code": "896",
+    "regions": [
+      { "geoAreaCode": 1, "geoAreaName": "World" },
+      { "geoAreaCode": 922, "geoAreaName": "Custom groupings of data providers" }
+    ],
+    "hasFlagFile": false
+  }
+]
