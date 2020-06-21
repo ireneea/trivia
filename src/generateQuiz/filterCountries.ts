@@ -14,7 +14,7 @@ export function filterCountries(countries: Country[], filters: CountryFilters = 
 
   return countries.filter((country) => {
     let include =
-      isValidCountry(country) &&
+      hasName(country) &&
       matchIndependent(country, independent) &&
       matchRegions(country, regions) &&
       matchFlag(country, withFlag) &&
@@ -26,7 +26,7 @@ export function filterCountries(countries: Country[], filters: CountryFilters = 
   });
 }
 
-function isValidCountry(country?: Country): boolean {
+function hasName(country?: Country): boolean {
   return !!country && !!country.name;
 }
 

@@ -220,9 +220,9 @@ describe("filterCountries", () => {
     expect(filtered).toContainEqual(_sample(countries));
   });
 
-  it("should not include invalid countries", () => {
+  it("should not include countries without a name", () => {
     // a country without a name is considered invalid
-    const invalidCountry = {
+    const noNameCountry = {
       m49Code: "2",
       iso2Code: "BB",
       iso3Code: "BBB",
@@ -234,10 +234,10 @@ describe("filterCountries", () => {
       hasFlagFile: true,
     };
 
-    const filtered = filterCountries([...countries, invalidCountry]);
+    const filtered = filterCountries([...countries, noNameCountry]);
 
     expect(filtered).toHaveLength(countries.length);
-    expect(filtered).not.toContainEqual(invalidCountry);
+    expect(filtered).not.toContainEqual(noNameCountry);
   });
 
   it("filter by one region", () => {
