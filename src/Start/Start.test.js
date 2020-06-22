@@ -16,6 +16,9 @@ describe("Start", () => {
     const { getByText } = render(<Start {...props} />);
     fireEvent.press(getByText("Start"));
 
-    expect(props.navigation.navigate).toHaveBeenCalledWith("Game");
+    expect(props.navigation.navigate).toHaveBeenCalledWith(
+      "Game",
+      expect.objectContaining({ game: expect.any(Object) })
+    );
   });
 });
