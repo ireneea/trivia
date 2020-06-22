@@ -1,4 +1,4 @@
-import { getCapitalCountryGame } from "./countryQuiz";
+import { getCountryQuizGame } from "./countryQuiz";
 import "jest-extended";
 
 expect.extend({
@@ -45,7 +45,7 @@ function genCharArray(charA, charZ) {
 
 describe("countryQuiz", () => {
   it("return valid game", () => {
-    const game = getCapitalCountryGame(countries);
+    const game = getCountryQuizGame(countries);
     expectGameToBeValid(game);
     const hasCapitalInText = (question) => question.text.includes("is the capital of?");
     expect(game.questions).toSatisfyAll(hasCapitalInText);
