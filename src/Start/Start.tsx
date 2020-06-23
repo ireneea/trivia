@@ -2,7 +2,6 @@ import React from "react";
 import { View, Text, TouchableWithoutFeedback } from "react-native";
 
 import { globalStyles } from "../styles/globals";
-// import { getFullGame } from "../generateQuiz/generateQuiz";
 import { getCountryQuizGame } from "../generateQuiz/countryQuiz";
 import { filterCountries } from "../generateQuiz/filterCountries";
 import allCountries from "../../data/countries.json";

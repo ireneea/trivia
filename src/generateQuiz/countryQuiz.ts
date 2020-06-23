@@ -7,9 +7,9 @@ import { Country, GameType, QuestionType } from "../ts/appTypes";
 // Games
 //  - ✔ Country -> Capital
 //  - ✔ Capital -> Country
-//  - ✔ Surface -> Country
-//  - ✔ Population -> Country
-//  - ✔ Flag -> Country
+//  - X Surface -> Country
+//  - X Population -> Country
+//  - X Flag -> Country
 
 export function getCountryQuizGame(countries: Country[]): GameType {
   const selectedCountries = _sampleSize(countries, 10);
