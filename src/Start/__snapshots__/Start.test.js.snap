@@ -22,19 +22,61 @@ exports[`Start should render correctly 1`] = `
       style={
         Object {
           "alignItems": "center",
+          "backgroundColor": "#56AFEA",
           "flex": 1,
           "justifyContent": "center",
         }
       }
       testID="startScreen"
     >
-      <TouchableWithoutFeedback
-        testID="startBtn"
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 20,
+            "width": "100%",
+          }
+        }
       >
-        <Text>
-          Start
-        </Text>
-      </TouchableWithoutFeedback>
+        <TouchableWithoutFeedback
+          testID="startBtn"
+        >
+          <ViewManagerAdapter_ExpoLinearGradient
+            proxiedProperties={
+              Object {
+                "colors": Array [
+                  4284702066,
+                  4282728784,
+                ],
+                "endPoint": undefined,
+                "locations": undefined,
+                "startPoint": undefined,
+              }
+            }
+            style={
+              Object {
+                "alignItems": "center",
+                "borderRadius": 20,
+                "marginVertical": 5,
+                "paddingHorizontal": 50,
+                "paddingVertical": 15,
+                "width": "100%",
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#ffffff",
+                  "fontSize": 20,
+                  "textTransform": "uppercase",
+                }
+              }
+            >
+              Start
+            </Text>
+          </ViewManagerAdapter_ExpoLinearGradient>
+        </TouchableWithoutFeedback>
+      </View>
     </View>
   </View>
 </View>

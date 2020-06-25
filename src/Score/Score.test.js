@@ -45,7 +45,7 @@ describe("Score", () => {
       const props = mockRouteParamsProps({ results });
 
       const component = render(<Score {...props} />);
-      expect(component.queryByTestId("accuracy")).toHaveTextContent("50 %");
+      expect(component.queryByTestId("accuracy")).toHaveTextContent("50%");
     });
 
     it("show average time", () => {
