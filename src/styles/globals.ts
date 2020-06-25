@@ -1,5 +1,12 @@
 import { StyleSheet } from "react-native";
 
+export const colors = {
+  background: "#56AFEA", // blue
+  normal: "#ffffff", // white
+  primary: "#FFC312", // yellow sunflower
+  secondary: "#635D72", // grey
+};
+
 export const globalStyles = StyleSheet.create({
   container: {
     flex: 1,
@@ -21,4 +28,5 @@ export const fontSize = StyleSheet.create({
   xl: { fontSize: 25 },
   xxl: { fontSize: 31 },
   xxxl: { fontSize: 39 },
+  xxxxl: { fontSize: 49 },
 });

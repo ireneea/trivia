@@ -1,7 +1,12 @@
 import React from "react";
-import { View, Text, TouchableWithoutFeedback, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RouteProp } from "@react-navigation/native";
+
+import Button from "../components/Button";
+import BackgroundScreen from "../components/BackgroundScreen";
+import Points from "./Points";
+import Stats from "./Stats";
 
 import { globalStyles } from "../styles/globals";
 import { RoutesStackParamList, GameResults, AnswerResult } from "../ts/appTypes";
@@ -14,31 +19,22 @@ type Props = {
 const Score: React.FC<Props> = (props) => {
   const { points, results } = props.route.params;
   return (
-    <View testID="scoreScreen" style={globalStyles.centredContainer}>
-      <Text testID="points">Points {points}</Text>
-      <Text testID="accuracy">Accuracy {getAccuracy(results)} %</Text>
-      <View style={{ flexDirection: "row", justifyContent: "space-between", width: "100%", marginVertical: 20 }}>
-        <View style={globalStyles.centredContainer}>
-          <Text>Correct</Text>
-          <Text testID="correct">{getAnswerResultCount(results, AnswerResult.CORRECT)}</Text>
-        </View>
-        <View style={globalStyles.centredContainer}>
-          <Text>Incorrect</Text>
-          <Text testID="incorrect">{getAnswerResultCount(results, AnswerResult.INCORRECT)}</Text>
-        </View>
-        <View style={globalStyles.centredContainer}>
-          <Text>Unanswered</Text>
-          <Text testID="unanswered">{getAnswerResultCount(results, AnswerResult.NO_ANSWER)}</Text>
-        </View>
+    <BackgroundScreen testID="scoreScreen">
+      <View style={{ flex: 2, width: "100%" }}>
+        <Points points={points} accuracy={getAccuracy(results)} />
       </View>
-
-      <TouchableWithoutFeedback testID="newGameBtn" onPress={() => props.navigation.navigate("Game")}>
-        <Text>New Game</Text>
-      </TouchableWithoutFeedback>
-      <TouchableWithoutFeedback testID="homeBtn" onPress={() => props.navigation.navigate("Start")}>
-        <Text>Home</Text>
-      </TouchableWithoutFeedback>
-    </View>
+      <View style={{ flex: 1, width: "100%", justifyContent: "flex-start" }}>
+        <Stats
+          correct={getAnswerResultCount(results, AnswerResult.CORRECT)}
+          incorrect={getAnswerResultCount(results, AnswerResult.INCORRECT)}
+          unanswered={getAnswerResultCount(results, AnswerResult.NO_ANSWER)}
+        />
+      </View>
+      <View style={styles.btnContainers}>
+        <Button testID="newGameBtn" onPress={() => props.navigation.navigate("Game")} label="New Game" />
+        <Button testID="newGameBtn" onPress={() => props.navigation.navigate("Start")} label="Home" />
+      </View>
+    </BackgroundScreen>
   );
 };
 
@@ -69,5 +65,14 @@ const getAnswerResultCount = (results: GameResults = {}, answerType: AnswerResul
 
   return count;
 };
+
+const styles = StyleSheet.create({
+  btnContainers: {
+    ...globalStyles.centredContainer,
+    width: "100%",
+    paddingHorizontal: 20,
+    justifyContent: "flex-start",
+  },
+});
 
 export default Score;

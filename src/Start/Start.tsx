@@ -1,7 +1,9 @@
 import React from "react";
-import { View, Text, TouchableWithoutFeedback } from "react-native";
+import { View, StyleSheet } from "react-native";
 
-import { globalStyles } from "../styles/globals";
+import Button from "../components/Button";
+import BackgroundScreen from "../components/BackgroundScreen";
+
 import { getCountryQuizGame } from "../generateQuiz/countryQuiz";
 import { filterCountries } from "../generateQuiz/filterCountries";
 import allCountries from "../../data/countries.json";
@@ -20,12 +22,19 @@ const Start: React.FC<Props> = (props) => {
   };
 
   return (
-    <View testID="startScreen" style={globalStyles.centredContainer}>
-      <TouchableWithoutFeedback testID="startBtn" onPress={onStart}>
-        <Text>Start</Text>
-      </TouchableWithoutFeedback>
-    </View>
+    <BackgroundScreen testID="startScreen">
+      <View style={styles.btnContainer}>
+        <Button testID="startBtn" onPress={onStart} label="Start" />
+      </View>
+    </BackgroundScreen>
   );
 };
+
+const styles = StyleSheet.create({
+  btnContainer: {
+    paddingHorizontal: 20,
+    width: "100%",
+  },
+});
 
 export default Start;
