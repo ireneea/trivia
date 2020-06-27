@@ -6,9 +6,10 @@ import { View, TouchableWithoutFeedback, StyleSheet, Text } from "react-native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RouteProp } from "@react-navigation/native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import BackgroundScreen from "../components/BackgroundScreen";
 
-import { globalStyles } from "../styles/globals";
-import { AnswerType, RoutesStackParamList, QuestionType, AnswerResult } from "../ts/appTypes";
+import { globalStyles, colors, fontSize } from "../styles/globals";
+import { AnswerType, RoutesStackParamList, QuestionType } from "../ts/appTypes";
 
 import gameMachine from "./gameMachine";
 
@@ -127,13 +128,15 @@ const Game: React.FC<Props> = (props) => {
   const currentQuestion = getCurrentQuestion();
 
   return (
-    <View testID="gameScreen" style={styles.gameContainer}>
-      <View style={{ flex: 2 }}>
+    <BackgroundScreen testID="gameScreen">
+      <View style={{ flex: 1, width: "100%" }}>
         <OverlayTimer timeLeft={isPlaying() ? timeLeft : ANSWER_TIME} totalTime={ANSWER_TIME} />
         <View style={styles.gameStatusContainer}>
-          <Text accessibilityHint="score">{gameState.context.score}</Text>
+          <Text accessibilityHint="score" style={styles.score}>
+            {gameState.context.score}
+          </Text>
           <TouchableWithoutFeedback testID="endGameBtn" onPress={quit} accessibilityLabel="End Game">
-            <MaterialCommunityIcons style={{ marginLeft: 8 }} name="close" size={18} color="rgba(0, 0, 0, 0.2)" />
+            <MaterialCommunityIcons style={{ marginLeft: 8 }} name="close" size={20} color={colors.secondary} />
           </TouchableWithoutFeedback>
         </View>
         <View style={{ flex: 1, paddingHorizontal: 30 }}>
@@ -141,7 +144,7 @@ const Game: React.FC<Props> = (props) => {
         </View>
       </View>
 
-      <View style={{ flex: 2, paddingHorizontal: 30 }}>
+      <View style={{ flex: 1, paddingHorizontal: 30, width: "100%" }}>
         {currentQuestion?.choices.map((answer: AnswerType) => (
           <Answer
             key={answer.answer}
@@ -161,12 +164,16 @@ const Game: React.FC<Props> = (props) => {
           />
         </View>
       </View>
-    </View>
+    </BackgroundScreen>
   );
 };
 
 const styles = StyleSheet.create({
   gameContainer: StyleSheet.flatten([globalStyles.container, { padding: 0 }]),
+  score: {
+    color: colors.primary,
+    ...fontSize.l,
+  },
   gameStatusContainer: {
     flexDirection: "row",
     justifyContent: "space-between",

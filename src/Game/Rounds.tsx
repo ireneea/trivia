@@ -3,6 +3,7 @@ import { View } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 
 import { AnswerResult, GameResults } from "../ts/appTypes";
+import { colors } from "../styles/globals";
 
 type Prop = {
   rounds: number;
@@ -64,9 +65,11 @@ const Rounds: React.FC<Prop> = (props) => {
   );
 };
 
-const Current = () => <FontAwesome testID="current" name="circle" size={12} color="rgba(0, 0, 0, 0.1)" />;
-const Inactive = () => <FontAwesome testID="inactive" name="circle-o" size={12} color="rgba(0, 0, 0, 0.1)" />;
-const Success = () => <FontAwesome testID="success" name="circle" size={12} color="green" />;
-const Fail = () => <FontAwesome testID="fail" name="times" size={12} color="red" />;
+const discrete = "rgba(0, 0, 0, 0.1)";
+
+const Current = () => <FontAwesome testID="current" name="circle" size={12} color={discrete} />;
+const Inactive = () => <FontAwesome testID="inactive" name="circle-o" size={12} color={discrete} />;
+const Success = () => <FontAwesome testID="success" name="circle" size={12} color={colors.green} />;
+const Fail = () => <FontAwesome testID="fail" name="times" size={12} color={colors.red} />;
 
 export default Rounds;

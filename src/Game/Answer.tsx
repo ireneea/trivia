@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, StyleProp, TouchableWithoutFeedback } from "react-native";
 
 import { AnswerType } from "../ts/appTypes";
-import { fontSize } from "../styles/globals";
+import { fontSize, colors } from "../styles/globals";
 
 type Props = {
   answer: AnswerType;
@@ -51,11 +51,11 @@ const getContainerStyle = (props: Props): any => {
 
 const styles = StyleSheet.create({
   answerContainer: {
-    backgroundColor: "whitesmoke",
+    backgroundColor: colors.secondary,
     marginVertical: 10,
     paddingVertical: 15,
     paddingHorizontal: 15,
-    borderRadius: 2,
+    borderRadius: 8,
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -66,18 +66,21 @@ const styles = StyleSheet.create({
 
     elevation: 3,
   },
-  answerText: fontSize.m,
+  answerText: {
+    color: colors.normal,
+    ...fontSize.l,
+  },
   correctAnswerContainer: {
-    backgroundColor: "#02c39a",
+    backgroundColor: colors.green,
   },
   incorrectAnswerContainer: {
-    backgroundColor: "#e63946",
+    backgroundColor: colors.red,
   },
   correctAnswerText: {
-    color: "snow",
+    // color: colors.normal,
   },
   incorrectAnswerText: {
-    color: "snow",
+    // color: colors.normal,
   },
 });
 

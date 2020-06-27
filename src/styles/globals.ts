@@ -5,6 +5,8 @@ export const colors = {
   normal: "#ffffff", // white
   primary: "#FFC312", // yellow sunflower
   secondary: "#635D72", // grey
+  red: "#EA2027",
+  green: "#009432",
 };
 
 export const globalStyles = StyleSheet.create({
