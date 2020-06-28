@@ -23,7 +23,7 @@ const Score: React.FC<Props> = (props) => {
       <View style={{ flex: 2, width: "100%" }}>
         <Points points={points} accuracy={getAccuracy(results)} />
       </View>
-      <View style={{ flex: 1, width: "100%", justifyContent: "flex-start" }}>
+      <View style={{ flex: 1, width: "100%", justifyContent: "flex-end" }}>
         <Stats
           correct={getAnswerResultCount(results, AnswerResult.CORRECT)}
           incorrect={getAnswerResultCount(results, AnswerResult.INCORRECT)}

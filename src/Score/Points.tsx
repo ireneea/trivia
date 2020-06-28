@@ -1,9 +1,10 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Dimensions } from "react-native";
 
 import { globalStyles, colors, fontSize } from "../styles/globals";
 
 import PercentageCircle from "./PercentageCircle";
+import CircleScore from "./CircleScore";
 
 type Props = {
   points: number;
@@ -12,24 +13,32 @@ type Props = {
 
 const Points: React.FC<Props> = (props) => {
   const { points, accuracy } = props;
+
+  const xCentre = Math.round(Dimensions.get("window").width) / 2;
+
   return (
     <View style={styles.container}>
-      <PercentageCircle
-        radius={90}
-        percent={accuracy}
-        color={colors.primary}
-        bgcolor={colors.background}
-        innerColor={colors.background}
-      >
-        <Text testID="points" style={styles.pointsText}>
-          {points}
-        </Text>
-      </PercentageCircle>
-      <View style={styles.accuracyContainer}>
-        <Text testID="accuracy" style={styles.accuracyText}>
-          {accuracy}%
-        </Text>
+      {/* <View style={{ position: "absolute", left: xCentre - 30, top: 310 }}>
+        <CircleScore
+          value={4}
+          label="Highest streak"
+          radius={80}
+          valueSize={49}
+          labelSize={13}
+          borderColor={colors.primary}
+          backgroundColor={colors.background}
+          textColor={colors.primary}
+          testID="streak"
+        />
       </View>
+      <View style={{ position: "absolute", left: xCentre - 80, top: 100 }}>
+        <CircleScore value={points} label="Total Score" radius={120} valueSize={76} labelSize={20} testID="points" />
+      </View>
+      <View style={{ position: "absolute", left: xCentre - 150, top: 260 }}>
+        <CircleScore value={256} label="Bonus Points" radius={75} valueSize={49} labelSize={13} testID="bonus" />
+      </View> */}
+
+      <CircleScore value={points} label="Total Score" radius={120} valueSize={76} labelSize={20} testID="points" />
     </View>
   );
 };
@@ -37,6 +46,7 @@ const Points: React.FC<Props> = (props) => {
 const styles = StyleSheet.create({
   container: {
     ...globalStyles.centredContainer,
+    // flex: 1,
   },
   pointsText: {
     marginTop: 20,
