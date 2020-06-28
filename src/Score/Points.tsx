@@ -9,18 +9,19 @@ import CircleScore from "./CircleScore";
 type Props = {
   points: number;
   bonus: number;
+  streak: number;
 };
 
 const Points: React.FC<Props> = (props) => {
-  const { points, bonus } = props;
+  const { points, bonus, streak } = props;
 
   const xCentre = Math.round(Dimensions.get("window").width) / 2;
 
   return (
     <View style={styles.container}>
-      {/* <View style={{ position: "absolute", left: xCentre - 30, top: 310 }}>
+      <View style={{ position: "absolute", left: xCentre - 30, top: 310 }}>
         <CircleScore
-          value={4}
+          value={streak}
           label="Highest streak"
           radius={80}
           valueSize={49}
@@ -30,7 +31,7 @@ const Points: React.FC<Props> = (props) => {
           textColor={colors.primary}
           testID="streak"
         />
-      </View> */}
+      </View>
       <View style={{ position: "absolute", left: xCentre - 80, top: 100 }}>
         <CircleScore value={points} label="Total Score" radius={120} valueSize={76} labelSize={20} testID="points" />
       </View>

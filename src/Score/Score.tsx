@@ -2,6 +2,7 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RouteProp } from "@react-navigation/native";
+import _max from "lodash/max";
 
 import Button from "../components/Button";
 import BackgroundScreen from "../components/BackgroundScreen";
@@ -20,8 +21,8 @@ const Score: React.FC<Props> = (props) => {
   const { points, results } = props.route.params;
   return (
     <BackgroundScreen testID="scoreScreen">
-      <View style={{ flex: 2, width: "100%" }}>
-        <Points points={points} bonus={getBonusPoints(points, results)} />
+      <View style={{ flex: 3, width: "100%" }}>
+        <Points points={points} bonus={getBonusPoints(points, results)} streak={getStreak(results)} />
       </View>
       <View style={{ flex: 1, width: "100%", justifyContent: "flex-end" }}>
         <Stats
@@ -71,6 +72,31 @@ const getBonusPoints = (points: number, results: GameResults = {}): number => {
   const bonus = points - correctCount * 100; // TODO: use correct points constant
 
   return bonus;
+};
+
+const getStreak = (results: GameResults = {}): number => {
+  let streak = 0;
+  const rounds = Object.keys(results);
+
+  if (rounds.length > 0) {
+    const { max } = rounds.reduce(
+      (acc, round) => {
+        const result = results[round];
+        const newAcc = { ...acc };
+        if (result === AnswerResult.CORRECT) {
+          newAcc.current = newAcc.current + 1;
+          newAcc.max = _max([newAcc.current, newAcc.max]) || 0;
+        } else {
+          newAcc.current = 0;
+        }
+        return newAcc;
+      },
+      { current: 0, max: 0 }
+    );
+    streak = max;
+  }
+
+  return streak;
 };
 
 const styles = StyleSheet.create({
