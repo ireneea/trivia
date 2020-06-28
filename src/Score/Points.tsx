@@ -8,11 +8,11 @@ import CircleScore from "./CircleScore";
 
 type Props = {
   points: number;
-  accuracy: number;
+  bonus: number;
 };
 
 const Points: React.FC<Props> = (props) => {
-  const { points, accuracy } = props;
+  const { points, bonus } = props;
 
   const xCentre = Math.round(Dimensions.get("window").width) / 2;
 
@@ -30,15 +30,13 @@ const Points: React.FC<Props> = (props) => {
           textColor={colors.primary}
           testID="streak"
         />
-      </View>
+      </View> */}
       <View style={{ position: "absolute", left: xCentre - 80, top: 100 }}>
         <CircleScore value={points} label="Total Score" radius={120} valueSize={76} labelSize={20} testID="points" />
       </View>
       <View style={{ position: "absolute", left: xCentre - 150, top: 260 }}>
-        <CircleScore value={256} label="Bonus Points" radius={75} valueSize={49} labelSize={13} testID="bonus" />
-      </View> */}
-
-      <CircleScore value={points} label="Total Score" radius={120} valueSize={76} labelSize={20} testID="points" />
+        <CircleScore value={bonus} label="Bonus Points" radius={75} valueSize={49} labelSize={13} testID="bonus" />
+      </View>
     </View>
   );
 };

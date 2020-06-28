@@ -35,18 +35,18 @@ describe("Score", () => {
       expect(component.queryByTestId("points")).toHaveTextContent("213");
     });
 
-    // TODO: test bonus points and highest streak instead
-    it.skip("show the accuracy", () => {
+    it("show the bonus points", () => {
       const results = {
         "1": AnswerResult.INCORRECT,
         "2": AnswerResult.CORRECT,
         "3": AnswerResult.NO_ANSWER,
         "4": AnswerResult.CORRECT,
       };
-      const props = mockRouteParamsProps({ results });
+
+      const props = mockRouteParamsProps({ points: 254, results });
 
       const component = render(<Score {...props} />);
-      expect(component.queryByTestId("accuracy")).toHaveTextContent("50%");
+      expect(component.queryByTestId("bonus")).toHaveTextContent("54");
     });
 
     it("show average time", () => {

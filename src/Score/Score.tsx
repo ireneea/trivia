@@ -21,7 +21,7 @@ const Score: React.FC<Props> = (props) => {
   return (
     <BackgroundScreen testID="scoreScreen">
       <View style={{ flex: 2, width: "100%" }}>
-        <Points points={points} accuracy={getAccuracy(results)} />
+        <Points points={points} bonus={getBonusPoints(points, results)} />
       </View>
       <View style={{ flex: 1, width: "100%", justifyContent: "flex-end" }}>
         <Stats
@@ -64,6 +64,13 @@ const getAnswerResultCount = (results: GameResults = {}, answerType: AnswerResul
   }
 
   return count;
+};
+
+const getBonusPoints = (points: number, results: GameResults = {}): number => {
+  const correctCount = getAnswerResultCount(results, AnswerResult.CORRECT);
+  const bonus = points - correctCount * 100; // TODO: use correct points constant
+
+  return bonus;
 };
 
 const styles = StyleSheet.create({
