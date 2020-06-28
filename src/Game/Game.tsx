@@ -2,6 +2,7 @@ import React from "react";
 import { useMachine } from "@xstate/react";
 
 import { View, TouchableWithoutFeedback, StyleSheet, Text } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RouteProp } from "@react-navigation/native";
@@ -129,12 +130,15 @@ const Game: React.FC<Props> = (props) => {
 
   return (
     <BackgroundScreen testID="gameScreen">
-      <View style={{ flex: 1, width: "100%" }}>
+      <View style={styles.questionContainer}>
         <OverlayTimer timeLeft={isPlaying() ? timeLeft : ANSWER_TIME} totalTime={ANSWER_TIME} />
         <View style={styles.gameStatusContainer}>
           <Text accessibilityHint="score" style={styles.score}>
             {gameState.context.score}
           </Text>
+          <TouchableWithoutFeedback onPress={() => countdown.pause()}>
+            <MaterialCommunityIcons style={{ marginLeft: 8 }} name="pause" size={20} color={colors.secondary} />
+          </TouchableWithoutFeedback>
           <TouchableWithoutFeedback testID="endGameBtn" onPress={quit} accessibilityLabel="End Game">
             <MaterialCommunityIcons style={{ marginLeft: 8 }} name="close" size={20} color={colors.secondary} />
           </TouchableWithoutFeedback>
@@ -143,6 +147,8 @@ const Game: React.FC<Props> = (props) => {
           <Question question={currentQuestion} />
         </View>
       </View>
+
+      <LinearGradient colors={[colors.overlay, "rgba(0,0,0,0)"]} style={styles.separator} />
 
       <View style={{ flex: 1, paddingHorizontal: 30, width: "100%" }}>
         {currentQuestion?.choices.map((answer: AnswerType) => (
@@ -170,6 +176,14 @@ const Game: React.FC<Props> = (props) => {
 
 const styles = StyleSheet.create({
   gameContainer: StyleSheet.flatten([globalStyles.container, { padding: 0 }]),
+  questionContainer: {
+    flex: 1,
+    width: "100%",
+  },
+  separator: {
+    width: "100%",
+    height: 10,
+  },
   score: {
     color: colors.primary,
     ...fontSize.l,

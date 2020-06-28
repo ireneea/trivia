@@ -1,7 +1,7 @@
 import React from "react";
 
 import OverlayTimer from "./OverlayTimer";
-import { render, fireEvent, act } from "@testing-library/react-native";
+import { render } from "@testing-library/react-native";
 
 describe("OverlayTimer", () => {
   const testData = [
@@ -21,34 +21,34 @@ describe("OverlayTimer", () => {
   testData.forEach(({ props, expected }) => {
     it(`height should be ${expected} for ${JSON.stringify(props)}`, () => {
       const component = render(<OverlayTimer {...props} />);
-      expectHeightToBe(component, expected);
+      expectWidthToBe(component, expected);
     });
   });
 
   it("should not have height if no parameter is passed", () => {
     const component = render(<OverlayTimer />);
-    expectHeightToBe(component, "0%");
+    expectWidthToBe(component, "0%");
   });
 
   it("should not have height if total time is a negative number", () => {
     const component = render(<OverlayTimer totalTime={-10} timeLeft={20} />);
-    expectHeightToBe(component, "0%");
+    expectWidthToBe(component, "0%");
   });
 
   it("should not have height if total time is 0", () => {
     const component = render(<OverlayTimer totalTime={0} timeLeft={20} />);
-    expectHeightToBe(component, "0%");
+    expectWidthToBe(component, "0%");
   });
 
   it("should not have a height if the timeLeft is not a positive number", () => {
     const component = render(<OverlayTimer totalTime={100} timeLeft={-20} />);
-    expectHeightToBe(component, "0%");
+    expectWidthToBe(component, "0%");
   });
 });
 
-function expectHeightToBe(component, expected) {
+function expectWidthToBe(component, expected) {
   const overlay = component.getByTestId("overlay");
   const style = overlay.getProp("style");
 
-  expect(style.height).toBe(expected);
+  expect(style.width).toBe(expected);
 }

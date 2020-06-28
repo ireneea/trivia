@@ -7,6 +7,7 @@ export const colors = {
   secondary: "#635D72", // grey
   red: "#EA2027",
   green: "#009432",
+  overlay: "rgba(0, 0, 0, 0.05)",
 };
 
 export const globalStyles = StyleSheet.create({

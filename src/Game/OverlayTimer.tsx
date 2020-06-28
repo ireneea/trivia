@@ -1,6 +1,7 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import _isNumber from "lodash/isNumber";
+import { colors } from "../styles/globals";
 
 type Props = {
   timeLeft?: number;
@@ -8,9 +9,9 @@ type Props = {
 };
 
 const OverlayTimer: React.FC<Props> = (props) => {
-  const height = { height: `${getTimeSpentPercentage(props)}%` };
+  const width = { width: `${getTimeSpentPercentage(props)}%` };
 
-  return <View style={StyleSheet.flatten([styles.overlay, height])} testID="overlay"></View>;
+  return <View style={StyleSheet.flatten([styles.overlay, width])} testID="overlay"></View>;
 };
 
 const getTimeSpentPercentage = (props: Props) => {
@@ -33,10 +34,9 @@ const styles = StyleSheet.create({
     position: "absolute",
     left: 0,
     top: 0,
-    opacity: 0.05,
-    backgroundColor: "black",
-    width: "100%",
-    height: "0%",
+    backgroundColor: colors.overlay,
+    width: "0%",
+    height: "100%",
   },
 });
 
