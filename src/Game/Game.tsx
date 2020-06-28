@@ -136,9 +136,9 @@ const Game: React.FC<Props> = (props) => {
           <Text accessibilityHint="score" style={styles.score}>
             {gameState.context.score}
           </Text>
-          <TouchableWithoutFeedback onPress={() => countdown.pause()}>
+          {/* <TouchableWithoutFeedback onPress={() => countdown.pause()}>
             <MaterialCommunityIcons style={{ marginLeft: 8 }} name="pause" size={20} color={colors.secondary} />
-          </TouchableWithoutFeedback>
+          </TouchableWithoutFeedback> */}
           <TouchableWithoutFeedback testID="endGameBtn" onPress={quit} accessibilityLabel="End Game">
             <MaterialCommunityIcons style={{ marginLeft: 8 }} name="close" size={20} color={colors.secondary} />
           </TouchableWithoutFeedback>
