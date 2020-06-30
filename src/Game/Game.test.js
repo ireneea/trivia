@@ -2,7 +2,8 @@ import React from "react";
 import { render, fireEvent, act } from "@testing-library/react-native";
 import "@testing-library/jest-native/extend-expect";
 
-import Game, { READ_ANSWER_TIME, ANSWER_TIME, ANSWER_BONUS_TIME_LIMIT } from "./Game";
+import Game from "./Game";
+import { READ_ANSWER_TIME, ANSWER_TIME, ANSWER_BONUS_TIME_LIMIT } from "./GameParameters";
 import { correctAnswerContainer, incorrectAnswerContainer } from "./Answer";
 
 import { mockNavigationProps, mockRouteParamsProps } from "../../utils";

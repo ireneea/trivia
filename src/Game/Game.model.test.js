@@ -7,7 +7,8 @@ import _set from "lodash/set";
 
 import { mockNavigationProps, mockRouteParamsProps } from "../../utils";
 
-import Game, { READ_ANSWER_TIME, ANSWER_TIME } from "./Game";
+import Game from "./Game";
+import { READ_ANSWER_TIME, ANSWER_TIME } from "./GameParameters";
 import { correctAnswerContainer, incorrectAnswerContainer } from "./Answer";
 import gameMachine from "./gameMachine";
 

@@ -20,9 +20,7 @@ import OverlayTimer from "./OverlayTimer";
 import Rounds from "./Rounds";
 import useCountdown from "./hooks/useCountdown";
 
-export const READ_ANSWER_TIME = 1000;
-export const ANSWER_TIME = 5000;
-export const ANSWER_BONUS_TIME_LIMIT = 3000;
+import { CORRECT_ANSWER_POINTS, READ_ANSWER_TIME, ANSWER_TIME, ANSWER_BONUS_TIME_LIMIT } from "./GameParameters";
 
 type Props = {
   navigation: StackNavigationProp<RoutesStackParamList, "Game">;
@@ -101,9 +99,9 @@ const Game: React.FC<Props> = (props) => {
     if (isAnswerCorrect(answer)) {
       let bonus = 0;
       if (countdown.timeSpent < ANSWER_BONUS_TIME_LIMIT) {
-        bonus = (ANSWER_BONUS_TIME_LIMIT - countdown.timeSpent) / 100;
+        bonus = (ANSWER_BONUS_TIME_LIMIT - countdown.timeSpent) / CORRECT_ANSWER_POINTS;
       }
-      const points = Math.round(100 + bonus);
+      const points = Math.round(CORRECT_ANSWER_POINTS + bonus);
 
       sendGameEvent(gameMachine.events.CORRECT_ANSWER, { points });
     } else {
