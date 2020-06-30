@@ -17,7 +17,7 @@ type Props = {
 const Start: React.FC<Props> = (props) => {
   const onStart = () => {
     const { navigation } = props;
-    const validCountries = filterCountries(allCountries, { withCapital: true });
+    const validCountries = filterCountries(allCountries, { withCapital: true, independent: true });
     const game = getCountryQuizGame(validCountries);
 
     navigation.navigate("Game", { game });

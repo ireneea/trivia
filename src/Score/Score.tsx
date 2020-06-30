@@ -25,7 +25,7 @@ const Score: React.FC<Props> = (props) => {
   const { points, results } = props.route.params;
 
   const startNewGame = () => {
-    const validCountries = filterCountries(allCountries, { withCapital: true });
+    const validCountries = filterCountries(allCountries, { withCapital: true, independent: true });
     const game = getCountryQuizGame(validCountries);
 
     props.navigation.navigate("Game", { game });

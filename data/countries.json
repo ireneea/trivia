@@ -878,7 +878,8 @@
     "hasFlagFile": true
   },
   {
-    "name": "Congo, Rep.",
+    "name": "Republic of the Congo",
+    "shortName": "Congo, Rep.",
     "m49Code": "178",
     "iso2Code": "CG",
     "iso3Code": "COG",
@@ -897,7 +898,8 @@
     "hasFlagFile": true
   },
   {
-    "name": "Congo, Dem. Rep.",
+    "name": "Democratic Republic of the Congo",
+    "shortName": "Congo, Dem. Rep.",
     "m49Code": "180",
     "iso2Code": "CD",
     "iso3Code": "COD",
@@ -1418,7 +1420,7 @@
     "hasFlagFile": true
   },
   {
-    "name": "Gambia, The",
+    "name": "Gambia",
     "m49Code": "270",
     "iso2Code": "GM",
     "iso3Code": "GMB",
@@ -2024,7 +2026,8 @@
     "hasFlagFile": true
   },
   {
-    "name": "Korea, Dem. People’s Rep.",
+    "name": "North Korea",
+    "shortName": "Korea, Dem. People’s Rep.",
     "m49Code": "408",
     "iso2Code": "KP",
     "iso3Code": "PRK",
@@ -2042,7 +2045,8 @@
     "hasFlagFile": true
   },
   {
-    "name": "Korea, Rep.",
+    "name": "South Korea",
+    "shortName": "Korea, Rep.",
     "m49Code": "410",
     "iso2Code": "KR",
     "iso3Code": "KOR",
@@ -2078,7 +2082,8 @@
     "hasFlagFile": true
   },
   {
-    "name": "Kyrgyz Republic",
+    "name": "Kyrgyzstan",
+    "shortName": "Kyrgyz Republic",
     "m49Code": "417",
     "iso2Code": "KG",
     "iso3Code": "KGZ",
@@ -2096,7 +2101,8 @@
     "hasFlagFile": true
   },
   {
-    "name": "Lao PDR",
+    "name": "Laos",
+    "shortName": "Lao PDR",
     "m49Code": "418",
     "iso2Code": "LA",
     "iso3Code": "LAO",
@@ -2925,7 +2931,8 @@
     "hasFlagFile": true
   },
   {
-    "name": "Micronesia, Fed. Sts.",
+    "name": "Federated States of Micronesia",
+    "shortName": "Micronesia, Fed. Sts.",
     "m49Code": "583",
     "iso2Code": "FM",
     "iso3Code": "FSM",
@@ -3243,7 +3250,8 @@
     "hasFlagFile": true
   },
   {
-    "name": "Russian Federation",
+    "name": "Russia",
+    "shortName": "Russian Federation",
     "m49Code": "643",
     "iso2Code": "RU",
     "iso3Code": "RUS",
@@ -3555,7 +3563,8 @@
     "hasFlagFile": true
   },
   {
-    "name": "Slovak Republic",
+    "name": "Slovakia",
+    "shortName": "Slovak Republic",
     "m49Code": "703",
     "iso2Code": "SK",
     "iso3Code": "SVK",
@@ -3815,7 +3824,8 @@
     "hasFlagFile": true
   },
   {
-    "name": "Syrian Arab Republic",
+    "name": "Syria",
+    "shortName": "Syrian Arab Republic",
     "m49Code": "760",
     "iso2Code": "SY",
     "iso3Code": "SYR",
@@ -4101,7 +4111,8 @@
     "hasFlagFile": true
   },
   {
-    "name": "Egypt, Arab Rep.",
+    "name": "Egypt",
+    "shortName": "Egypt, Arab Rep.",
     "m49Code": "818",
     "iso2Code": "EG",
     "iso3Code": "EGY",
