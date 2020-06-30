@@ -5,9 +5,8 @@ import { View, TouchableWithoutFeedback, StyleSheet, Text } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
 import { StackNavigationProp } from "@react-navigation/stack";
-import { RouteProp } from "@react-navigation/native";
+import { RouteProp, useFocusEffect } from "@react-navigation/native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import BackgroundScreen from "../components/BackgroundScreen";
 
 import { globalStyles, colors, fontSize } from "../styles/globals";
 import { AnswerType, RoutesStackParamList, QuestionType } from "../ts/appTypes";
@@ -15,6 +14,7 @@ import { AnswerType, RoutesStackParamList, QuestionType } from "../ts/appTypes";
 import gameMachine from "./gameMachine";
 
 import Answer from "./Answer";
+import BackgroundScreen from "../components/BackgroundScreen";
 import Question from "./Question";
 import OverlayTimer from "./OverlayTimer";
 import Rounds from "./Rounds";
@@ -29,18 +29,30 @@ type Props = {
 
 const Game: React.FC<Props> = (props) => {
   const game = props?.route?.params?.game;
+  const { navigation } = props;
 
-  const [gameState, sendGameEvent] = useMachine(
-    gameMachine.machine.withContext({ rounds: game?.questions.length || 0, currentRound: 0, score: 0, results: {} }),
-    gameMachine.options
-  );
+  const [gameState, sendGameEvent] = useMachine(gameMachine.machine, gameMachine.options);
   const countdown = useCountdown();
   const [selectedAnswer, setSelectedAnswer] = React.useState((): AnswerType | undefined => undefined);
   const [timeLeft, setTimeLeft] = React.useState(() => ANSWER_TIME);
 
   React.useEffect(() => {
-    sendGameEvent(gameMachine.events.START);
-  }, []);
+    let unsubscribe = () => {};
+
+    if (navigation && navigation.addListener) {
+      // this code allow to start the game every time there is a navigation to the game screen
+      // @see https://reactnavigation.org/docs/navigation-lifecycle
+      unsubscribe = navigation.addListener("focus", () => {
+        sendGameEvent(gameMachine.events.START, { rounds: game?.questions.length || 0 });
+      });
+    } else {
+      // this is useful for testing when we don't have a proper navigation property
+      sendGameEvent(gameMachine.events.START, { rounds: game?.questions.length || 0 });
+    }
+
+    // Return the function to unsubscribe from the event so it gets removed on unmount
+    return unsubscribe;
+  }, [navigation, game]);
 
   React.useEffect(() => {
     if (isAnswering()) {

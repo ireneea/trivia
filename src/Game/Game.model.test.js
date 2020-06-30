@@ -65,8 +65,6 @@ function generateTestMachine() {
   const isCorrect = ({ answer }) => answer === "correct";
   const isIncorrect = ({ answer }) => answer === "incorrect";
 
-  addTestToSateNode(config, "idling", () => {});
-
   addTestToSateNode(config, "answering", async (testContext, state) => {
     const { currentRound } = state.context;
     const { expectAnswer } = testContext;

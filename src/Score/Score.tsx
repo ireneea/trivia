@@ -17,8 +17,20 @@ type Props = {
   route: RouteProp<RoutesStackParamList, "Score">;
 };
 
+import { getCountryQuizGame } from "../generateQuiz/countryQuiz";
+import { filterCountries } from "../generateQuiz/filterCountries";
+import allCountries from "../../data/countries.json";
+
 const Score: React.FC<Props> = (props) => {
   const { points, results } = props.route.params;
+
+  const startNewGame = () => {
+    const validCountries = filterCountries(allCountries, { withCapital: true });
+    const game = getCountryQuizGame(validCountries);
+
+    props.navigation.navigate("Game", { game });
+  };
+
   return (
     <BackgroundScreen testID="scoreScreen">
       <View style={{ flex: 3, width: "100%" }}>
@@ -32,7 +44,7 @@ const Score: React.FC<Props> = (props) => {
         />
       </View>
       <View style={styles.btnContainers}>
-        <Button testID="newGameBtn" onPress={() => props.navigation.navigate("Game")} label="New Game" />
+        <Button testID="newGameBtn" onPress={startNewGame} label="New Game" />
         <Button testID="newGameBtn" onPress={() => props.navigation.navigate("Start")} label="Home" />
       </View>
     </BackgroundScreen>

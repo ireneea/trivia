@@ -12,7 +12,7 @@ export const events = {
 
 const config: MachineConfig<any, any, any> = {
   id: "game",
-  initial: "idling",
+  initial: "answering",
   context: {
     rounds: 0,
     currentRound: 0,
@@ -21,22 +21,28 @@ const config: MachineConfig<any, any, any> = {
   },
   on: {
     [events.QUIT]: ".gameOver",
+    [events.START]: {
+      target: "answering",
+      cond: "eventHasRounds",
+      actions: "initialise",
+    },
   },
   states: {
-    idling: {
-      on: {
-        [events.START]: {
-          target: "answering",
-          cond: "isGameValid",
-        },
-      },
-    },
     answering: {
       entry: "incrementRoundNumber",
       on: {
-        [events.CORRECT_ANSWER]: "feedback.correct",
-        [events.INCORRECT_ANSWER]: "feedback.incorrect",
-        [events.NO_ANSWER]: "feedback.noAnswer",
+        [events.CORRECT_ANSWER]: {
+          target: "feedback.correct",
+          cond: "ctxHasRounds",
+        },
+        [events.INCORRECT_ANSWER]: {
+          target: "feedback.incorrect",
+          cond: "ctxHasRounds",
+        },
+        [events.NO_ANSWER]: {
+          target: "feedback.noAnswer",
+          cond: "ctxHasRounds",
+        },
       },
     },
     feedback: {
@@ -64,15 +70,17 @@ const config: MachineConfig<any, any, any> = {
         },
       },
     },
-    gameOver: {
-      type: "final",
-    },
+    gameOver: {},
   },
 };
 
 const guards = {
-  isGameValid: (ctx) => {
-    const isValid = !!ctx.rounds && ctx.rounds > 0;
+  eventHasRounds: (ctx, event) => {
+    const isValid = !!event.rounds && event.rounds > 0;
+    return isValid;
+  },
+  ctxHasRounds: (ctx) => {
+    const isValid = ctx && ctx.rounds > 0;
     return isValid;
   },
   isNotLastRound: (ctx) => {
@@ -104,6 +112,12 @@ const actions = {
   setNoAnswerRoundResult: assign({
     results: (ctx) => setCurrentRoundResult(ctx, "noAnswer"),
   }),
+  initialise: assign({
+    rounds: (ctx, event) => event.rounds,
+    currentRound: (ctx, event) => 0,
+    score: (ctx, event) => 0,
+    results: (ctx, event) => ({}),
+  }),
 };
 
 const setCurrentRoundResult = (ctx, result) => {
@@ -113,6 +127,9 @@ const setCurrentRoundResult = (ctx, result) => {
   };
 };
 
+/**
+ * @see https://xstate.js.org/viz/?gist=833a13822bc491cfce78c7da995a1798
+ */
 export default {
   events,
   config,

@@ -15,7 +15,10 @@ describe("Score", () => {
       const { getByText } = render(<Score {...props} />);
       fireEvent.press(getByText("New Game"));
 
-      expect(props.navigation.navigate).toHaveBeenCalledWith("Game");
+      expect(props.navigation.navigate).toHaveBeenCalledWith(
+        "Game",
+        expect.objectContaining({ game: expect.any(Object) })
+      );
     });
 
     it("navigate to Start", () => {

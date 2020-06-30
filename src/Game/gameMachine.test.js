@@ -3,18 +3,30 @@ import gameMachine from "./gameMachine";
 
 describe("gameMachine", () => {
   it(`reaches gameOver using all feedback states`, () => {
-    const initialContext = { rounds: 4, currentRound: 0, score: 0, results: {} };
+    const initialContext = { rounds: 0, currentRound: 0, score: 0, results: {} };
     let expectedContext = { ...initialContext };
     const validMachine = gameMachine.machine.withContext(initialContext);
     const service = interpret(validMachine);
 
     // initial state
     service.start();
-    expect(service.state.value).toBe("idling");
+    expect(service.state.value).toBe("answering");
+
+    // cannot answer if context does not have rounds
+    service.send(gameMachine.events.CORRECT_ANSWER, { points: 100 });
+    expect(service.state.value).toBe("answering");
+
+    service.send(gameMachine.events.INCORRECT_ANSWER);
+    expect(service.state.value).toBe("answering");
+
+    service.send(gameMachine.events.START, { rounds: -10 });
+    service.send(gameMachine.events.NO_ANSWER);
+    expect(service.state.value).toBe("answering");
 
     // reaches `answering` via `START`
-    service.send(gameMachine.events.START);
+    service.send(gameMachine.events.START, { rounds: 4 });
     expect(service.state.value).toBe("answering");
+    expectedContext.rounds = 4;
     expectedContext.currentRound = 1;
     expectContextToMatch(service, expectedContext);
 
@@ -66,16 +78,22 @@ describe("gameMachine", () => {
     service.send(gameMachine.events.NEXT_ROUND);
     expect(service.state.value).toBe("gameOver");
     expectContextToMatch(service, expectedContext);
-  });
 
-  it("does not start invalid game", () => {
-    const zeroRoundMachine = gameMachine.machine.withContext({ rounds: 0, currentRound: 0 });
-    const service = interpret(zeroRoundMachine);
+    // reaches `answering` via `START`
+    service.send(gameMachine.events.START, { rounds: 1 });
+    expect(service.state.value).toBe("answering");
+    expectedContext = { ...initialContext, rounds: 1, currentRound: 1 };
+    expectContextToMatch(service, expectedContext);
 
-    // initial state
-    service.start();
-    service.send(gameMachine.events.START);
-    expect(service.state.value).toBe("idling");
+    // reaches `gameOver` via `QUIT`
+    service.send(gameMachine.events.QUIT);
+    expect(service.state.value).toBe("gameOver");
+
+    // reaches `gameOver` via `QUIT`
+    service.send(gameMachine.events.START, { rounds: 1 });
+    service.send(gameMachine.events.NO_ANSWER);
+    service.send(gameMachine.events.QUIT);
+    expect(service.state.value).toBe("gameOver");
   });
 });
 
